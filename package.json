@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "webpack --watch & nodemon server.js"
+    "start": "webpack & nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -33,9 +33,11 @@
     "express": "^4.13.4",
     "lodash": "^3.10.1",
     "morgan": "^1.7.0",
+    "nodemon": "^1.11.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "webpack": "^1.14.0"
   }
 }
