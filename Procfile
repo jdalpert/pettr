@@ -1,1 +1,1 @@
-web: nodemon server.js & webpack
+web: nodemon server.js
