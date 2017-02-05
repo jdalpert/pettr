@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "webpack & nodemon server.js"
+    "start": "npm install & webpack & nodemon server.js"
   },
   "repository": {
     "type": "git",
