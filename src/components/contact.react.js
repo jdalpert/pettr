@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 //const store = [{userName: Tony, userAddress: Klondike, userQuote: Food}];
+// this is a test pls ignore this
 export default class Contact extends Component {
 
 	constructor(props) {
