@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 //const store = [{userName: Tony, userAddress: Klondike, userQuote: Food}];
 // this is a test pls ignore this
+// hey remember to merge your branch with master first
+// and then send your pull request
 export default class Contact extends Component {
 
 	constructor(props) {
