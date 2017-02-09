@@ -17,7 +17,6 @@ export default class Contact extends Component {
 				<strong>Address:</strong> {this.props.contact.userAddress} <br/>
 				<strong>Fav Quote:</strong> {this.props.contact.userQuote} 
 				<br/>
-
 			</div>
 		);
 	}

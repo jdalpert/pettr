@@ -55,7 +55,6 @@ class Display extends Component {
 				</div>
 		);
 		}
-
 		else{
 			return (
 				<div>
