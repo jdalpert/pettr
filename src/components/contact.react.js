@@ -6,7 +6,8 @@ import React, { Component } from 'react';
 // and then send your pull request
 // michael pls never "Commit to master";
 // adsffadsas
-// testing testing testing #3 edit to the pull request ongoing swog
+// testing testing testing #3 edit to the pull request ongoing
+// #4 please remember to commit to your branch, and then sync it or else it won't go through.
 export default class Contact extends Component {
 
 	constructor(props) {
