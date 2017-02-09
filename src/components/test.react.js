@@ -1,3 +1,6 @@
+import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router';
+//import Axios from 'axios';
 import { connect } from "react-redux";
 import Contact from './contact.react'
 import * as actions from "../actions/add_person.action";
@@ -21,3 +24,11 @@ class Test extends Component {
 		);
 	}
 }
+
+function mapStateToProps(state) {
+	return {
+		data: state.list.data
+	};
+}
+
+export default connect(mapStateToProps, actions)(Test);
