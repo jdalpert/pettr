@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 // NEVER MERGE W/ MASTER FIRST. I WILL NEVER MERGE. (JOSH WILL)
 // ME, WORK ON MY BRANCH. GIT-PULL ORIGIN MASTER, THEN AFTER MERGED IN
 // and then send your pull request
+// michael pls never "Commit to master";
 export default class Contact extends Component {
 
 	constructor(props) {
