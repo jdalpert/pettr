@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 // ME, WORK ON MY BRANCH. GIT-PULL ORIGIN MASTER, THEN AFTER MERGED IN
 // and then send your pull request
 // michael pls never "Commit to master";
+// adsffadsas
 export default class Contact extends Component {
 
 	constructor(props) {
