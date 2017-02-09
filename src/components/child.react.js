@@ -46,6 +46,12 @@ class Child extends Component {
 		//this.context.router.push("/display");
 	}
 
+	_handleClickTest = () => {
+		//this.context.router.push("/display");
+		this.context.router.push("/test");
+		//this.context.router.push("/display");
+	}
+
 	render() {
 		return (
 			<div className="child">
@@ -85,6 +91,10 @@ class Child extends Component {
 				<button 
 					className="btn btn-primary btn-sm" 
 					onClick={this._handleClick}>Submit
+				</button>
+				<button 
+					className="btn btn-primary btn-sm" 
+					onClick={this._handleClickTest}>Test
 				</button>
 			</div>
 		);  

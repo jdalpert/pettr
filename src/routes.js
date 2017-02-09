@@ -15,5 +15,6 @@ export default (
 		<IndexRoute component={Child}/>
 		<Route path="/display" component={Display} />
 		<Route path="/child" component={Child}/>
+		<Route path="/test" component={test}/>
 	</Route>
 );
