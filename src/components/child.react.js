@@ -45,7 +45,7 @@ class Child extends Component {
 		this.context.router.push("/display");
 		//this.context.router.push("/display");
 	}
-
+	//PUT ALL OF YOUR HTML CODE HERE
 	render() {
 		return (
 			<div className="child">
