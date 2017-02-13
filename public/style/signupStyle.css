@@ -1,0 +1,65 @@
+.signup-form input, textarea, #state {
+	background: #efefef;
+	border:1.5px solid #dedede;
+	margin-bottom:1%;
+	-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+
+.signup-form input, #state {
+	padding: .5%;
+}
+
+/* Style the text boxes */
+.signup-form textarea {
+	width:50%;
+	height:90px;
+	margin-top:3px;
+	padding: .8%;
+}
+
+
+input:focus, textarea:focus, #state:focus {
+    border:1px solid #f48e23;
+}
+
+#select-pets label {
+	margin-right:1%;
+	margin-left:1%;
+}
+
+/*icon navbar*/
+
+.icon-bar {
+    width: 40%;
+    text-align: center;
+    background-color: #555;
+	margin: auto;
+  	position: absolute;
+  	top: 0; right: 0;
+}
+
+.icon-bar a {
+    width: 20%;
+    padding: 12px 0;
+    float: left;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: #ecb071;
+}
+
+.active {
+    background-color: #f48e23 !important;
+}
+
+#title {
+	float:right;
+	position: absolute;
+	left:0;
+
+}
