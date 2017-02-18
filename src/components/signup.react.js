@@ -36,6 +36,8 @@ class Signup extends Component {
 						<input type="text" id="first-name"/><br/>
 						<label htmlFor="last-name">Last Name:</label><br/>
 						<input type="text" id="last-name"/><br/>
+						<label htmlFor="email">Email:</label><br/>
+						<input type="text" id="email"/><br/>
 						
 						<div class="form-group">
 							<label for="state" class="col-sm-2 control-label">State</label>
@@ -115,8 +117,10 @@ class Signup extends Component {
 							<label htmlFor="other"> Other </label><br/>
 						</div>
 
+						<p> After you have created an account, you will be able to add pet profiles in your user profile.</p>
+
 					</form>
-					<button className="btn btn-primary btn-xs">Signup</button>
+					<button className="btn btn-primary btn-xs" id="signup-button">Signup</button>
 				</div>
 			</div>
 

@@ -5,6 +5,7 @@ import Child from './components/child.react';
 import Display from './components/display.react';
 import Test from './components/test.react';
 import Signup from './components/signup.react';
+import Home from './components/home.react';
 
 //import Greeting from './components/greeting.react';
 
@@ -19,5 +20,6 @@ export default (
 		<Route path="/child" component={Child}/>
 		<Route path="/test" component={Test}/>
 		<Route path="/signup" component={Signup}/>
+		<Route path="/home" component={Home}/>
 	</Route>
 );
