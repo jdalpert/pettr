@@ -1,0 +1,45 @@
+/*PUT YO REGULAR CSS CODE HERE*/
+
+.help {
+	text-align:center;
+}
+
+#test div {
+    background-color: #EDEDED;
+    background: blue;
+}
+
+div {
+	background-color: blue;
+}
+
+p {
+	text-align: center;
+	font-size: 100px;
+}
+
+h2{
+	text-align: center;
+	font-family: Arial;
+	font-size: 3em;
+	color: #6889a8;
+	background-color: yellow;
+}
+
+h1{
+	text-align: center;
+	font-family: Arial;
+	font-size: 3em;
+	color: #6889a8;
+	background-color: yellow;
+}
+
+#help {
+	text-align: center;
+	font-size: 30px;
+}
+
+
+p{
+	font-size: 30px;
+}
