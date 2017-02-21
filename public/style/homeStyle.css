@@ -1,0 +1,64 @@
+.swipe-buttons {
+	text-align:center;
+}
+
+.swipe-buttons button #abandon {
+	margin-left:5%;
+}
+
+button {
+	margin-left:5%;
+}
+
+#left-arrow, #right-arrow {
+	background-color:#ffc80a;
+	padding:0;
+}
+
+#pet-breed {
+	font-weight:bold;
+	margin-top:1%;
+	margin-bottom:1%;
+}
+
+.hide-bullets {
+list-style:none;
+margin-left: -40px;
+margin-top:20px;
+}
+
+.float {
+	margin-top:2%;
+}
+
+.slideShowPics {
+	height: 329px;
+	width:  297px;
+}
+
+.confirmButtons{
+	padding-left: 200px;
+}
+
+.allPets {
+	height:120px;
+	width: 400px;
+	border:1px;
+	overflow:auto;
+}
+.petsList {
+	display: inline-flex;
+}
+
+.petsList>div>img {
+	height: 75px;
+	width: 75px;	
+}
+
+.petsList>.petName{
+	padding-left: 20px;
+}
+/*.smallPic {
+	height: 100px;
+	width: 100px;	
+}*/
