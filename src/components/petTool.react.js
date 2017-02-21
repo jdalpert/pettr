@@ -18,11 +18,11 @@ class PetTool extends Component {
 					</Navbar.Header>
 					<Navbar.Collapse>
 						<Nav pullRight>
-							<NavItem href="#"><i className="active fa fa-home"></i></NavItem> 
+							<NavItem href="/#/"><i to="/" className="active fa fa-home"></i></NavItem>
 							<NavItem href="#"><i className="fa fa-heart"></i></NavItem> 
-							<NavItem href="#"><i className="fa fa-user"></i></NavItem> 
-							<NavItem href="#"><i className="fa fa-rocket"></i></NavItem>
-							<NavItem href="#"><i className="fa fa-lock"></i></NavItem>
+							<NavItem href="/#/profile"><i className="fa fa-user"></i></NavItem> 
+							<NavItem href="/#/mission"><i className="fa fa-rocket"></i></NavItem>
+							<NavItem href="/#/signup"><i className="fa fa-lock"></i></NavItem>
 						</Nav>
 					</Navbar.Collapse>
 				</Navbar>

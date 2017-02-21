@@ -6,6 +6,8 @@ import Display from './components/display.react';
 import Test from './components/test.react';
 import Signup from './components/signup.react';
 import Home from './components/home.react';
+import Profile from './components/profile.react';
+import Mission from './components/mission.react';
 
 //import Greeting from './components/greeting.react';
 
@@ -15,11 +17,13 @@ import Home from './components/home.react';
 
 export default (
 	<Route path="/" component={App}>
-		<IndexRoute component={Child}/>
+		<IndexRoute component={Home}/>
 		<Route path="/display" component={Display} />
 		<Route path="/child" component={Child}/>
 		<Route path="/test" component={Test}/>
 		<Route path="/signup" component={Signup}/>
 		<Route path="/home" component={Home}/>
+		<Route path="/profile" component={Profile}/>
+		<Route path="/mission" component={Mission}/>
 	</Route>
 );
