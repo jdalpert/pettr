@@ -16,13 +16,15 @@
 
 /*icon navbar*/
 .icon-bar {
-    width: 40%;
+    width: 100%;
     text-align: center;
-    background-color: #555;
+    background-color: #5E2605;
 	margin: auto;
   	position: absolute;
   	top: 0; right: 0;
 }
+
+
 
 .icon-bar a {
     width: 20%;
@@ -48,6 +50,6 @@
 }
 
 img{
-	width:50px;
-	height:50px;
+	width:100px;
+	height:75px;
 }

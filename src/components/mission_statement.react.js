@@ -21,13 +21,13 @@ class MissionStatement extends Component {
 			<div>
 				<div className="icon-bar">
 				  <a className="active" href="#"><i className="fa fa-home"></i></a> 
-				  <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Froot-Loops-Cereal-Bowl.jpg/220px-Froot-Loops-Cereal-Bowl.jpg"/></a> 
-				  <a href="#"><img src="../assets/iconmatch.png"/></a> 
-				  <a href="#"><img src="../assets/iconprofile.png"/></a>
-				  <a href="#"><img src="../assets/missionstatement.png"/></a> 
+				  <a id="ic" href="#"><img id="navc"src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/iconhome.png?raw=true"/></a> 
+				  <a id="ic" href="#"><img id="navc"src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/iconmatch.png?raw=true"/></a> 
+				  <a id="ic" href="#"><img id="navc"src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/iconprofile.png?raw=true"/></a>
+				  <a id="ic" href="#"><img id="navc"src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/missionstatement.png?raw=true"/></a> 
 				</div>
 
-			<div className="missionpage test">
+			<div className="missionpage">
 				<p id="mission_text">Welcome to the Mission Statement page! You will find information about
 					the purpose of the website as well as instructions about how to use it.</p>
 
