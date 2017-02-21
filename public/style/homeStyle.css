@@ -1,0 +1,28 @@
+.swipe-buttons {
+	text-align:center;
+}
+
+.swipe-buttons button #abandon {
+	margin-left:5%;
+}
+
+button {
+	margin-left:5%;
+}
+
+#left-arrow, #right-arrow {
+	background-color:#ffc80a;
+	padding:0;
+}
+
+#pet-breed {
+	font-weight:bold;
+	margin-top:1%;
+	margin-bottom:1%;
+}
+
+.hide-bullets {
+list-style:none;
+margin-left: -40px;
+margin-top:20px;
+}
