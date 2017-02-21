@@ -4,7 +4,9 @@ import { Link } from 'react-router';
 import { connect } from "react-redux";
 import Contact from './contact.react'
 import * as actions from "../actions/add_person.action";
-import PictureShow from 'react';
+import { Button } from 'react-bootstrap';
+import Slider from 'react-slick';
+
 
 //const store = [{userName: Tony, userAddress: Klondike, userQuote: Food}];
 class Home extends Component {
@@ -18,6 +20,13 @@ class Home extends Component {
 	};
 
 	render() {
+		let settings = {
+	      dots: true,
+	      infinite: true,
+	      speed: 500,
+	      slidesToShow: 1,
+	      slidesToScroll: 1
+    	};
 		return(
 			<div>
 				<div className="container home main-content">
@@ -25,8 +34,14 @@ class Home extends Component {
 						<div className="col-sm-1" id="left-arrow">left-arrow</div>
 						<div className="col-sm-5">
 							<h2>Lola Bear</h2>
-							<img id ="pic1" src ="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg"/><br/>
-
+							<div className="slideShowPics">
+			                	<Slider {...settings}>
+			                		<div className="slideShowPics"><h3><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg"/></h3></div>
+									<div className="slideShowPics"><h3><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg"/></h3></div>
+		                            <div className="slideShowPics"><h3><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg"/></h3></div>
+			                		<div className="slideShowPics"><h3><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/4/1/5/228543262.jpg"/></h3></div>
+			                	</Slider>
+		                	</div>
 						</div>
 						<div className="col-sm-5">
 							<h4>Description</h4>
@@ -44,62 +59,15 @@ class Home extends Component {
 						</div>
 						<div className="col-sm-1" id="right-arrow">right-arrow</div>
 					</div>
-					<div className="row">
-						<div className="col-sm-12 swipe-buttons">
-							<button className="btn btn-primary btn-xs" id="abandon">Abandon</button>
-							<button className="btn btn-primary btn-xs" id="adopt"> Adopt</button>
+					<div className="confirmButtons">
+						<div className="col-sm-15 swipe-buttons">
+							<Button bsStyle="primary" bsSize="large" className="defaultButton">Abandon</Button>
+							<Button bsStyle="primary" bsSize="large" className="defaultButton"> Adopt</Button>
 						</div>
 					</div>
 
 					<div className="row">
-                    <div className="col-xs-12" id="slider">
-                        <div className="row">
-                            <div className="col-sm-4" id="carousel-bounding-box">
-                                <div className="carousel slide" id="myCarousel">
-                                    <div className="carousel-inner">
-                                        <div className="active item" data-slide-number="0">
-                                        <img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg"/></div>
-
-                                        <div className="item" data-slide-number="1">
-                                        <img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg"/></div>
-
-                                        <div className="item" data-slide-number="2">
-                                        <img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg"/></div>
-
-                                        <div className="item" data-slide-number="3">
-                                        <img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/4/1/5/228543262.jpg"/></div>
-
-                                    </div>
-                                                        
-                                    </div>
-                            </div>
-
-                            
-                        </div>
-                    </div>
                 	</div>
-
-                	<div className="row hidden-xs" id="slider-thumbs">
-                        <ul className="hide-bullets">
-                            <li className="col-sm-2">
-                                <a className="thumbnail" id="carousel-selector-0"><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg"/></a>
-                            </li>
-
-                            <li className="col-sm-2">
-                                <a className="thumbnail" id="carousel-selector-1"><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg"/></a>
-                            </li>
-
-                            <li className="col-sm-2">
-                                <a className="thumbnail" id="carousel-selector-2"><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg"/></a>
-                            </li>
-
-                            <li className="col-sm-2">
-                                <a className="thumbnail" id="carousel-selector-3"><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/4/1/5/228543262.jpg"/></a>
-                            </li>
-                       
-                        </ul>                 
-                	</div>
-
 				</div>
 			</div>
 		);

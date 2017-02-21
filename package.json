@@ -39,12 +39,15 @@
     "morgan": "^1.7.0",
     "nodemon": "^1.11.0",
     "react": "^15.1.0",
+    "react-bootstrap": "^0.30.7",
     "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",
     "react-router": "^3.0.2",
+    "react-slick": "^0.14.6",
     "redux": "^3.5.2",
     "redux-devtools": "^3.3.2",
     "redux-promise": "^0.5.3",
+    "slick-carousel": "^1.6.0",
     "webpack": "^1.14.0"
   }
 }

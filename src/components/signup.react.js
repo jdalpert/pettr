@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 import { connect } from "react-redux";
 import Contact from './contact.react'
 import * as actions from "../actions/add_person.action";
+import { Button } from 'react-bootstrap';
 
 //const store = [{userName: Tony, userAddress: Klondike, userQuote: Food}];
 class Signup extends Component {
@@ -19,16 +20,6 @@ class Signup extends Component {
 	render() {
 		return(
 			<div>
-		
-				<div className="icon-bar">
-				  <a className="active" href="#"><i className="fa fa-home"></i></a> 
-				  <a href="#"><i className="fa fa-heart"></i></a> 
-				  <a href="#"><i className="fa fa-user"></i></a> 
-				  <a href="#"><i className="fa fa-rocket"></i></a>
-				  <a href="#"><i className="fa fa-lock"></i></a> 
-				</div>
-			
-
 				<div className="signup main-content">
 					<div className="col-sm-7">
 						<h1>Sign Up </h1>

@@ -48,12 +48,13 @@ input:focus, textarea:focus, #state:focus {
 /*icon navbar*/
 
 .icon-bar {
-    width: 40%;
+	width: 100%;
     text-align: center;
     background-color: #555;
 	margin: auto;
   	position: absolute;
   	top: 0; right: 0;
+  	z-index: 100;
 }
 
 .icon-bar a {
@@ -63,6 +64,7 @@ input:focus, textarea:focus, #state:focus {
     transition: all 0.3s ease;
     color: white;
     font-size: 36px;
+    list-style: none;
 }
 
 .icon-bar a:hover {
@@ -70,13 +72,16 @@ input:focus, textarea:focus, #state:focus {
 }
 
 .active {
-    background-color: #f48e23 !important;
+    color: #f48e23 !important;
 }
 
 #title {
 	float:right;
 	position: absolute;
 	left:0;
+}
+
+.mainLogo {
 
 }
 
