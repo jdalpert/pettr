@@ -51,16 +51,16 @@ class Profile extends Component {
 
 							<h4>Pets</h4>
 							<div className="container allPets">
-							<div className="container petsList">
-								<div><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg"/></div>
-								<h4 className="petName"><b><Link to="/#/">Lola Bear</Link></b></h4>
-							</div>
-							<hr/>
-							<div className="container petsList">
-								<div><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg"/></div>
-								<h4 className="petName"><b><Link to="/#/">Lola Bear</Link></b></h4>
-							</div>
-							<hr/>
+								<div className="container petsList">
+									<div><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg"/></div>
+									<h4 className="petName"><b><Link to="/#/">Lola Bear</Link></b></h4>
+								</div>
+								<hr/>
+								<div className="container petsList">
+									<div><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg"/></div>
+									<h4 className="petName"><b><Link to="/#/">Lola Bear</Link></b></h4>
+								</div>
+								<hr/>
 							</div>
 							<div className="col-sm-1"/>
 						</div>
