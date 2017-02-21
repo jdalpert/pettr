@@ -27,7 +27,11 @@ class MissionStatement extends Component {
 				<p>We are just a bunch of nerds that like animals kay?</p>
 
 				<h2>Our Purpose</h2>
-				<p>The purpose for this project is to not just receive a grade we need towards the </p>
+				<p>The purpose of our project not only includes a demonstration of what we can do
+				as a group, but as a way to reach out towards people who generally wants to spend
+				time with animals. Whether it be adopting, fostering, and looking for play time with
+				a pet, it is within our goal to make it easier to provide those services to you with our
+				app.</p>
 
 				<h1>How To Get Started FOOL</h1>
 
@@ -42,8 +46,8 @@ class MissionStatement extends Component {
 				notification will be sent towards the owner. If the owner approves you, you will receive a match!</p>
 
 				<h2>Review Your Matches</h2>
-				<p>Don't have an account? Make sure you sign up and 
-				join the website to set up and start looking for pets to match with!</p>
+				<p>Review matches you have with a pet if their owner aproves or likes you back. You will be able to
+				scroll down a set of matches and be able to view the pet owner's contact information.</p>
 
 				</div>
 
