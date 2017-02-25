@@ -56,7 +56,7 @@ class Child extends Component {
 	}
 	_handleClickMS = () => {
 		//this.context.router.push("/display");
-		this.context.router.push("/mission_statement");
+		this.context.router.push("/mission");
 		//this.context.router.push("/display");
 	}
 
@@ -107,7 +107,7 @@ class Child extends Component {
 				</button>
 				<button 
 					className="btn btn-primary btn-sm" 
-					onClick={this._handleClickMS}>Mission Statement
+					onClick={this._handleClickMS}>Mission
 				</button>
 			</div>
 		);  
