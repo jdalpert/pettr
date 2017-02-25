@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import Child from './child.react';
 import Display from './display.react';
+import PetTool from './petTool.react'
+
 let backFlag = 0;
 
 export default class App extends Component {
@@ -40,6 +42,7 @@ export default class App extends Component {
 	render() {
 		return (
 			<div className="app">
+				<PetTool />
 				{/*{this.state.response}
 				<Child callback = {this._callback}/>*/}
 				{this.props.children}
