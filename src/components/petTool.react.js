@@ -13,16 +13,16 @@ class PetTool extends Component {
 			<div>
 				<Navbar className="icon-bar">
 					<Navbar.Header>
-						<NavItem href="#"><span>Pettr</span></NavItem> 
+						<NavItem href="/#/"><span className="main-logo">Pettr</span></NavItem> 
 						<Navbar.Toggle />
 					</Navbar.Header>
 					<Navbar.Collapse>
 						<Nav pullRight>
-							<NavItem href="/#/"><i to="/" className="active fa fa-home"></i></NavItem>
-							<NavItem href="/#/messages"><i className="fa fa-heart"></i></NavItem> 
-							<NavItem href="/#/profile"><i className="fa fa-user"></i></NavItem> 
-							<NavItem href="/#/mission"><i className="fa fa-rocket"></i></NavItem>
-							<NavItem href="/#/signup"><i className="fa fa-lock"></i></NavItem>
+							<NavItem href="/#/"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/iconhome.png?raw=true"/></NavItem>
+							<NavItem href="/#/messages"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/iconmatch.png?raw=true"/></NavItem> 
+							<NavItem href="/#/profile"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/iconprofile.png?raw=true"/></NavItem> 
+							<NavItem href="/#/mission"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/missionstatement.png?raw=/true"/></NavItem>
+							<NavItem href="/#/signup"><img className="nav-icon" src={"../../assets/iconlock.png"} /></NavItem>
 						</Nav>
 					</Navbar.Collapse>
 				</Navbar>
