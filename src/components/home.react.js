@@ -75,6 +75,8 @@ class Home extends Component {
 }
 
 function mapStateToProps(state) {
+	console.log(state.list.data);
+	console.log("here?");
 	return {
 		data: state.list.data
 	};
