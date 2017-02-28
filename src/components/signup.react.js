@@ -18,6 +18,11 @@ class Signup extends Component {
 		};		
 	}
 
+
+	static contextTypes = {
+		router: PropTypes.object
+	};
+
 	_handleChange = (event) => {
 		let obj = {};
 		obj[event.target.name] = event.target.value;
@@ -31,7 +36,7 @@ class Signup extends Component {
 		this.state.email = "";
 		console.log("here");
 		this.context.router.push("/");
-	}
+	};
 
 	render() {
 		return(
@@ -125,7 +130,7 @@ class Signup extends Component {
 							</div>
 							<p> After you have created an account, you will be able to add pet profiles in your user profile.</p>
 						</form>
-						<button className="btn btn-primary btn-xs" onClick={this._handleClick} id="signup-button">Signup</button>
+						<Button className="btn btn-primary btn-xs" onClick={this._handleClick} id="signup-button">Signup</Button>
 					</div>
 
 					<div className="col-sm-5">
