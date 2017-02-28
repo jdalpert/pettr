@@ -13,7 +13,7 @@ class PetTool extends Component {
 			<div>
 				<Navbar className="icon-bar">
 					<Navbar.Header>
-						<NavItem href="#"><span>Pettr</span></NavItem> 
+						<NavItem href="/#/"><span>Pettr</span></NavItem> 
 						<Navbar.Toggle />
 					</Navbar.Header>
 					<Navbar.Collapse>
