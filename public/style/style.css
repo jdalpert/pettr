@@ -74,9 +74,12 @@ input {
 
 nav > li > a > img {
   max-width:100px;
-
 }
 
 .navbar-nav > li {
   width:13%;
+}
+
+.navbar-default {
+  border:none;
 }

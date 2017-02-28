@@ -22,7 +22,7 @@ class PetTool extends Component {
 							<NavItem href="/#/messages"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/iconmatch.png?raw=true"/></NavItem> 
 							<NavItem href="/#/profile"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/iconprofile.png?raw=true"/></NavItem> 
 							<NavItem href="/#/mission"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/missionstatement.png?raw=/true"/></NavItem>
-							<NavItem href="/#/signup"><img className="nav-icon" src={"../../assets/iconlock.png"} /></NavItem>
+							<NavItem href="/#/signup"><img className="nav-icon" src={"https://github.com/jdalpert/pettr/blob/1c0fbb49df0328799ae5020f30685c01eb84e94b/assets/iconlogin.png?raw=true"} /></NavItem>
 						</Nav>
 					</Navbar.Collapse>
 				</Navbar>
