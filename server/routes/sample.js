@@ -55,8 +55,9 @@ router.get('/file/:id',function(req,res){
 
 router.post('/', function(req, res){
 	console.log(req.body);
-	new Info(req.body).save();
-	res.send(req.body);
+	new Info(req.body).save( function(err, user){
+        res.send(user._id);   
+    });
 })
 
 module.exports = router;
