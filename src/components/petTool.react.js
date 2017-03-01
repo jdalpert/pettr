@@ -18,7 +18,7 @@ class PetTool extends Component {
 					</Navbar.Header>
 					<Navbar.Collapse>
 						<Nav pullRight>
-							<NavItem href="/#/"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/iconhome.png?raw=true"/></NavItem>
+							<NavItem href="/#/"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/layout/src/components/assets/iconhome.png?raw=true"/></NavItem>
 							<NavItem href="/#/messages"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/iconmatch.png?raw=true"/></NavItem> 
 							<NavItem href="/#/profile"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/iconprofile.png?raw=true"/></NavItem> 
 							<NavItem href="/#/mission"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/missionstatement.png?raw=/true"/></NavItem>
