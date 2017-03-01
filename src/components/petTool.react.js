@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import { connect } from "react-redux";
 import Contact from './contact.react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
-
+//import homeIcon from './assets/iconhome.png';
 //const store = [{userName: Tony, userAddress: Klondike, userQuote: Food}];
 class PetTool extends Component {
 
@@ -18,11 +18,11 @@ class PetTool extends Component {
 					</Navbar.Header>
 					<Navbar.Collapse>
 						<Nav pullRight>
-							<NavItem href="/#/"><img className="nav-icon" src="assets/iconhome.png"/></NavItem>
+							<NavItem href="/#/"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/iconhome.png?raw=true"/></NavItem>
 							<NavItem href="/#/messages"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/iconmatch.png?raw=true"/></NavItem> 
 							<NavItem href="/#/profile"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/iconprofile.png?raw=true"/></NavItem> 
 							<NavItem href="/#/mission"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/missionstatement.png?raw=/true"/></NavItem>
-							<NavItem href="/#/signup"><img className="nav-icon" src={"https://github.com/jdalpert/pettr/blob/1c0fbb49df0328799ae5020f30685c01eb84e94b/assets/iconlogin.png?raw=true"} /></NavItem>
+							<NavItem href="/#/signup"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/1c0fbb49df0328799ae5020f30685c01eb84e94b/assets/iconlogin.png?raw=true"/></NavItem>
 						</Nav>
 					</Navbar.Collapse>
 				</Navbar>
