@@ -20,11 +20,12 @@ input {
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
   width: 80%; 
-  height: 75%;
+  height: 100%;
   padding-left: 40px;
   padding-right:40px;
   padding-top:10px;
   padding-bottom:10px;
   overflow-y:auto;
+  margin-top:5%;
 }
 
