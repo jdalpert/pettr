@@ -115,7 +115,7 @@ class Signup extends Component {
 							<label htmlFor="location">City or Zip Code:</label><br/>
 							<input type="text" id="location"/><br/>
 							<label htmlFor="about">About:</label><br/>
-							<textarea placeholder="Tell us about you and anything that will help
+							<textarea placeholder="Tell us about yourself and anything that will help
 							other users know what you're looking for! Are you looking for a specific pets?
 							Are you creating pet profiles and why?" id="about"/>
 
@@ -135,6 +135,7 @@ class Signup extends Component {
 
 					<div className="col-sm-5">
 						<div className="login">
+							<img className="asset" src="https://github.com/jdalpert/pettr/blob/layout/src/components/assets/asset.png?raw=true"/>
 							<div className="heading">
 								<h3>Already have an account?<br/>Sign in</h3>
 							    <form action="#">
