@@ -40,7 +40,7 @@ input {
 }
 
 .icon-bar a {
-    width: 20%;
+    width: 25%;
     padding: 12px 0;
     float: left;
     transition: all 0.3s ease;
@@ -68,7 +68,7 @@ input {
 }
 
 .nav-icon{
-  max-height:100px;
+  max-height:80px;
 }
 
 nav > li > a > img {
@@ -76,9 +76,17 @@ nav > li > a > img {
 }
 
 .navbar-nav > li {
-  width:13%;
+  width:17%;
 }
 
 .navbar-default {
   border:none;
+}
+
+.navbar-right {
+  margin-right:-5%;
+}
+
+ul.nav.navbar-nav.navbar-right {
+  background-color:yellow;
 }
