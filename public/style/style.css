@@ -2,7 +2,8 @@
   text-align: center;
 }*/
 body {
-	background-color: #f6b26b;
+	/*background-color: #f6b26b;*/
+  background:url('http://i622.photobucket.com/albums/tt310/airbornlove/stripebg_zpsqhazrtrg.png');
 }
 
 input {
@@ -14,7 +15,8 @@ input {
 }
 
 .main-content {
-	background-color: #FFFFFF;
+	/*background-color: #FFFFFF;*/
+  background-color: rgba(255, 250, 232, 0.72);
 	margin: auto;
   position: absolute;
   top: 10%; left: 0; bottom: 0; right: 0;
@@ -41,7 +43,6 @@ input {
 }
 
 .icon-bar a {
-    width: 25%;
     padding: 12px 0;
     float: left;
     transition: all 0.3s ease;
@@ -52,6 +53,8 @@ input {
 
 .icon-bar a:hover {
     background-color: #ecb071;
+    width:10%;
+
 }
 
 .active {
@@ -65,7 +68,7 @@ input {
 }
 
 .main-logo {
-  color:brown;
+  margin-left:20%;
 }
 
 .nav-icon{
@@ -90,5 +93,5 @@ ul.nav.navbar-nav.navbar-right {
   background-color:yellow;
 }*/
 
-/*Testing Icon Labels*/
+
 
