@@ -37,6 +37,7 @@ input {
     position: absolute;
     top: 0; right: 0;
     z-index: 100;
+    list-style:none;
 }
 
 .icon-bar a {
@@ -68,25 +69,26 @@ input {
 }
 
 .nav-icon{
-  max-height:80px;
+  max-height:76px;
 }
 
 nav > li > a > img {
   max-width:100px;
 }
 
-.navbar-nav > li {
-  width:17%;
-}
+/*.navbar-nav > li {
+}*/
 
 .navbar-default {
   border:none;
 }
 
-.navbar-right {
-  margin-right:-5%;
+/*.navbar-right {
 }
 
 ul.nav.navbar-nav.navbar-right {
   background-color:yellow;
-}
+}*/
+
+/*Testing Icon Labels*/
+
