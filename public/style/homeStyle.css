@@ -67,7 +67,11 @@ margin-top:20px;
 	height:120px;
 	width: 400px;
 	border:1px;
-	overflow:auto;
+	/*overflow:auto;*/
+	overflow: hidden;
+	position:absolute;
+	height: 100%;
+	margin: auto;
 }
 .petsList {
 	display: inline-flex;
@@ -81,6 +85,13 @@ margin-top:20px;
 .petsList>.petName{
 	padding-left: 20px;
 }
+
+.profile{
+height: 100%;
+margin-top:5%;
+}
+.row .profile{
+	height:100%}
 /*.smallPic {
 	height: 100px;
 	width: 100px;	
