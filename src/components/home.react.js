@@ -32,7 +32,7 @@ class Home extends Component {
 				<div className="container home main-content">
 					<div className="row">
 						<div className="col-sm-1" id="left-arrow"><img id="left-arrow" src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/01_arrow_left-512.png"/></div>
-						<div className="col-sm-5">
+						<div className="col-md-5">
 							<h2>Lola Bear</h2>
 							<div className="slideShowPics">
 			                	<Slider {...settings}>
@@ -43,8 +43,8 @@ class Home extends Component {
 			                	</Slider>
 		                	</div>
 						</div>
-						<div className="col-sm-5">
-							<h4>Description</h4>
+						<div className="col-md-5">
+						<h3 class="display-4"> About me!</h3>
 							<text id="pet-breed">Breed:</text><text> Pomeranian<br/></text>
 						
 							<p id="description">Hi I am a 5 year old golden/chestnut/white female pomeranian looking for a new home! I am a smal ldog
