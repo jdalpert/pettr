@@ -4,11 +4,9 @@ import { Link } from 'react-router';
 import { connect } from "react-redux";
 import Contact from './contact.react'
 import * as actions from "../actions/add_person.action";
-import { Jumbotron, Button } from 'react-bootstrap';
-
 
 //const store = [{userName: Tony, userAddress: Klondike, userQuote: Food}];
-class Mission extends Component {
+class MissionStatement extends Component {
 
 	constructor(props) {
 		super(props);
@@ -20,15 +18,21 @@ class Mission extends Component {
 
 	render() {
 		return(
-			<div className="container home main-content">
-				<Jumbotron className="missionpage">
-<p id="mission_text">Welcome to the Mission Statement page! You will find information about
+			<div>
+				<div className="icon-bar">
+				  <a className="active" href="#"><i className="fa fa-home"></i></a> 
+				  <a id="ic" href="#"><img id="navc"src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/iconhome.png?raw=true"/></a> 
+				  <a id="ic" href="#"><img id="navc"src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/iconmatch.png?raw=true"/></a> 
+				  <a id="ic" href="#"><img id="navc"src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/iconprofile.png?raw=true"/></a>
+				  <a id="ic" href="#"><img id="navc"src="https://github.com/jdalpert/pettr/blob/PotatoBranch/assets/missionstatement.png?raw=true"/></a> 
+				</div>
+
+			<div className="missionpage">
+				<p id="mission_text">Welcome to the Mission Statement page! You will find information about
 					the purpose of the website as well as instructions about how to use it.</p>
 
 				<h2 id ="mission_heads">Who We Are</h2>
-				<p id="mission_text">We are group of students from UCI who is currently taking a project
-				class in Informatics developing a website for the adoption of pets. We are a team who is
-				enthusiastic about animals and bringing an end to pet homelessness.</p>
+				<p id="mission_text">We are just a bunch of nerds that like animals kay?</p>
 
 				<h2 id ="mission_heads">Our Purpose</h2>
 				<p id="mission_text">The purpose of our project not only includes a demonstration of what we can do
@@ -37,7 +41,7 @@ class Mission extends Component {
 				a pet, it is within our goal to make it easier to provide those services to you with our
 				app.</p>
 
-				<h2 id ="mission_heads">How To Get Started</h2>
+				<h1 id ="mission_heads">How To Get Started</h1>
 
 				<h2 id ="mission_heads">Sign Up</h2>
 				<p id="mission_text">Don't have an account? Make sure you sign up and 
@@ -52,8 +56,10 @@ class Mission extends Component {
 				<h2 id ="mission_heads">Review Your Matches</h2>
 				<p id="mission_text">Review matches you have with a pet if their owner aproves or likes you back. You will be able to
 				scroll down a set of matches and be able to view the pet owner's contact information.</p>
-				</Jumbotron>
-			</div>
+				</div>
+				
+				</div>
+
 		);
 	}
 }
@@ -64,4 +70,4 @@ function mapStateToProps(state) {
 	};
 }
 
-export default connect(mapStateToProps, actions)(Mission);
+export default connect(mapStateToProps, actions)(MissionStatement);
