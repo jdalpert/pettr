@@ -31,7 +31,7 @@ class Home extends Component {
 			<div>
 				<div className="container home main-content">
 					<div className="row">
-						<div className="col-sm-1" id="left-arrow">left-arrow</div>
+						<div className="col-sm-1" id="left-arrow"><img id="left-arrow" src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/01_arrow_left-512.png"/></div>
 						<div className="col-sm-5">
 							<h2>Lola Bear</h2>
 							<div className="slideShowPics">
@@ -57,7 +57,7 @@ class Home extends Component {
 							<text id="pet-location">Location: Irvine, CA<br/></text>
 							<a href="#">View Profile</a>
 						</div>
-						<div className="col-sm-1" id="right-arrow">right-arrow</div>
+						<div className="col-sm-1" id="right-arrow"><img id="right-arrow" src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/01_arrow_right-512.png"/></div>
 					</div>
 					<div className="confirmButtons">
 						<div className="col-sm-15 swipe-buttons">
@@ -65,9 +65,6 @@ class Home extends Component {
 							<Button bsStyle="primary" bsSize="large" className="defaultButton"> Adopt</Button>
 						</div>
 					</div>
-
-					<div className="row">
-                	</div>
 				</div>
 			</div>
 		);

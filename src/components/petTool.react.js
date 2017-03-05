@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import { connect } from "react-redux";
 import Contact from './contact.react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
-
+//import homeIcon from './assets/iconhome.png';
 //const store = [{userName: Tony, userAddress: Klondike, userQuote: Food}];
 class PetTool extends Component {
 
@@ -13,16 +13,16 @@ class PetTool extends Component {
 			<div>
 				<Navbar className="icon-bar">
 					<Navbar.Header>
-						<NavItem href="/#/"><span>Pettr</span></NavItem> 
+						<NavItem href="/#/"><img className="main-logo" src="https://github.com/jdalpert/pettr/blob/layout/src/components/assets/title.png?raw=true"/></NavItem> 
 						<Navbar.Toggle />
 					</Navbar.Header>
 					<Navbar.Collapse>
 						<Nav pullRight>
-							<NavItem href="/#/"><i to="/" className="active fa fa-home"></i></NavItem>
-							<NavItem href="/#/messages"><i className="fa fa-heart"></i></NavItem> 
-							<NavItem href="/#/profile"><i className="fa fa-user"></i></NavItem> 
-							<NavItem href="/#/mission"><i className="fa fa-rocket"></i></NavItem>
-							<NavItem href="/#/signup"><i className="fa fa-lock"></i></NavItem>
+							<NavItem href="/#/"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/layout/src/components/assets/iconhome.png?raw=true"/></NavItem>
+							<NavItem href="/#/messages"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/layout/src/components/assets/iconmatch.png?raw=true"/></NavItem> 
+							<NavItem href="/#/profile"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/layout/src/components/assets/iconprofile.png?raw=true"/></NavItem> 
+							<NavItem href="/#/mission"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/layout/src/components/assets/missionstatement.png?raw=true"/></NavItem>
+							<NavItem href="/#/signup"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/layout/src/components/assets/iconlogin.png?raw=true"/></NavItem>
 						</Nav>
 					</Navbar.Collapse>
 				</Navbar>
