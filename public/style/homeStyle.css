@@ -6,9 +6,6 @@
 	margin-left:5%;
 }
 
-button {
-	margin-left:5%;
-}
 
 #left-arrow {
 	position: absolute;
@@ -21,6 +18,7 @@ button {
 	 left:1%;
 	 z-index:1;
 	 padding:0;
+	 float: right;
 }
 
 #right-arrow {
@@ -34,6 +32,7 @@ button {
 	 right:1%;
 	 z-index:1;
 	 padding:0;
+
 }
 
 #pet-breed {
@@ -52,14 +51,13 @@ margin-top:20px;
 	margin-top:2%;
 }
 
+
+
 .slideShowPics {
-	height: 329px;
-	width:  297px;
+	float: block;
+
 }
 
-.slick-slider {
-	left:20%;
-}
 
 .confirmButtons{
 	padding-left: 200px;
