@@ -19,7 +19,7 @@ class Test extends Component {
 	render() {
 		return(
 			<div>
-				<button className="btn btn-primary btn-xs" > Hello World. </button>
+				<button className="btn btn-primary btn-xs" > Hello World </button>
 			</div>
 		);
 	}
