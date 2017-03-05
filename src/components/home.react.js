@@ -47,8 +47,8 @@ class Home extends Component {
 							<h4>Description</h4>
 							<text id="pet-breed">Breed:</text><text> Pomeranian<br/></text>
 						
-							<p id="description">Hi I am a 5 year old golden/chestnut/white female pomeranian looking for a new home! I am a smal ldog
-							that weighs 25 lbs or less. I am already spayed, purebred, a special needs pet, and up to date with shots. Unforunatelly, I have diabetes
+							<p id="description">Hi I am a 5 year old golden/chestnut/white female pomeranian looking for a new home! I am a small dog
+							that weighs 25 lbs or less. I am already spayed, purebred, a special needs pet, and up to date with shots. Unfortunately, I have diabetes
 							and will need insulin shots twice a day, but they are fairly inexpensive.
 							I am respectful and get along well with both people and dogs. Please give me a new home!</p>
 							

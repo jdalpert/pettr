@@ -4,8 +4,8 @@
 }
 
 .signup-form input, textarea, #state {
-	background: #efefef;
-	border:1.5px solid #dedede;
+	background: #ffcc85;
+	border:1.5px solid #f48e23;
 	margin-bottom:1%;
 	-moz-border-radius:5px;
     -webkit-border-radius:5px;
@@ -33,11 +33,17 @@
 	padding-left: 2%;
 	padding-right: 2%;
 	font-size:1em;
+	background-color: #bb7d06;
+}
+
+.btn-primary {
+	border-color: #bb7d06;
 }
 
 
 input:focus, textarea:focus, #state:focus {
-    border:1px solid #f48e23;
+    border:1px solid #ba2100;
+
 }
 
 #select-pets label {
@@ -78,4 +84,12 @@ input:focus, textarea:focus, #state:focus {
 .pressed {
 	background-color: rgb(238,238,238);
 	width: 100%;
+}
+
+textarea  {
+	color: black;
+}
+
+.asset {
+	max-height:200px;
 }
