@@ -21,7 +21,7 @@ input {
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
   width: 80%; 
-  height: 80%;
+  height: 75%;
   padding-left: 5%;
   padding-right: 5%;
   padding-top:0;
@@ -109,14 +109,14 @@ ul.nav.navbar-nav.navbar-right {
 }
 
 /*fixing some margin stuff again*/
-.container {
+/*.container {
   margin-right: 0;
   margin-left: 3%;
 }
-
-/*@media screen and (min-width: 700px)
+*/
+/*@media screen and (min-width: 768px)
 {
-  #TEXTs {
-    float:right;
+  .main-content {
+    margin-top: 10%;
   }
 }*/

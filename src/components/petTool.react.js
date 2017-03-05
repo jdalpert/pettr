@@ -18,10 +18,10 @@ class PetTool extends Component {
 					</Navbar.Header>
 					<Navbar.Collapse>
 						<Nav pullRight>
-							<NavItem href="/#/"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/layout/src/components/assets/iconhome.png?raw=true"/></NavItem>
-							<NavItem href="/#/messages"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/layout/src/components/assets/iconmatch.png?raw=true"/></NavItem> 
-							<NavItem href="/#/profile"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/layout/src/components/assets/iconprofile.png?raw=true"/></NavItem> 
-							<NavItem href="/#/mission"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/layout/src/components/assets/missionstatement.png?raw=true"/></NavItem>
+							<NavItem href="/#/"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconhome.png?raw=true"/></NavItem>
+							<NavItem href="/#/messages"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconmatch.png?raw=true"/></NavItem> 
+							<NavItem href="/#/profile"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconprofile.png?raw=true"/></NavItem> 
+							<NavItem href="/#/mission"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/missionstatement.png?raw=true"/></NavItem>
 							<NavItem href="/#/signup"><img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/layout/src/components/assets/iconlogin.png?raw=true"/></NavItem>
 						</Nav>
 					</Navbar.Collapse>
