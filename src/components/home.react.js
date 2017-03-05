@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import { connect } from "react-redux";
 import Contact from './contact.react'
 import * as actions from "../actions/add_person.action";
-import { Button, Pager } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import Slider from 'react-slick';
 
 
@@ -21,51 +21,29 @@ class Home extends Component {
 
 	render() {
 		let settings = {
- 		  infinite: true,
 	      dots: true,
+	      infinite: true,
 	      speed: 500,
 	      slidesToShow: 1,
-	      slidesToScroll: 1,
-	      arrows: false,
-	      draggable: true,
-	      swipeToSlide: true,
-	      arrows: true,
-
+	      slidesToScroll: 1
     	};
-
-
-
-
-
 		return(
 			<div>
-				<div className="container-fluid main-content">
-					<div className="row" >
-					<div className="col-md-1" id="left-arrow"> <img id="left-arrow" src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/01_arrow_left-512.png"/></div>
-
-
-						<div className="col-md-6">
-
-							<h1> Fart head </h1>
-
-
+				<div className="container home main-content">
+					<div className="row">
+						<div className="col-sm-1" id="left-arrow"><img id="left-arrow" src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/01_arrow_left-512.png"/></div>
+						<div className="col-sm-5">
+							<h2>Lola Bear</h2>
 							<div className="slideShowPics">
 			                	<Slider {...settings}>
-			                		<div id = "hey"><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg"/></div>
-									<div className="slideShowPics"><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg"/></div>
-		                           	<div className="slideShowPics"><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg"/></div>
-			                		<div className="slideShowPics"><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/4/1/5/228543262.jpg"/></div>
-			                		
+			                		<div className="slideShowPics"><h3><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg"/></h3></div>
+									<div className="slideShowPics"><h3><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg"/></h3></div>
+		                            <div className="slideShowPics"><h3><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg"/></h3></div>
+			                		<div className="slideShowPics"><h3><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/4/1/5/228543262.jpg"/></h3></div>
 			                	</Slider>
 		                	</div>
-		                }
-	
-		                hey its me ur brother and this is some filler text for blah blah blah blah blah editting purposes
-
 						</div>
-							
-	
-						<div className = "col-md-6">
+						<div className="col-sm-5">
 							<h4>Description</h4>
 							<text id="pet-breed">Breed:</text><text> Pomeranian<br/></text>
 						
@@ -78,12 +56,15 @@ class Home extends Component {
 							<text id="owner">Southern California Pomeranian Rescue<br/></text>
 							<text id="pet-location">Location: Irvine, CA<br/></text>
 							<a href="#">View Profile</a>
-
-
-		                </div>
-						<div className="col-md-1" id="right-arrow"><img id="right-arrow" src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/01_arrow_right-512.png"/></div>
-
-					</div>		
+						</div>
+						<div className="col-sm-1" id="right-arrow"><img id="right-arrow" src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/01_arrow_right-512.png"/></div>
+					</div>
+					<div className="confirmButtons">
+						<div className="col-sm-15 swipe-buttons">
+							<Button bsStyle="primary" bsSize="large" className="defaultButton">Abandon</Button>
+							<Button bsStyle="primary" bsSize="large" className="defaultButton"> Adopt</Button>
+						</div>
+					</div>
 				</div>
 			</div>
 		);
