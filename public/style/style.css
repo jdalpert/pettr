@@ -2,7 +2,8 @@
   text-align: center;
 }*/
 body {
-	background-color: #f6b26b;
+	/*background-color: #f6b26b;*/
+  background:url('https://github.com/jdalpert/pettr/blob/layout/src/components/assets/bg.png?raw=true');
 }
 
 input {
@@ -14,10 +15,11 @@ input {
 }
 
 .main-content {
-	background-color: #FFFFFF;
+	/*background-color: #FFFFFF;*/
+  background-color: rgba(255, 250, 232, 0.72);
 	margin: auto;
   position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
+  top: 10%; left: 0; bottom: 0; right: 0;
   width: 80%; 
   height: 75%;
   padding-left: 40px;
@@ -25,4 +27,81 @@ input {
   padding-top:10px;
   padding-bottom:10px;
   overflow-y:auto;
+}
+
+/*icon navbar*/
+
+.icon-bar {
+  width: 100%;
+    text-align: center;
+    background-color: transparent;
+    margin: auto;
+    position: absolute;
+    top: 0; right: 0;
+    z-index: 100;
+    list-style:none;
+}
+
+.icon-bar a {
+    padding: 12px 0;
+    float: left;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+    list-style: none;
+}
+
+.icon-bar a:hover {
+    background-color: #ecb071;
+    width:10%;
+
+}
+
+.active {
+    color: #f48e23 !important;
+}
+
+#title {
+  float:right;
+  position: absolute;
+  left:0;
+}
+
+.main-logo {
+  margin-left:20%;
+}
+
+.nav-icon{
+  max-height:76px;
+}
+
+nav > li > a > img {
+  max-width:100px;
+}
+
+/*.navbar-nav > li {
+}*/
+
+.navbar-default {
+  border:none;
+}
+
+/*.navbar-right {
+}
+
+ul.nav.navbar-nav.navbar-right {
+  background-color:yellow;
+}*/
+
+
+.navbar-collapse {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.nav>li>a {
+  padding-top: 30px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
 }
