@@ -16,9 +16,9 @@ input {
 
 
 .main-content {
-  /*background-color: #FFFFFF;*/
+	/*background-color: #FFFFFF;*/
   background-color: rgba(255, 250, 232, 0.99);
-  margin-top: 134px;
+	margin-top: 134px;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
   width: 80%; 
@@ -41,6 +41,7 @@ input {
     top: 0; right: 0;
     z-index: 100;
     list-style:none;
+    padding-bottom: 10%;
 }
 
 .icon-bar a {
@@ -100,6 +101,7 @@ ul.nav.navbar-nav.navbar-right {
   padding-right: 0;
 }
 
+/*fixes the icons from dropping into the screen at 992px*/
 .nav>li>a {
   padding-top: 30px;
   padding-right: 10px;
@@ -107,6 +109,7 @@ ul.nav.navbar-nav.navbar-right {
   padding-left: 10px;
 }
 
+/*fixing some margin stuff again*/
 .container {
   margin-right: 0;
   margin-left: 3%;
