@@ -41,8 +41,8 @@ class Signup extends Component {
 	render() {
 		return(
 			<div>
-				<div className="signup main-content">
-					<div className="col-sm-7">
+				<div className="container main-content">
+					<div className="col-md-6">
 						<h1>Sign Up </h1>
 						<form action="" className="signup-form"> 
 							<label htmlFor="first-name">First Name:</label><br/>
@@ -133,7 +133,7 @@ class Signup extends Component {
 						<Button className="btn btn-primary btn-xs" onClick={this._handleClick} id="signup-button">Signup</Button>
 					</div>
 
-					<div className="col-sm-5">
+					<div className="col-md-6">
 						<div className="login">
 							<div className="heading">
 								<h3>Already have an account?<br/>Sign in</h3>
