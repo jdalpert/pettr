@@ -11,9 +11,30 @@ class Signup extends Component {
 
 	constructor(props) {
 		super(props);
+		this.state = {
+			firstName:"",
+			lastName:"",
+			email:""
+		};		
 	}
 
+
+	static contextTypes = {
+		router: PropTypes.object
+	};
+
+	_handleChange = (event) => {
+		let obj = {};
+		obj[event.target.name] = event.target.value;
+		this.setState(obj)
+	};
+
 	_handleClick = () => {
+		this.props.grab_data(this.state);
+		this.state.firstName = "";
+		this.state.lastName = "";
+		this.state.email = "";
+		console.log("here");
 		this.context.router.push("/");
 	};
 
@@ -25,12 +46,11 @@ class Signup extends Component {
 						<h1>Sign Up </h1>
 						<form action="" className="signup-form"> 
 							<label htmlFor="first-name">First Name:</label><br/>
-							<input type="text" id="first-name"/><br/>
+							<input type="text" name="firstName" onChange={this._handleChange} value={this.state.firstName} id="first-name"/><br/>
 							<label htmlFor="last-name">Last Name:</label><br/>
-							<input type="text" id="last-name"/><br/>
+							<input type="text" name="lastName" onChange={this._handleChange} value={this.state.lastName} id="last-name"/><br/>
 							<label htmlFor="email">Email:</label><br/>
-							<input type="text" id="email"/><br/>
-							
+							<input type="text" name="email" onChange={this._handleChange} value={this.state.email} id="email"/><br/>
 							<div class="form-group">
 								<label for="state" class="col-sm-2 control-label">State</label>
 								<div class="col-sm-10">
@@ -108,11 +128,9 @@ class Signup extends Component {
 								<input type="checkbox" id="other" value="other"/>
 								<label htmlFor="other"> Other </label><br/>
 							</div>
-
 							<p> After you have created an account, you will be able to add pet profiles in your user profile.</p>
-
 						</form>
-						<button className="btn btn-primary btn-xs" id="signup-button">Signup</button>
+						<Button className="btn btn-primary btn-xs" onClick={this._handleClick} id="signup-button">Signup</Button>
 					</div>
 
 					<div className="col-sm-5">
