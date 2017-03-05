@@ -1,0 +1,15 @@
+.missionpage{
+	padding-top: 100px;
+	background: #FFDAB9;
+}
+
+
+.missionpage #mission_text{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.missionpage #mission_heads{
+	text-align: center
+}
