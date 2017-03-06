@@ -23,13 +23,7 @@ export default (
 		<Route path="/display" component={Display} />
 		<Route path="/child" component={Child}/>
 		<Route path="/test" component={Test}/>
-<<<<<<< HEAD
-
-		<Route path="/mission_statement" component={MissionStatement}/>
 		<Route path="/settings" component={Settings}/>
-
-=======
->>>>>>> 0bdf3db373c332ff5d1262f301a3467a36d19a47
 		<Route path="/signup" component={Signup}/>
 		<Route path="/home" component={Home}/>
 		<Route path="/profile" component={Profile}/>
