@@ -103,8 +103,17 @@ margin-top:20px;
 	width: 75px;	
 }
 
+.profile{
+ height: 100%;
+ margin-top:5%;
+ }
+
 .petsList>.petName{
 	padding-left: 20px;
+}
+
+.row .profile{
+	height:100%};
 }
 /*.smallPic {
 	height: 100px;

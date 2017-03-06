@@ -29,8 +29,8 @@ class Profile extends Component {
     	};
 		return(
 			<div>
-				<div className="container home main-content">
-					<div className="row">
+				<div className="container home main-content profile">
+					<div className="row profile">
 						<div className="col-sm-1"/>
 						<div className="col-sm-5">
 							<h2>Michael Williams</h2>
