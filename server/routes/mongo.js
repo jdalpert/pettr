@@ -6,16 +6,16 @@ var userSchema = new Mongoose.Schema({
 	firstName: String,
 	lastName: String,
 	email: String,
+	password: String,
 	city: String,
 	state: String,
 	dog: Boolean,
 	cat: Boolean,
 	other: Boolean,
-	pet: [
-		{
-			petId: String
-		}
-	],
+	pets: [{
+		_id: false,
+		petId: String
+	}],
 	contactInfo: String,
 	description: String,
 	organization: String

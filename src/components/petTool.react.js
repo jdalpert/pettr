@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 import { connect } from "react-redux";
 import Contact from './contact.react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import * as actions from "../actions/add_person.action";
 //import homeIcon from './assets/iconhome.png';
 //const store = [{userName: Tony, userAddress: Klondike, userQuote: Food}];
 class PetTool extends Component {
@@ -11,6 +12,8 @@ class PetTool extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			userId: "",
+			email: "",
 			pettrTitle:"https://github.com/jdalpert/pettr/blob/layout/src/components/assets/title.png?raw=true",
 			homeIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconhome.png?raw=true",
 			matchIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconmatch.png?raw=true",
@@ -18,6 +21,21 @@ class PetTool extends Component {
 			missionIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/missionstatement.png?raw=true",
 			signupIc:"https://github.com/jdalpert/pettr/blob/layout/src/components/assets/iconlogin.png?raw=true"
 		};		
+	}
+
+	static contextTypes = {
+		router: PropTypes.object
+	};
+
+	componentWillReceiveProps(nextProps) {
+		console.log("check");
+		console.log(nextProps);
+		if(nextProps.data.userId){
+			this.setState({userId: nextProps.data.userId});
+		}
+		if(nextProps.data.email)
+			this.setState({email: nextProps.data.email});
+		console.log("was it empty?");
 	}
 
 	pettrTitleHover = () =>{
@@ -62,8 +80,6 @@ class PetTool extends Component {
 		this.setState({signupIc:"https://github.com/jdalpert/pettr/blob/layout/src/components/assets/iconlogin.png?raw=true"});
 	}
 
-
-
 	render() {
 		return(
 			<div>
@@ -83,6 +99,13 @@ class PetTool extends Component {
 						</Nav>
 					</Navbar.Collapse>
 				</Navbar>
+				<div pullRight>
+					{
+						(this.state.email !== "")?
+						<span>Welcome: <b>{this.state.email}</b></span>
+						:<span></span>
+					}
+				</div>
 			</div>
 		);
 	}
@@ -92,7 +115,7 @@ class PetTool extends Component {
 function mapStateToProps(state) {
 	console.log(state.list.data);
 	return {
-		data: state.list.data.response
+		data: state.list.data
 	};
 }
 

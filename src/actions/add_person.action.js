@@ -1,5 +1,5 @@
 import Axios from "axios";
-import { CHANGE, GRAB, DELETE, SAMPLE_API } from "./constants";
+import { CHANGE, GRAB, GRAB2, DELETE, SAMPLE_API, LOGINUSER, GETINFO } from "./constants";
 
 Axios.interceptors.request.use(function (config) {
   console.log(config)
@@ -40,12 +40,31 @@ export function grab_data(obj) {
 	};
 }
 
-export function grab_data2() {
-	const request = Axios.get(SAMPLE_API);
+export function grab_data2(obj) {
+	const request = Axios.post(SAMPLE_API+obj.userId, obj);
 	return {
-
+		type: GRAB2,
+		payload: request
 	};
 }
+
+export function loginUser(obj){
+	const request = Axios.post(SAMPLE_API+"test", obj);
+	return {
+		type: LOGINUSER,
+		payload: request
+	};
+}
+
+
+export function getUserInfo(obj){
+	const request = Axios.get(SAMPLE_API+obj.userId);
+	return {
+		type: GETINFO,
+		payload: request
+	};
+}
+
 
 export function delete_person(userID) {
 	console.log(userID);

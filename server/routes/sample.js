@@ -13,7 +13,7 @@ var mongoose = require('mongoose');
 var Info = require('./mongo.js');
 var Pet = require('./pet.js');
 
-router.all('/upload',function(req,res){
+/*router.all('/upload',function(req,res){
      var dirname = require('path').dirname(__dirname);
      var filename = req.files.file.name;
      var path = req.files.file.path;
@@ -33,8 +33,8 @@ router.all('/upload',function(req,res){
      read_stream.pipe(writestream);
         
 });
-
-router.get('/file/:id',function(req,res){
+*/
+/*router.get('/file/:id',function(req,res){
       var pic_id = req.param('id');
       var gfs = req.gfs;
  
@@ -52,12 +52,38 @@ router.get('/file/:id',function(req,res){
             res.json('File Not Found');
         }
     });
+});*/
+router.get('/:id', function(req, res){
+	console.log(req.params.id);
+	Info.findOne({_id: req.params.id}, function(err, user){
+		res.send(user);
+	});
+});
+
+router.post('/test', function(req, res){
+	console.log(req.body);
+	Info.findOne({email:req.body.loginEmail, password:req.body.loginPassword}, function(err, user){
+		console.log(user);
+        res.send({userId: user._id});
+    });
+});
+
+router.post('/:id', function(req, res){
+	console.log(req.body);
+	new Pet(req.body).save(function(err, pet){
+		let petId = pet._id;
+		let userId = pet.userId;
+        Info.findOneAndUpdate( {_id: userId}, { $push: { pets:{petId} } }, 
+        	function(err, user){
+        		res.send({userId: user._id});
+        });
+    });
 });
 
 router.post('/', function(req, res){
 	console.log(req.body);
 	new Info(req.body).save(function(err, user){
-        res.send(user._id);
+        res.send({userId: user._id});
     });
 })
 

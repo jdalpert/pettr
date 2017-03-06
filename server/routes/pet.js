@@ -6,7 +6,6 @@ var petSchema = new Mongoose.Schema({
 	type: String,
 	city: String,
 	state: String,
-	contactInfo: String,
 	description: String
 });
 
