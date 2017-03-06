@@ -9,6 +9,7 @@ import Home from './components/home.react';
 import Profile from './components/profile.react';
 import Mission from './components/mission.react';
 import Messages from './components/messages.react';
+import Settings from './components/settings.react';
 
 //import Greeting from './components/greeting.react';
 
@@ -22,6 +23,7 @@ export default (
 		<Route path="/display" component={Display} />
 		<Route path="/child" component={Child}/>
 		<Route path="/test" component={Test}/>
+		<Route path="/settings" component={Settings}/>
 		<Route path="/signup" component={Signup}/>
 		<Route path="/home" component={Home}/>
 		<Route path="/profile" component={Profile}/>
