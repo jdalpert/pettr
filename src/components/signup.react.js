@@ -14,7 +14,12 @@ class Signup extends Component {
 		this.state = {
 			firstName:"",
 			lastName:"",
-			email:""
+			email:"",
+			city: "",
+			state: "",
+			dog: true,
+			cat: false,
+			other: false
 		};		
 	}
 
@@ -54,7 +59,7 @@ class Signup extends Component {
 							<div class="form-group">
 								<label for="state" class="col-sm-2 control-label">State</label>
 								<div class="col-sm-10">
-									<select class="form-control" id="state" name="state"><br/>
+									<select class="form-control" id="state" onChange={this._handleChange} value={this.state.state} name="state"><br/>
 										<option value=""></option>
 										<option value="AK">Alaska</option>
 										<option value="AL">Alabama</option>
@@ -111,9 +116,8 @@ class Signup extends Component {
 									</select>
 								</div>
 							</div>
-
-							<label htmlFor="location">City or Zip Code:</label><br/>
-							<input type="text" id="location"/><br/>
+							<label htmlFor="location">City</label><br/>
+							<input type="text" name="city" onChange={this._handleChange} value={this.state.city} id="city"/><br/>
 							<label htmlFor="about">About:</label><br/>
 							<textarea placeholder="Tell us about yourself and anything that will help
 							other users know what you're looking for! Are you looking for a specific pets?
@@ -121,12 +125,12 @@ class Signup extends Component {
 
 							<b><p>Select all pets I'm interested in:</p></b>
 							<div id="select-pets">
-								<input type="checkbox" name ="pets" id="dogs" value="dogs"/>
+								<input type="checkbox" onChange={this._handleChange} checked={this.state.dog} value={this.state.dog} name ="pets" id="dogs"/>
 								<label htmlFor="dogs"> Dogs </label>
 								<input type="checkbox" id="cats" value="cats"/> 
-								<label htmlFor="cats"> Cats </label>
+								<label htmlFor="cats" onChange={this._handleChange} checked={this.state.cat} value={this.state.cat}> Cats </label>
 								<input type="checkbox" id="other" value="other"/>
-								<label htmlFor="other"> Other </label><br/>
+								<label htmlFor="other" onChange={this._handleChange} checked={this.state.other} value={this.state.other}> Other </label><br/>
 							</div>
 							<p> After you have created an account, you will be able to add pet profiles in your user profile.</p>
 						</form>

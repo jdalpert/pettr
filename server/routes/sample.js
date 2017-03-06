@@ -11,6 +11,7 @@ var fs = require('fs');
 var mongoose = require('mongoose');
 
 var Info = require('./mongo.js');
+var Pet = require('./pet.js');
 
 router.all('/upload',function(req,res){
      var dirname = require('path').dirname(__dirname);
@@ -55,8 +56,8 @@ router.get('/file/:id',function(req,res){
 
 router.post('/', function(req, res){
 	console.log(req.body);
-	new Info(req.body).save( function(err, user){
-        res.send(user._id);   
+	new Info(req.body).save(function(err, user){
+        res.send(user._id);
     });
 })
 
