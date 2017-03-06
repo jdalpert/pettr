@@ -32,8 +32,8 @@ class Home extends Component {
 				<div className="container home main-content">
 					<div className="row">
 						<div className="col-sm-1" id="left-arrow"><img id="left-arrow" src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/01_arrow_left-512.png"/></div>
-						<div className="col-sm-5">
-							<h2>Lola Bear</h2>
+						<div className="col-sm-6">
+							<h1 class="display-4"> My name is Lola Bear! </h1>
 							<div className="slideShowPics">
 			                	<Slider {...settings}>
 			                		<div className="slideShowPics"><h3><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg"/></h3></div>
@@ -43,16 +43,24 @@ class Home extends Component {
 			                	</Slider>
 		                	</div>
 						</div>
-						<div className="col-sm-5">
-							<h4>Description</h4>
-							<text id="pet-breed">Breed:</text><text> Pomeranian<br/></text>
+						<div className="col-sm-6">
+							<br/>
+							<text id= "facts"> Facts about Fart Head! <br/> </text>
+
+							<text id="pet-breed">	Breed: 	</text> 	<text> Pomeranian<br/> 		</text>
+							<text id="pet-color">	Color: 	</text> 	<text> Diarrhea-Like<br/> 	</text>
+							<text id="pet-age">		Age: 	</text> 	<text> im12andwhatisthis<br/> 			</text>
+							<text id="pet-gender">	Gender: </text> 	<text> Two Spirits <br/>	</text>
+
 						
+							<br/>
 							<p id="description">Hi I am a 5 year old golden/chestnut/white female pomeranian looking for a new home! I am a small dog
 							that weighs 25 lbs or less. I am already spayed, purebred, a special needs pet, and up to date with shots. Unfortunately, I have diabetes
 							and will need insulin shots twice a day, but they are fairly inexpensive.
 							I am respectful and get along well with both people and dogs. Please give me a new home!</p>
-							
-							<h4>Owner</h4>
+							<br/>
+
+							<h4 class = "display-4">Who takes care of me?</h4>
 							<text id="owner">Southern California Pomeranian Rescue<br/></text>
 							<text id="pet-location">Location: Irvine, CA<br/></text>
 							<a href="#">View Profile</a>
