@@ -76,6 +76,10 @@ input {
   max-height:76px;
 }
 
+a .nav-icon:hover {
+
+}
+
 nav > li > a > img {
   max-width:100px;
 }
@@ -85,6 +89,7 @@ nav > li > a > img {
 
 .navbar-default {
   border:none;
+  padding:0;
 }
 
 /*.navbar-right {
@@ -120,3 +125,9 @@ ul.nav.navbar-nav.navbar-right {
     margin-top: 10%;
   }
 }*/
+
+@media (min-width: 992px) {
+  .container {
+    width:80%;
+  }
+}
