@@ -89,6 +89,7 @@ nav > li > a > img {
 
 .navbar-default {
   border:none;
+  padding:0;
 }
 
 /*.navbar-right {
