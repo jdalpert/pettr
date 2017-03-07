@@ -72,8 +72,8 @@ class Home extends Component {
 					</div>
 					<div className="confirmButtons">
 						<div className="col-sm-15 swipe-buttons">
-							<Button bsStyle="primary" bsSize="large" className="defaultButton">Abandon</Button>
-							<Button bsStyle="primary" bsSize="large" className="defaultButton"> Adopt</Button>
+							<img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/abandonb.png?raw=true"/>
+							<img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/adoptb.png?raw=true"/>
 						</div>
 					</div>
 				</div>
