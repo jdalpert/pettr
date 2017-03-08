@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import { connect } from "react-redux";
 import Contact from './contact.react'
 import * as actions from "../actions/add_person.action";
-import { Button } from 'react-bootstrap';
+import { Button, Carousel } from 'react-bootstrap';
 import Slider from 'react-slick';
 
 
@@ -31,13 +31,13 @@ class Home extends Component {
 	}
 
 	render() {
-		let settings = {
-	      dots: true,
-	      infinite: true,
-	      speed: 500,
-	      slidesToShow: 1,
-	      slidesToScroll: 1
-    	};
+		// let settings = {
+	 //      dots: true,
+	 //      infinite: true,
+	 //      speed: 500,
+	 //      slidesToShow: 1,
+	 //      slidesToScroll: 1
+  //   	};
 		return(
 			<div>
 				<div className="container home main-content">
@@ -45,7 +45,43 @@ class Home extends Component {
 						<div className="col-sm-1" id="left-arrow"><img id="left-arrow" src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/01_arrow_left-512.png"/></div>
 						<div className="col-sm-6">
 							<h1 class="display-4"> My name is Lola Bear! </h1>
-							<div className="slideShowPics">
+							
+     					 <Carousel activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect}>
+       						 <Carousel.Item>
+          						<img width={400} height={300} alt="400x300" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg"/>
+          						<Carousel.Caption>
+           							<h3>First slide label</h3>
+           							<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+         						</Carousel.Caption>
+       						 </Carousel.Item>
+       					
+       						 <Carousel.Item>
+          						<img width={400} height={300} alt="400x300" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg"/>
+          						<Carousel.Caption>
+           							<h3>Second slide label</h3>
+           		 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          						</Carousel.Caption>
+        					</Carousel.Item>
+        
+        					<Carousel.Item>
+          						<img width={400} height={300} alt="400x300" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg"/>
+          						<Carousel.Caption>
+            						<h3>Third slide label</h3>
+            						<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          						</Carousel.Caption>
+       						</Carousel.Item>
+
+        					<Carousel.Item>
+          						<img width={400} height={300} alt="400x300" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/4/1/5/228543262.jpg"/>
+          						<Carousel.Caption>
+            						<h3>Fourth</h3>
+            						<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          						</Carousel.Caption>
+       						</Carousel.Item>
+
+
+      					</Carousel>
+							{/*<div className="slideShowPics">
 			                	<Slider {...settings}>
 			                		<div className="slideShowPics"><h3><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg"/></h3></div>
 									<div className="slideShowPics"><h3><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg"/></h3></div>
@@ -53,8 +89,9 @@ class Home extends Component {
 			                		<div className="slideShowPics"><h3><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/4/1/5/228543262.jpg"/></h3></div>
 			                	</Slider>
 		                	</div>
+		                */}
 						</div>
-						<div className="col-sm-6">
+						<div className="col-sm-5">
 							<br/>
 							<text id= "facts"> Facts about Fart Head! <br/> </text>
 
@@ -71,7 +108,7 @@ class Home extends Component {
 							I am respectful and get along well with both people and dogs. Please give me a new home!</p>
 							<br/>
 
-							<h4 class = "display-4">Who takes care of me?</h4>
+							<h4 class = "display-4">Come find me here!</h4>
 							<text id="owner">Southern California Pomeranian Rescue<br/></text>
 							<text id="pet-location">Location: Irvine, CA<br/></text>
 							<a href="#">View Profile</a>
