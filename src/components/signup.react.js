@@ -14,7 +14,18 @@ class Signup extends Component {
 		this.state = {
 			firstName:"",
 			lastName:"",
-			email:""
+			email:"",
+			password: "",
+			city: "",
+			state: "",
+			dog: true,
+			cat: false,
+			other: false,
+			contactInfo: "",
+			description: "",
+			organization: "",
+			loginEmail: "",
+			loginPassword: "",
 		};		
 	}
 
@@ -31,11 +42,13 @@ class Signup extends Component {
 
 	_handleClick = () => {
 		this.props.grab_data(this.state);
-		this.state.firstName = "";
-		this.state.lastName = "";
-		this.state.email = "";
-		console.log("here");
-		this.context.router.push("/");
+		this.context.router.push("/addpet");
+	};
+
+	_handleLogin = () => {
+		console.log("CHECK");
+		this.props.loginUser(this.state);
+		this.context.router.push("/profile");
 	};
 
 	render() {
@@ -51,10 +64,12 @@ class Signup extends Component {
 							<input type="text" name="lastName" onChange={this._handleChange} value={this.state.lastName} id="last-name"/><br/>
 							<label htmlFor="email">Email:</label><br/>
 							<input type="text" name="email" onChange={this._handleChange} value={this.state.email} id="email"/><br/>
+							<label htmlFor="password">Password:</label><br/>
+							<input type="password" name="password" onChange={this._handleChange} value={this.state.password} id="password"/><br/>
 							<div class="form-group">
-								<label for="state" class="col-sm-2 control-label">State</label>
+								<label for="state" class="col-sm-2 control-label">State:</label>
 								<div class="col-sm-10">
-									<select class="form-control" id="state" name="state"><br/>
+									<select class="form-control" id="state" onChange={this._handleChange} value={this.state.state} name="state"><br/>
 										<option value=""></option>
 										<option value="AK">Alaska</option>
 										<option value="AL">Alabama</option>
@@ -111,21 +126,25 @@ class Signup extends Component {
 									</select>
 								</div>
 							</div>
+							<label htmlFor="location">City:</label><br/>
+							<input type="text" name="city" onChange={this._handleChange} value={this.state.city} id="city"/><br/>
+							<label htmlFor="contactInfo">Contact Info:</label><br/>
+							<input type="text" placeholder="This will be sent to potentional matches" name="contactInfo" onChange={this._handleChange} value={this.state.contactInfo} id="contactInfo"/><br/>
+							<label htmlFor="Organization">Organization(Optional):</label><br/>
+							<input type="text" name="organization" onChange={this._handleChange} value={this.state.organization} id="organization"/><br/>
 
-							<label htmlFor="location">City or Zip Code:</label><br/>
-							<input type="text" id="location"/><br/>
-							<label htmlFor="about">About:</label><br/>
+							<label htmlFor="description">Description(Optional):</label><br/>
 							<textarea placeholder="Tell us about yourself and anything that will help
 							other users know what you're looking for! Are you looking for a specific pets?
-							Are you creating pet profiles and why?" id="about"/>
+							Are you creating pet profiles and why?" name="description" onChange={this._handleChange} value={this.state.description} id="description"/>
 
 							<b><p>Select all pets I'm interested in:</p></b>
 							<div id="select-pets">
-								<input type="checkbox" name ="pets" id="dogs" value="dogs"/>
+								<input type="checkbox" onChange={this._handleChange} checked={this.state.dog} value={this.state.dog} name ="dog" id="dog"/>
 								<label htmlFor="dogs"> Dogs </label>
-								<input type="checkbox" id="cats" value="cats"/> 
+								<input type="checkbox" onChange={this._handleChange} checked={this.state.cat} value={this.state.cat} name ="cat" id="cat"/> 
 								<label htmlFor="cats"> Cats </label>
-								<input type="checkbox" id="other" value="other"/>
+								<input type="checkbox" onChange={this._handleChange} checked={this.state.other} value={this.state.other} name ="other" id="other"/>
 								<label htmlFor="other"> Other </label><br/>
 							</div>
 							<p> After you have created an account, you will be able to add pet profiles in your user profile.</p>
@@ -138,19 +157,16 @@ class Signup extends Component {
 							<img className="asset" src="https://github.com/jdalpert/pettr/blob/layout/src/components/assets/asset.png?raw=true"/>
 							<div className="heading">
 								<h3>Already have an account?<br/>Sign in</h3>
-							    <form action="#">
-
+							    <form action="">
 							      <div className="input-group input-group-lg">
 							        <span className="input-group-addon"><i className="fa fa-user"></i></span>
-							        <input type="text" className="form-control" placeholder="Username or email"/>
-							          </div>
-
-							        <div className="input-group input-group-lg">
-							          <span className="input-group-addon"><i className="fa fa-lock"></i></span>
-							          <input type="password" className="form-control" placeholder="Password"/>
-							        </div>
-
-							        <button className="btn btn-primary btn-xs login-button">Login</button>
+							        <input type="text" className="form-control" placeholder="Email" name="loginEmail" onChange={this._handleChange} value={this.state.loginEmail}/>
+							      </div>
+							      <div className="input-group input-group-lg">
+							        <span className="input-group-addon"><i className="fa fa-lock"></i></span>
+							        <input type="password" className="form-control" placeholder="Password" name="loginPassword" onChange={this._handleChange} value={this.state.loginPassword}/>
+							      </div>
+							        <button className="btn btn-primary btn-xs login-button" onClick={this._handleLogin} >Login</button>
 							    </form>
 							</div>
 						</div>

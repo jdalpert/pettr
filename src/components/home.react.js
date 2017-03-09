@@ -13,11 +13,22 @@ class Home extends Component {
 
 	constructor(props) {
 		super(props);
+		this.state = {
+			id: "",
+			location: ""
+		};	
 	}
 
 	_handleClick = () => {
 		this.context.router.push("/");
 	};
+
+	componentWillReceiveProps(nextProps) {
+		console.log("check");
+		this.setState({id: nextProps.data});
+		console.log(nextProps.data);
+		console.log("was it empty?");
+	}
 
 	render() {
 		let settings = {

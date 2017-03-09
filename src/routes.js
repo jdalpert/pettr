@@ -10,6 +10,8 @@ import Profile from './components/profile.react';
 import Mission from './components/mission.react';
 import Messages from './components/messages.react';
 import Settings from './components/settings.react';
+import AddPet from './components/addPet.react';
+
 
 //import Greeting from './components/greeting.react';
 
@@ -29,5 +31,6 @@ export default (
 		<Route path="/profile" component={Profile}/>
 		<Route path="/mission" component={Mission}/>
 		<Route path="/messages" component={Messages}/>
+		<Route path="/addpet" component={AddPet}/>
 	</Route>
 );

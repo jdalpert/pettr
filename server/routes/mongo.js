@@ -6,13 +6,19 @@ var userSchema = new Mongoose.Schema({
 	firstName: String,
 	lastName: String,
 	email: String,
-	pet: [
-		{
-			type: String,
-			name: String,
-			age: Number,
-		}
-	]
+	password: String,
+	city: String,
+	state: String,
+	dog: Boolean,
+	cat: Boolean,
+	other: Boolean,
+	pets: [{
+		_id: false,
+		petId: String
+	}],
+	contactInfo: String,
+	description: String,
+	organization: String
 });
 
 module.exports = Mongoose.model('Info', userSchema);
