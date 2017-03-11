@@ -56,11 +56,12 @@ var Pet = require('./pet.js');
 router.get('/:id', function(req, res){
 	console.log(req.params.id);
 	Info.findOne({_id: req.params.id}, function(err, user){
+		console.log(user);
 		res.send(user);
 	});
 });
 
-router.post('/test', function(req, res){
+router.post('/login', function(req, res){
 	console.log(req.body);
 	Info.findOne({email:req.body.loginEmail, password:req.body.loginPassword}, function(err, user){
 		console.log(user);
@@ -69,7 +70,6 @@ router.post('/test', function(req, res){
 });
 
 router.post('/:id', function(req, res){
-	console.log(req.body);
 	new Pet(req.body).save(function(err, pet){
 		let petId = pet._id;
 		let userId = pet.userId;
@@ -83,6 +83,7 @@ router.post('/:id', function(req, res){
 router.post('/', function(req, res){
 	console.log(req.body);
 	new Info(req.body).save(function(err, user){
+		console.log(user);
         res.send({userId: user._id});
     });
 })

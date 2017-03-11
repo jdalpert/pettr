@@ -49,7 +49,7 @@ export function grab_data2(obj) {
 }
 
 export function loginUser(obj){
-	const request = Axios.post(SAMPLE_API+"test", obj);
+	const request = Axios.post(SAMPLE_API+"login", obj);
 	return {
 		type: LOGINUSER,
 		payload: request
@@ -58,7 +58,7 @@ export function loginUser(obj){
 
 
 export function getUserInfo(obj){
-	const request = Axios.get(SAMPLE_API+obj.userId);
+	const request = Axios.get(SAMPLE_API+obj);
 	return {
 		type: GETINFO,
 		payload: request
