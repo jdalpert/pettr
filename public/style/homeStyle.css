@@ -39,11 +39,6 @@
 
 }
 
-#pet-breed {
-	font-weight:bold;
-	margin-top:1%;
-	margin-bottom:1%;
-}
 
 .hide-bullets {
 list-style:none;
@@ -55,11 +50,37 @@ margin-top:20px;
 	margin-top:2%;
 }
 
+#facts {
+
+}
+
+#pet-breed {
+	font-weight:bold;
+	margin-top:1%;
+	margin-bottom:1%;
+}
+
+#pet-age {
+	font-weight:bold;
+	margin-top:1%;
+	margin-bottom:1%;
+}
+
+#pet-color {
+	font-weight:bold;
+	margin-top:1%;
+	margin-bottom:1%;
+}
+
+#pet-gender {
+	font-weight:bold;
+	margin-top:1%;
+	margin-bottom:1%;
+}
 
 
-.slideShowPics {
-	float: block;
-
+#description {
+	margin-left: 25px;
 }
 
 
