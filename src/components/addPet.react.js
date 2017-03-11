@@ -19,7 +19,7 @@ class AddPet extends Component {
 			state:"",
 			description:""
 		};		
-	}
+	} 
 
 	static contextTypes = {
 		router: PropTypes.object

@@ -25,6 +25,31 @@ class Profile extends Component {
 			organization: ""
 		};
 	}
+	componentWillMount(){
+		console.log("check2");
+		if(this.props.data){
+			console.log("These are the props data");
+			console.log(this.props.data.userId);
+			if(this.props.data.userId && !this.props.data.email){
+				this.setState({userId: this.props.data.userId});
+				this.props.getUserInfo(this.props.data.userId);
+			}
+			if(this.props.data.email){
+				this.setState(
+					{
+						email: this.props.data.email,
+						firstName: this.props.data.firstName,
+						lastName: this.props.data.lastName,
+						city: this.props.data.city,
+						state: this.props.data.state,
+						pets: this.props.data.pets,
+						description: this.props.data.description,
+						organization: this.props.data.organization
+					});
+			}
+			console.log("was it empty?2");
+		}
+	}
 
 	componentWillReceiveProps(nextProps) {
 		console.log("check");
