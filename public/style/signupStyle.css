@@ -36,11 +36,6 @@
 	background-color: #bb7d06;
 }
 
-#save-button{
-    margin-left: auto;
-    margin-right: auto;
-    width: 6em
-}
 
 .btn-primary {
 	border-color: #bb7d06;
@@ -98,4 +93,17 @@ textarea  {
 
 .asset {
 	max-height:200px;
+}
+
+/*settings*/
+
+#save-button{
+    margin-right: 50%;
+    margin-left: 45%;
+    font-size:1em;
+    margin-top:5%;
+}
+
+.settings{
+	margin-left: 15%;
 }

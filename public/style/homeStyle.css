@@ -1,6 +1,6 @@
-/*.home {
-	position:relative;
-}*/
+.home{
+	height: 100%;
+}
 
 .swipe-buttons {
 	text-align:center;
