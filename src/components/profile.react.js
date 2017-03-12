@@ -14,6 +14,7 @@ class Profile extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			login: false,
 			userId: "",
 			email: "",
 			firstName: "",
@@ -31,7 +32,7 @@ class Profile extends Component {
 			console.log("These are the props data");
 			console.log(this.props.data.userId);
 			if(this.props.data.userId && !this.props.data.email){
-				this.setState({userId: this.props.data.userId});
+				this.setState({userId: this.props.data.userId, login: true});
 				this.props.getUserInfo(this.props.data.userId);
 			}
 			if(this.props.data.email){
@@ -48,6 +49,8 @@ class Profile extends Component {
 					});
 			}
 			console.log("was it empty?2");
+		} else if (!this.state.login){
+			this.context.router.push("/login");
 		}
 	}
 
@@ -56,7 +59,7 @@ class Profile extends Component {
 		console.log(nextProps);
 		if(nextProps.data){
 			if(nextProps.data.userId && !nextProps.data.email){
-				this.setState({userId: nextProps.data.userId});
+				this.setState({userId: nextProps.data.userId, login: true});
 				this.props.getUserInfo(nextProps.data.userId);
 			}
 			if(nextProps.data.email){
@@ -69,7 +72,8 @@ class Profile extends Component {
 						state: nextProps.data.state,
 						pets: nextProps.data.pets,
 						description: nextProps.data.description,
-						organization: nextProps.data.organization
+						organization: nextProps.data.organization,
+						login: true
 					});
 			}
 			console.log("was it empty?");
@@ -80,8 +84,9 @@ class Profile extends Component {
 		router: PropTypes.object
 	};
 
-	_handleClick = () => {
-		this.context.router.push("/");
+	_handleClick = (id) =>{
+		//this.props.getPetInfo(id);
+		console.log("whaaa");
 	};
 
 	render() {
@@ -99,12 +104,13 @@ class Profile extends Component {
     				<div>
 	    				<div className="container petsList">
 							<div><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg"/></div>
-							<h4 className="petName"><b><Link to="/#/">{org.petName}</Link></b></h4>
-						</div>
+							<h4 className="petName"><b>{org.petName}</b></h4>
+{/*							<Button onClick={() => this._handleClick(org.petId)} >View Profile</Button>
+*/}						</div>
 						<hr/>
 					</div>
 				);
-    			return singlePet;
+				return singlePet;
     		}):
     		<div>
 	    		<div className="container petsList">
