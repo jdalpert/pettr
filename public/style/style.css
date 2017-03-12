@@ -6,6 +6,7 @@
 @font-face {
 	font-family: "help";
 	src: url(fonts/Museo500.otf) format("opentype");
+	/*this wont work for some reason*/
 }
 
 

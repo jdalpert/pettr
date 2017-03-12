@@ -91,14 +91,16 @@ class Home extends Component {
 		                	</div>
 		                */}
 						</div>
-						<div className="col-sm-5">
+						<div className="col-md-6">
 							<br/>
-							<text id= "facts"> Facts about Fart Head! <br/> </text>
 
+							<text id= "facts"> Facts about me! <br/> </text>
 							<text id="pet-breed">	Breed: 	</text> 	<text> Pomeranian<br/> 		</text>
 							<text id="pet-color">	Color: 	</text> 	<text> White-Brown<br/> 	</text>
 							<text id="pet-age">		Age: 	</text> 	<text> 10 <br/> 			</text>
 							<text id="pet-gender">	Gender: </text> 	<text> Female <br/>	</text>
+
+
 
 
 							<br/>
@@ -115,10 +117,11 @@ class Home extends Component {
 						</div>
 						<div className="col-sm-1" id="right-arrow"><img id="right-arrow" src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/01_arrow_right-512.png"/></div>
 					</div>
-					<div className="confirmButtons">
-						<div className="col-sm-15 swipe-buttons">
-							<img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/abandonb.png?raw=true"/>
-							<img className="nav-icon" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/adoptb.png?raw=true"/>
+
+					<div className="row confirmButtons">
+						<div className="col">
+								<img className="nav-icon no" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/abandonb.png?raw=true"/>
+								<img className="nav-icon yes" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/adoptb.png?raw=true"/>
 						</div>
 					</div>
 				</div>
