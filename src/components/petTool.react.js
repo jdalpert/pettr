@@ -105,7 +105,7 @@ class PetTool extends Component {
 						{
 							(this.state.email)?
 							<span>Welcome: <b>{this.state.email}</b></span>:
-							<span>You are not logged in!</span>
+							<span>Welcome: Guest!</span>
 						}
 				    </Navbar.Text>
 				</Navbar>
