@@ -4,7 +4,9 @@
 body {
 	/*background-color: #f6b26b;*/
   background:url('https://github.com/jdalpert/pettr/blob/layout/src/components/assets/bg.png?raw=true');
-}
+  color: #667480;
+
+  }
 
 input {
 	border-radius: 4px;
@@ -16,7 +18,7 @@ input {
 
 .main-content {
 	/*background-color: #FFFFFF;*/
-  background-color: rgba(255, 250, 232, 0.99);
+  background-color: rgba(228 , 219, 153, 0.75);
 	margin-top: 134px;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
