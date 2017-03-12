@@ -1,10 +1,26 @@
+@font-face {
+	font-family: "mufferaw";
+		src: url(fonts/mufferaw.ttf);
+}
+
+@font-face {
+	font-family: "help";
+	src: url(fonts/Museo500.otf) format("opentype");
+}
+
+
 /*div.child {
   text-align: center;
 }*/
 body {
 	/*background-color: #f6b26b;*/
   background:url('https://github.com/jdalpert/pettr/blob/layout/src/components/assets/bg.png?raw=true');
-  color: #6c7a89;
+  /*color: #4f5a65;*/
+	/*color: #2b0000;*/
+	/*color: #1d1905;*/
+	/*color: #2a150d;*/
+	color: #3e3e3e;
+	font-family: 'Quando', serif;
   }
 
 input {
@@ -17,7 +33,7 @@ input {
 
 .main-content {
 	/*background-color: #FFFFFF;*/
-  background-color: rgba(245, 215, 110, 0.85);
+  background-color: rgba(255, 250, 230, 1);
 	margin-top: 134px;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
