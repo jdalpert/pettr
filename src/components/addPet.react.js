@@ -19,7 +19,7 @@ class AddPet extends Component {
 			state:"",
 			description:""
 		};		
-	}
+	} 
 
 	static contextTypes = {
 		router: PropTypes.object
@@ -27,7 +27,7 @@ class AddPet extends Component {
 
 	componentWillReceiveProps(nextProps) {
 		console.log("hey there");
-		this.setState({userId: nextProps.data});
+		this.setState({userId: nextProps.data._id});
 	};
 
 	componentDidMount(){

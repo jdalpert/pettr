@@ -29,14 +29,14 @@ class Settings extends Component {
 		this.setState(obj)
 	};
 
-	_handleClick = () => {
-		this.props.grab_data(this.state);
-		this.state.firstName = "";
-		this.state.lastName = "";
-		this.state.email = "";
-		console.log("here");
-		this.context.router.push("/");
-	};
+	// _handleClick = () => {
+	// 	this.props.grab_data(this.state);
+	// 	this.state.firstName = "";
+	// 	this.state.lastName = "";
+	// 	this.state.email = "";
+	// 	console.log("here");
+	// 	this.context.router.push("/");
+	// };
 
 	render() {
 		return(
@@ -62,27 +62,21 @@ class Settings extends Component {
 							<input type="text" id="location"/><br/>
 
 						</form>
-						<Button className="btn btn-primary btn-xs" /*onClick={this._handleClick}*/ id="signup-button">Save</Button>
+						<Button className="btn btn-primary btn-xs" /*onClick={this._handleClick}*/ id="save-button">Save</Button>
 					</div>
 
 					<div className="col-sm-5">
 						<div className="login">
 							<div className="heading">
-								<h3>Already have an account?<br/>Sign in</h3>
-							    <form action="#">
-
-							      <div className="input-group input-group-lg">
-							        <span className="input-group-addon"><i className="fa fa-user"></i></span>
-							        <input type="text" className="form-control" placeholder="Username or email"/>
-							          </div>
-
-							        <div className="input-group input-group-lg">
-							          <span className="input-group-addon"><i className="fa fa-lock"></i></span>
-							          <input type="password" className="form-control" placeholder="Password"/>
-							        </div>
-
-							        <button className="btn btn-primary btn-xs login-button">Login</button>
-							    </form>
+								<h2>Contact Information</h2>
+							<label htmlFor="current location">Current Email</label><br/>
+							<p>EMAIL PLACEHOLDER</p>
+							<label htmlFor="new location">New Email</label><br/>
+							<input type="text" id="location"/><br/>			
+							<label htmlFor="current location">Current Phone Number</label><br/>
+							<p>PHONE NUM PLACEHOLDER</p>
+							<label htmlFor="new location">New Phone Number</label><br/>
+							<input type="text" id="location"/><br/>						
 							</div>
 						</div>
 					</div>

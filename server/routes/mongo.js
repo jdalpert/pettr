@@ -14,6 +14,7 @@ var userSchema = new Mongoose.Schema({
 	other: Boolean,
 	pets: [{
 		_id: false,
+		petName: String,
 		petId: String
 	}],
 	contactInfo: String,

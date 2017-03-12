@@ -3,8 +3,8 @@ import { Link } from 'react-router';
 //import Axios from 'axios';
 import { connect } from "react-redux";
 import Contact from './contact.react';
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import * as actions from "../actions/add_person.action";
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
 //import homeIcon from './assets/iconhome.png';
 //const store = [{userName: Tony, userAddress: Klondike, userQuote: Food}];
 class PetTool extends Component {
@@ -19,7 +19,7 @@ class PetTool extends Component {
 			matchIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconmatch.png?raw=true",
 			profileIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconprofile.png?raw=true",
 			missionIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/missionstatement.png?raw=true",
-			signupIc:"https://github.com/jdalpert/pettr/blob/layout/src/components/assets/iconlogin.png?raw=true"
+			signupIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconlogin2.png?raw=true"
 		};		
 	}
 
@@ -30,12 +30,15 @@ class PetTool extends Component {
 	componentWillReceiveProps(nextProps) {
 		console.log("check");
 		console.log(nextProps);
-		if(nextProps.data.userId){
-			this.setState({userId: nextProps.data.userId});
+		if(nextProps.data){
+			if(nextProps.data.userId && !nextProps.data.email){
+				this.setState({userId: nextProps.data.userId});
+				this.props.getUserInfo(nextProps.data.userId);
+			}
+			if(nextProps.data.email)
+				this.setState({email: nextProps.data.email});
+			console.log("was it empty?");
 		}
-		if(nextProps.data.email)
-			this.setState({email: nextProps.data.email});
-		console.log("was it empty?");
 	}
 
 	pettrTitleHover = () =>{
@@ -74,10 +77,10 @@ class PetTool extends Component {
 	}
 
 	signupHover = () =>{
-		this.setState({signupIc:"https://github.com/jdalpert/pettr/blob/layout/src/components/assets/iconlogin.png?raw=true"});
+		this.setState({signupIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconlogin2.png?raw=true"});
 	}
 	signupUnhover = () =>{
-		this.setState({signupIc:"https://github.com/jdalpert/pettr/blob/layout/src/components/assets/iconlogin.png?raw=true"});
+		this.setState({signupIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconlogin2.png?raw=true"});
 	}
 
 	render() {
@@ -98,14 +101,14 @@ class PetTool extends Component {
 							
 						</Nav>
 					</Navbar.Collapse>
+					<Navbar.Text>
+						{
+							(this.state.email)?
+							<span>Welcome: <b>{this.state.email}</b></span>:
+							<span>"TEST"</span>
+						}
+				    </Navbar.Text>
 				</Navbar>
-				<div pullRight>
-					{
-						(this.state.email !== "")?
-						<span>Welcome: <b>{this.state.email}</b></span>
-						:<span></span>
-					}
-				</div>
 			</div>
 		);
 	}
@@ -119,4 +122,4 @@ function mapStateToProps(state) {
 	};
 }
 
-export default connect(mapStateToProps)(PetTool);
+export default connect(mapStateToProps, actions)(PetTool);

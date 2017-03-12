@@ -56,11 +56,12 @@ var Pet = require('./pet.js');
 router.get('/:id', function(req, res){
 	console.log(req.params.id);
 	Info.findOne({_id: req.params.id}, function(err, user){
+		console.log(user);
 		res.send(user);
 	});
 });
 
-router.post('/test', function(req, res){
+router.post('/login', function(req, res){
 	console.log(req.body);
 	Info.findOne({email:req.body.loginEmail, password:req.body.loginPassword}, function(err, user){
 		console.log(user);
@@ -70,11 +71,19 @@ router.post('/test', function(req, res){
 
 router.post('/:id', function(req, res){
 	console.log(req.body);
+	console.log("TeSt");
 	new Pet(req.body).save(function(err, pet){
+		console.log(pet);
 		let petId = pet._id;
+		let petName = pet.name;
 		let userId = pet.userId;
-        Info.findOneAndUpdate( {_id: userId}, { $push: { pets:{petId} } }, 
+		let pets = {petName: petName, petId: petId};
+		console.log(pets);
+        Info.findOneAndUpdate( {_id: userId}, 
+        		{ $push: { pets: { petName: petName, petId:petId } } 
+        	},
         	function(err, user){
+        		console.log(user);
         		res.send({userId: user._id});
         });
     });
@@ -83,6 +92,7 @@ router.post('/:id', function(req, res){
 router.post('/', function(req, res){
 	console.log(req.body);
 	new Info(req.body).save(function(err, user){
+		console.log(user);
         res.send({userId: user._id});
     });
 })
