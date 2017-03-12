@@ -52,11 +52,11 @@ input {
     list-style: none;
 }
 
-.icon-bar a:hover {
+/*.icon-bar a:hover {
     background-color: #ecb071;
     width:10%;
 
-}
+}*/
 
 .active {
     color: #f48e23 !important;
@@ -90,6 +90,7 @@ nav > li > a > img {
 .navbar-default {
   border:none;
   padding:0;
+  height:0px;
 }
 
 /*.navbar-right {
@@ -131,10 +132,17 @@ ul.nav.navbar-nav.navbar-right {
   .container {
     width:80%;
   }
+
 }
 
 .welcome{
   display: flex;
   width: 100%;
   justify-content: flex-end; 
+}
+
+.navbar-default .navbar-text {
+  color: #ba2100;
+  float:right;
+  margin:0px;
 }
