@@ -22,7 +22,7 @@ class Mission extends Component {
 		return(
 			<div className="container home main-content">
 				<Jumbotron>
-<p id="mission_text">Welcome to the Mission Statement page! You will find information about
+				<p id="mission_text">Welcome to the Mission Statement page! You will find information about
  					the purpose of the website as well as instructions about how to use it.</p>
  
  				<h2 id ="mission_heads">Who We Are</h2>

@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import { connect } from "react-redux";
 import Contact from './contact.react'
 import * as actions from "../actions/add_person.action";
-import { Button } from 'react-bootstrap';
+import { Button , Carousel} from 'react-bootstrap';
 import Slider from 'react-slick';
 
 
@@ -14,6 +14,7 @@ class Profile extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			login: false,
 			userId: "",
 			email: "",
 			firstName: "",
@@ -31,7 +32,7 @@ class Profile extends Component {
 			console.log("These are the props data");
 			console.log(this.props.data.userId);
 			if(this.props.data.userId && !this.props.data.email){
-				this.setState({userId: this.props.data.userId});
+				this.setState({userId: this.props.data.userId, login: true});
 				this.props.getUserInfo(this.props.data.userId);
 			}
 			if(this.props.data.email){
@@ -48,6 +49,8 @@ class Profile extends Component {
 					});
 			}
 			console.log("was it empty?2");
+		} else if (!this.state.login){
+			this.context.router.push("/login");
 		}
 	}
 
@@ -56,7 +59,7 @@ class Profile extends Component {
 		console.log(nextProps);
 		if(nextProps.data){
 			if(nextProps.data.userId && !nextProps.data.email){
-				this.setState({userId: nextProps.data.userId});
+				this.setState({userId: nextProps.data.userId, login: true});
 				this.props.getUserInfo(nextProps.data.userId);
 			}
 			if(nextProps.data.email){
@@ -69,7 +72,8 @@ class Profile extends Component {
 						state: nextProps.data.state,
 						pets: nextProps.data.pets,
 						description: nextProps.data.description,
-						organization: nextProps.data.organization
+						organization: nextProps.data.organization,
+						login: true
 					});
 			}
 			console.log("was it empty?");
@@ -80,18 +84,19 @@ class Profile extends Component {
 		router: PropTypes.object
 	};
 
-	_handleClick = () => {
-		this.context.router.push("/");
+	_handleClick = (id) =>{
+		//this.props.getPetInfo(id);
+		console.log("whaaa");
 	};
 
 	render() {
-		let settings = {
-	      dots: true,
-	      infinite: true,
-	      speed: 500,
-	      slidesToShow: 1,
-	      slidesToScroll: 1
-    	};
+		// let settings = {
+	  //     dots: true,
+	  //     infinite: true,
+	  //     speed: 500,
+	  //     slidesToShow: 1,
+	  //     slidesToScroll: 1
+    // 	};
 
     	let petsArry = (this.state.pets.length)?
     		this.state.pets.map(function (org){
@@ -99,12 +104,13 @@ class Profile extends Component {
     				<div>
 	    				<div className="container petsList">
 							<div><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg"/></div>
-							<h4 className="petName"><b><Link to="/#/">{org.petName}</Link></b></h4>
-						</div>
+							<h4 className="petName"><b>{org.petName}</b></h4>
+{/*							<Button onClick={() => this._handleClick(org.petId)} >View Profile</Button>
+*/}						</div>
 						<hr/>
 					</div>
 				);
-    			return singlePet;
+				return singlePet;
     		}):
     		<div>
 	    		<div className="container petsList">
@@ -120,17 +126,35 @@ class Profile extends Component {
 						<div className="col-sm-1"/>
 						<div className="col-sm-5">
 							<h2>{this.state.firstName} {this.state.lastName}</h2>
-							<div className="slideShowPics">
-			                	<Slider {...settings}>
-			                		<div className="slideShowPics"><h3><img src="http://www.setenterprises.com/var/setent/storage/images/about/personal/christopher-kristock/1185-4-eng-US/Christopher-Kristock_person.jpg"/></h3></div>
-									<div className="slideShowPics"><h3><img src="http://www.setenterprises.com/var/setent/storage/images/about/personal/christopher-kristock/1185-4-eng-US/Christopher-Kristock_person.jpg"/></h3></div>
-			                	</Slider>
-		                	</div>
+
+
+							<Carousel activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect}>
+									<Carousel.Item>
+										 <img width={400} height={300} alt="400x300" src="http://www.setenterprises.com/var/setent/storage/images/about/personal/christopher-kristock/1185-4-eng-US/Christopher-Kristock_person.jpg"/>
+										 <Carousel.Caption>
+											 <h3>First slide label</h3>
+											 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+									 </Carousel.Caption>
+									</Carousel.Item>
+
+									<Carousel.Item>
+										 <img width={400} height={300} alt="400x300" src="http://www.setenterprises.com/var/setent/storage/images/about/personal/christopher-kristock/1185-4-eng-US/Christopher-Kristock_person.jpg"/>
+										 <Carousel.Caption>
+											 <h3>Second slide label</h3>
+											 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+										 </Carousel.Caption>
+								 </Carousel.Item>
+							</Carousel>
+
+
+
+
+
 						</div>
 						<div className="col-sm-5">
 							<h4>Description</h4>
 							<p id="description">{this.state.description}</p>
-							
+
 							<h4>Info</h4>
 							{(this.state.organization)?
 								<text id="owner">Organization: {this.state.organization}<br/></text>:

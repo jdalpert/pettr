@@ -70,23 +70,6 @@ input:focus, textarea:focus, #state:focus {
 	max-height:400px;
 }
 
-.messageHolder {
-	display: inline-flex;
-}
-
-.messageNotifications{
-	width: 40%;
-}
-
-.messageButton{
-	width: 80px;
-}
-
-.pressed {
-	background-color: rgb(238,238,238);
-	width: 100%;
-}
-
 textarea  {
 	color: black;
 }

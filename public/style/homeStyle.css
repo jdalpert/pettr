@@ -10,6 +10,22 @@
 	margin-left:5%;
 }
 
+.confirmButtons {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.no {
+	display: inline-block;
+	/*margin-left: auto;*/
+	margin-right: 10px;
+}
+
+.yes {
+	display: inline-block;
+	margin-left: 10px;
+	/*margin-right: auto;*/
+}
 
 #left-arrow {
 	position: absolute;
@@ -51,42 +67,49 @@ margin-top:20px;
 }
 
 #facts {
-
+	color: #802200;
+	font-weight:bold;
+	font-size: 20px;
 }
 
 #pet-breed {
+	display: inline-block;
+	width: 55px;
+	margin-left: 15px;
 	font-weight:bold;
-	margin-top:1%;
-	margin-bottom:1%;
 }
 
 #pet-age {
+	display: inline-block;
+	width: 55px;
+	margin-left: 15px;
 	font-weight:bold;
-	margin-top:1%;
-	margin-bottom:1%;
 }
 
 #pet-color {
+	display: inline-block;
+	width: 55px;
+	margin-left: 15px;
 	font-weight:bold;
-	margin-top:1%;
-	margin-bottom:1%;
 }
 
 #pet-gender {
+	display: inline-block;
+	width: 55px;
+	margin-left: 15px;
 	font-weight:bold;
-	margin-top:1%;
-	margin-bottom:1%;
 }
 
 
 #description {
 	margin-left: 25px;
+	color:#1c2833;
 }
 
 
-.confirmButtons{
+/*.confirmButtons{
 	padding-left: 200px;
-}
+}*/
 
 .allPets {
 	height:100%;
@@ -119,5 +142,5 @@ margin-top:20px;
 }
 /*.smallPic {
 	height: 100px;
-	width: 100px;	
+	width: 100px;
 }*/
