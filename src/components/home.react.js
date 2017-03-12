@@ -43,7 +43,7 @@ class Home extends Component {
 				<div className="container home main-content">
 					<div className="row">
 						<div className="col-sm-1" id="left-arrow"><img id="left-arrow" src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/01_arrow_left-512.png"/></div>
-						<div className="col-sm-5">
+						<div className="col-sm-6">
 							<h1 class="display-4"> My name is Lola Bear! </h1>
 
      					 <Carousel activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect}>
@@ -96,9 +96,9 @@ class Home extends Component {
 							<text id= "facts"> Facts about Fart Head! <br/> </text>
 
 							<text id="pet-breed">	Breed: 	</text> 	<text> Pomeranian<br/> 		</text>
-							<text id="pet-color">	Color: 	</text> 	<text> Diarrhea-Like<br/> 	</text>
-							<text id="pet-age">		Age: 	</text> 	<text> im12andwhatisthis<br/> 			</text>
-							<text id="pet-gender">	Gender: </text> 	<text> Two Spirits <br/>	</text>
+							<text id="pet-color">	Color: 	</text> 	<text> White-Brown<br/> 	</text>
+							<text id="pet-age">		Age: 	</text> 	<text> 10 <br/> 			</text>
+							<text id="pet-gender">	Gender: </text> 	<text> Female <br/>	</text>
 
 
 							<br/>
