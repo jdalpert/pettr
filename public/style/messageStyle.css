@@ -60,7 +60,6 @@ hr {
 
 .jumbotron {
 	background-color:rgb(247, 235, 194);
-
 }
 
 #match-name, #match-time, #pet-name {
@@ -70,6 +69,15 @@ hr {
 
 #matchRequestTitle {
 	color: #db9128;
-	margin-top:2%;
+	margin-top:3%;
 	padding:0px;
+}
+
+#matchRequestInfo {
+	color: #ba2100;
+	margin:0px;
+}
+
+#matchedTitle {
+	color:#db9128;
 }

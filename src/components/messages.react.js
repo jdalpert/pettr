@@ -23,6 +23,7 @@ class Messages extends Component {
 			<div className="container home main-content messageHolder">
 				<div className="container messageNotifications">
 				<h3 id="matchRequestTitle">Match Requests</h3>
+				<text id="matchRequestInfo">View user's or pet's profile by clicking their name.</text>
 					<div className="container pressed messageList">
 						<img className="match-pic" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg"/>
 						<h4 className="messageName"><b><Link to="/profile">Bob Stanley</Link></b></h4>
@@ -74,7 +75,7 @@ class Messages extends Component {
 				</div>
 
 				<Jumbotron>
-				    <h1>Matched!</h1>
+				    <h1 id="matchedTitle">Matched!</h1>
 				    <img className="match-pic" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg"/>
 				    <p><text id="match-name"> Bob Stanley</text> and <text id="pet-name">Lola Bear</text> matched <text id="match-time">5 days ago</text>! Connect with them at: <br/>
 				    <b><text id="contact-info">555-555-5555</text></b>

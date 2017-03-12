@@ -52,11 +52,11 @@ input {
     list-style: none;
 }
 
-.icon-bar a:hover {
+/*.icon-bar a:hover {
     background-color: #ecb071;
     width:10%;
 
-}
+}*/
 
 .active {
     color: #f48e23 !important;
@@ -132,6 +132,7 @@ ul.nav.navbar-nav.navbar-right {
   .container {
     width:80%;
   }
+
 }
 
 .welcome{
@@ -140,8 +141,8 @@ ul.nav.navbar-nav.navbar-right {
   justify-content: flex-end; 
 }
 
-.btn-success:active:focus {
-  color: #ffffff; 
-  background-color: #161617; 
-  border-color: #494F57;
+.navbar-default .navbar-text {
+  color: #ba2100;
+  float:right;
+  margin:0px;
 }
