@@ -1,0 +1,75 @@
+.messageHolder {
+	display: inline-flex;
+	padding:0px;
+}
+
+.messageNotifications{
+	width: 50%;
+	height:100%;
+	overflow:auto;
+}
+
+.messageButton{
+	width: 25%;
+	background-color:#db9128;
+	margin-left:2%;
+}
+
+.profileButton{
+	background-color:#db9128;
+}
+
+.profileButton a {
+	color: white;
+	text-decoration:none;
+}
+
+
+.messageButton:hover, .messageButton:active, .messageButton:focus {
+	background-color:#fba62b;
+	border-color: #db9128;
+}
+
+
+.pressed {
+	/*background-color: rgb(238,238,238);*/
+	background-color:rgb(247, 235, 194);
+	width: 100%;
+}
+
+.match-pic {
+	max-height: 35%;
+	max-width: 35%;
+	float:left;
+	margin-right: 5%;
+
+}
+
+.messageList {
+	margin-top:5%;
+	width:100%;
+}
+
+.messageList a {
+	color:#ba2100;
+}
+
+hr {
+	border-top:2px solid #f9e087;
+}
+
+.jumbotron {
+	background-color:rgb(247, 235, 194);
+
+}
+
+#match-name, #match-time, #pet-name {
+	color: #ba2100;
+	font-weight:bold;
+}
+
+#matchRequestTitle {
+	color: #db9128;
+	margin-top:2%;
+	padding:0px;
+}
