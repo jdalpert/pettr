@@ -4,8 +4,7 @@
 body {
 	/*background-color: #f6b26b;*/
   background:url('https://github.com/jdalpert/pettr/blob/layout/src/components/assets/bg.png?raw=true');
-  color: #667480;
-
+  color: #6c7a89;
   }
 
 input {
@@ -18,11 +17,11 @@ input {
 
 .main-content {
 	/*background-color: #FFFFFF;*/
-  background-color: rgba(228 , 219, 153, 0.75);
+  background-color: rgba(245, 215, 110, 0.85);
 	margin-top: 134px;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
-  width: 80%; 
+  width: 80%;
   height: 75%;
   padding-left: 5%;
   padding-right: 5%;
@@ -115,19 +114,12 @@ ul.nav.navbar-nav.navbar-right {
   padding-left: 10px;
 }
 
-@media (min-width: 992px) {
-  .container {
-    width: 80%;
-  }
-}
-
 /*fixing some margin stuff again*/
 /*.container {
   margin-right: 0;
   margin-left: 3%;
 }
 */
-
 
 @media (min-width: 992px) {
   .container {
@@ -138,5 +130,5 @@ ul.nav.navbar-nav.navbar-right {
 .welcome{
   display: flex;
   width: 100%;
-  justify-content: flex-end; 
+  justify-content: flex-end;
 }

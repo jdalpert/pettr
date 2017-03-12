@@ -16,7 +16,7 @@ class Home extends Component {
 		this.state = {
 			id: "",
 			location: ""
-		};	
+		};
 	}
 
 	_handleClick = () => {
@@ -45,7 +45,7 @@ class Home extends Component {
 						<div className="col-sm-1" id="left-arrow"><img id="left-arrow" src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/01_arrow_left-512.png"/></div>
 						<div className="col-sm-5">
 							<h1 class="display-4"> My name is Lola Bear! </h1>
-							
+
      					 <Carousel activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect}>
        						 <Carousel.Item>
           						<img width={400} height={300} alt="400x300" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg"/>
@@ -54,7 +54,7 @@ class Home extends Component {
            							<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
          						</Carousel.Caption>
        						 </Carousel.Item>
-       					
+
        						 <Carousel.Item>
           						<img width={400} height={300} alt="400x300" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg"/>
           						<Carousel.Caption>
@@ -62,7 +62,7 @@ class Home extends Component {
            		 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           						</Carousel.Caption>
         					</Carousel.Item>
-        
+
         					<Carousel.Item>
           						<img width={400} height={300} alt="400x300" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg"/>
           						<Carousel.Caption>
@@ -100,7 +100,7 @@ class Home extends Component {
 							<text id="pet-age">		Age: 	</text> 	<text> im12andwhatisthis<br/> 			</text>
 							<text id="pet-gender">	Gender: </text> 	<text> Two Spirits <br/>	</text>
 
-						
+
 							<br/>
 							<p id="description">Hi I am a 5 year old golden/chestnut/white female pomeranian looking for a new home! I am a small dog
 							that weighs 25 lbs or less. I am already spayed, purebred, a special needs pet, and up to date with shots. Unfortunately, I have diabetes
