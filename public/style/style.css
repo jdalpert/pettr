@@ -1,10 +1,28 @@
+@font-face {
+	font-family: "mufferaw";
+		src: url(fonts/mufferaw.ttf);
+}
+
+@font-face {
+	font-family: "help";
+	src: url(fonts/Museo500.otf) format("opentype");
+	/*this wont work for some reason*/
+}
+
+
 /*div.child {
   text-align: center;
 }*/
 body {
 	/*background-color: #f6b26b;*/
   background:url('https://github.com/jdalpert/pettr/blob/layout/src/components/assets/bg.png?raw=true');
-}
+  /*color: #4f5a65;*/
+	/*color: #2b0000;*/
+	/*color: #1d1905;*/
+	/*color: #2a150d;*/
+	color: #3e3e3e;
+	font-family: 'Quando', serif;
+  }
 
 input {
 	border-radius: 4px;
@@ -16,11 +34,11 @@ input {
 
 .main-content {
 	/*background-color: #FFFFFF;*/
-  background-color: rgba(255, 250, 232, 0.99);
+  background-color: rgba(255, 250, 230, 1);
 	margin-top: 134px;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
-  width: 80%; 
+  width: 80%;
   height: 75%;
   padding-left: 5%;
   padding-right: 5%;
@@ -114,19 +132,12 @@ ul.nav.navbar-nav.navbar-right {
   padding-left: 10px;
 }
 
-@media (min-width: 992px) {
-  .container {
-    width: 80%;
-  }
-}
-
 /*fixing some margin stuff again*/
 /*.container {
   margin-right: 0;
   margin-left: 3%;
 }
 */
-
 
 @media (min-width: 992px) {
   .container {
@@ -138,7 +149,7 @@ ul.nav.navbar-nav.navbar-right {
 .welcome{
   display: flex;
   width: 100%;
-  justify-content: flex-end; 
+  justify-content: flex-end;
 }
 
 .navbar-default .navbar-text {
