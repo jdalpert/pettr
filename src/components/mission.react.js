@@ -20,7 +20,7 @@ class Mission extends Component {
 
 	render() {
 		return(
-			<div className="container home main-content">
+			<div className="container mission main-content">
 				<Jumbotron>
 				<p id="mission_text">Welcome to the Mission Statement page! You will find information about
  					the purpose of the website as well as instructions about how to use it.</p>
@@ -37,7 +37,7 @@ class Mission extends Component {
  				a pet, it is within our goal to make it easier to provide those services to you with our
 				app.</p>
 
-				<h2 id ="mission_heads">How To Get Started</h2>
+				<p><h2 id ="how-to">How To Get Started</h2></p>
  
  				<h2 id ="mission_heads">Sign Up</h2>
  				<p id="mission_text">Don't have an account? Make sure you sign up and 
