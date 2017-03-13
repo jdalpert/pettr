@@ -42,11 +42,10 @@ class Signup extends Component {
 
 	_handleClick = () => {
 		this.props.grab_data(this.state);
-		this.context.router.push("/addpet");
+		this.context.router.push("/profile");
 	};
 
 	_handleLogin = () => {
-		console.log("CHECK");
 		this.props.loginUser(this.state);
 		this.context.router.push("/profile");
 	};

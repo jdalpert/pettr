@@ -27,7 +27,10 @@ class AddPet extends Component {
 
 	componentWillReceiveProps(nextProps) {
 		console.log("hey there");
-		this.setState({userId: nextProps.data._id});
+		console.log(nextProps.data._id);
+		console.log("okaaayyy");
+		if(nextProps.data._id)
+			this.setState({userId: nextProps.data._id});
 	};
 
 	componentDidMount(){
@@ -42,6 +45,14 @@ class AddPet extends Component {
 
 	_handleClick = () => {
 		this.props.grab_data2(this.state);
+		this.setState({
+			userId: "",
+			name:"",
+			type:"dog",
+			city:"",
+			state:"",
+			description:""
+		});
 		this.context.router.push("/profile");
 	};
 
