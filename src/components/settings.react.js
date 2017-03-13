@@ -41,10 +41,10 @@ class Settings extends Component {
 	render() {
 		return(
 			<div>
-				<div className="signup main-content">
-					<div className="col-sm-7">
+				<div className="container signup main-content">
+					<div className="col-sm-3 settings">
 						<h1>Settings </h1>
-						<form action="" className="signup-form"> 
+						<form action="" className="signup-form settings"> 
 
 							<b><p>Pet Preferences</p></b>
 							<div id="select-pets">
@@ -61,26 +61,30 @@ class Settings extends Component {
 							<label htmlFor="new location">New Location</label><br/>
 							<input type="text" id="location"/><br/>
 
+
+							<label htmlFor="new password">New Password</label><br/>
+							<input type="text" id="passowrd"/><br/>
+
 						</form>
-						<Button className="btn btn-primary btn-xs" /*onClick={this._handleClick}*/ id="save-button">Save</Button>
+
 					</div>
 
-					<div className="col-sm-5">
-						<div className="login">
+					<div className="col-sm-5 settings">
+						<div className="signup-form settings">
 							<div className="heading">
 								<h2>Contact Information</h2>
-							<label htmlFor="current location">Current Email</label><br/>
+							<label htmlFor="current email">Current Email</label><br/>
 							<p>EMAIL PLACEHOLDER</p>
-							<label htmlFor="new location">New Email</label><br/>
-							<input type="text" id="location"/><br/>			
-							<label htmlFor="current location">Current Phone Number</label><br/>
+							<label htmlFor="new email">New Email</label><br/>
+							<input type="text" id="email"/><br/>			
+							<label htmlFor="current phonenum">Current Phone Number</label><br/>
 							<p>PHONE NUM PLACEHOLDER</p>
-							<label htmlFor="new location">New Phone Number</label><br/>
-							<input type="text" id="location"/><br/>						
+							<label htmlFor="new phonenum">New Phone Number</label><br/>
+							<input type="text" id="phonenum"/><br/>						
 							</div>
 						</div>
 					</div>
-
+						<Button className="btn btn-primary btn-xs" /*onClick={this._handleClick}*/ id="save-button">Save</Button>
 				</div>
 			</div>
 
