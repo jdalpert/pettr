@@ -1,6 +1,7 @@
 .messageHolder {
 	display: inline-flex;
 	padding:0px;
+	margin-left:10%;
 }
 
 .messageNotifications{
