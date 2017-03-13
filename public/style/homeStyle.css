@@ -1,10 +1,10 @@
-.swipe-buttons {
+/*.swipe-buttons {
 	text-align:center;
 }
 
 .swipe-buttons button #abandon {
 	margin-left:5%;
-}
+}*/
 
 .confirmButtons {
 	margin-top: 2%;
@@ -58,9 +58,9 @@ margin-left: -40px;
 margin-top:20px;
 }
 
-.float {
+/*.float {
 	margin-top:2%;
-}
+}*/
 
 #facts {
 	color: #802200;
@@ -69,12 +69,9 @@ margin-top:20px;
 }
 
 #pet-age, #pet-color, #pet-gender, #pet-size, #pet-type {
-	display: inline-block;
 	margin-left: 2%;
 	font-weight:bold;
 }
-
-
 
 #description {
 	/*margin-left: 25px;*/
@@ -104,7 +101,6 @@ margin-top:20px;
 
 .petsList>.petName{
 	padding-left: 20px;
-	display: ;
 }
 
 /*.smallPic {
@@ -144,22 +140,27 @@ div.carousel.slide {
 }
 
 .pet-bio-info {
-	margin-top:3%;
+	margin-top:5%;
 }
 
 .about-1 {
-	float:right;
 	/*background-color:yellow;*/
+	display: inline-block;
+	text-align: left;
+	float:left;
 }
 
 .about-2 {
-	float:left;
 	/*background-color:coral;*/
+	display: inline-block;
+	text-align: left;
+	overflow-y: auto;
+	float:left;
 }
 
-.petDescription {
+/*.petDescription {
 	margin-top:3%;
-}
+}*/
 
 
 #locationText {

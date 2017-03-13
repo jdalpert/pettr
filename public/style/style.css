@@ -152,8 +152,16 @@ ul.nav.navbar-nav.navbar-right {
   justify-content: flex-end;
 }
 
+/* this is the welcome: guest! thing*/
 .navbar-default .navbar-text {
   color: #ba2100;
-  float:right;
-  margin:0px;
+  position: absolute;
+  top: -webkit-calc(50% - 19px);
+  top: -moz-calc(50% - 19px);
+  top: -ms-calc(50% - 19px);
+  top: calc(50% - 19px);
+  right: 10%;
+  margin-top: 134px;
+  z-index:1;
+  padding:0;
 }
