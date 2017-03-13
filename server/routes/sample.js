@@ -53,11 +53,19 @@ var Pet = require('./pet.js');
         }
     });
 });*/
-router.get('/:id', function(req, res){
+router.get('/user/:id', function(req, res){
 	console.log(req.params.id);
 	Info.findOne({_id: req.params.id}, function(err, user){
 		console.log(user);
 		res.send(user);
+	});
+});
+
+router.get('/pet/:id', function(req, res){
+	console.log(req.params.id);
+	Pet.findOne({_id: req.params.id}, function(err, pet){
+		console.log(pet);
+		res.send(pet);
 	});
 });
 

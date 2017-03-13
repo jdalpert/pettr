@@ -85,28 +85,25 @@ class Profile extends Component {
 	};
 
 	_handleClick = (id) =>{
-		//this.props.getPetInfo(id);
-		console.log("whaaa");
+		this.props.getPetInfo(id);
+		console.log(id);
+		this.context.router.push("/");
 	};
 
-	render() {
-		// let settings = {
-	  //     dots: true,
-	  //     infinite: true,
-	  //     speed: 500,
-	  //     slidesToShow: 1,
-	  //     slidesToScroll: 1
-    // 	};
+	_handleAdd = (id) =>{
+		this.props.getUserInfo(id);
+		this.context.router.push("/addpet");
+	}
 
+	render() {
     	let petsArry = (this.state.pets.length)?
-    		this.state.pets.map(function (org){
+    		this.state.pets.map((org) => {
     			let singlePet = (
     				<div>
 	    				<div className="container petsList">
 							<div><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg"/></div>
-							<h4 className="petName"><b>{org.petName}</b></h4>
-{/*							<Button onClick={() => this._handleClick(org.petId)} >View Profile</Button>
-*/}						</div>
+							<h4 className="petName"><a onClick={() => this._handleClick(org.petId)}><b key={org.petId}>{org.petName}</b></a></h4>
+						</div>
 						<hr/>
 					</div>
 				);
@@ -114,8 +111,7 @@ class Profile extends Component {
     		}):
     		<div>
 	    		<div className="container petsList">
-					<div><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg"/></div>
-					<h4 className="petName"><b><Link to="/#/">Lola Bear</Link></b></h4>
+					<h4 className="petName"><b>No Pets</b></h4>
 				</div>
 				<hr/>
 			</div>;
@@ -161,8 +157,8 @@ class Profile extends Component {
 								<text id="owner">Organization: N/A<br/></text>
 							}
 							<text id="pet-location">Location: {this.state.city}, {this.state.state}<br/></text>
-
-							<h4>Pets</h4>
+						{/* Remember to remove button if just viewing a profile */}
+							<h4>Pets<Button onClick={() => this._handleAdd(this.state.userId)}>Add pet?</Button></h4>
 							<div className="container allPets">
 								{petsArry}
 							</div>
