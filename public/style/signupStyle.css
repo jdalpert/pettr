@@ -1,5 +1,6 @@
 .signup{
-	height:120%;
+	/*height:120%;*/
+	overflow-x:hidden;
 }
 
 .signup-form .main-content {
