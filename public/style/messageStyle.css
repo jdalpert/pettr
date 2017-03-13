@@ -1,6 +1,7 @@
 .messageHolder {
 	display: inline-flex;
 	padding:0px;
+	margin-left:10%;
 }
 
 .messageNotifications{
@@ -59,7 +60,7 @@ hr {
 }
 
 .jumbotron {
-	background-color:rgb(247, 235, 194);
+	background-color:rgba(247, 235, 194, 0.3);
 }
 
 #match-name, #match-time, #pet-name {
