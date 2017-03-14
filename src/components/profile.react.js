@@ -121,9 +121,8 @@ class Profile extends Component {
 		return(
 			<div>
 				<div className="container home main-content profile">
-					<div className="row profile">
-						<div className="col-sm-1"/>
-						<div className="col-sm-5">
+					{/*<div className="row profile">*/}
+						<div className="container profile-left">
 							<h2>{this.state.firstName} {this.state.lastName}</h2>
 
 
@@ -144,33 +143,28 @@ class Profile extends Component {
 										 </Carousel.Caption>
 								 </Carousel.Item>
 							</Carousel>
-
-
-
-
-
 						</div>
-						<div className="col-sm-5">
-							<h4>Description</h4>
+
+
+						<div className="container profile-right">
+							<b><Link id="settings-page" to="/settings">Settings</Link></b>
+							<h4 id="profile-title">Description</h4>
 							<p id="description">{this.state.description}</p>
 
-							<h4>Info</h4>
+							<h4 id="profile-title">Info</h4>
 							{(this.state.organization)?
 								<text id="owner">Organization: {this.state.organization}<br/></text>:
 								<text id="owner">Organization: N/A<br/></text>
 							}
 							<text id="pet-location">Location: {this.state.city}, {this.state.state}<br/></text>
 						{/* Remember to remove button if just viewing a profile */}
-							<h4>Pets  <Button onClick={() => this._handleAdd(this.state.userId)}>Add pet?</Button></h4>
+							<h4 id="profile-title">Pets <Button id="addPet" onClick={() => this._handleAdd(this.state.userId)}>Add pet?</Button></h4>
 							<div className="container allPets">
 								{petsArry}
 							</div>
-							<div className="col-sm-1"/>
 						</div>
-					</div>
+					{/*/</div>*/}
 
-					<div className="row">
-                	</div>
 				</div>
 			</div>
 		);

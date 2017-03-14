@@ -1,0 +1,56 @@
+.profile {
+	display:inline-flex;
+	/*overflow:hidden;*/
+}
+
+/*div.col-sm-6.profile-right {
+	background-color:beige;
+	overflow:auto;
+}
+
+div.col-sm-6.profile-left {
+	background-color:yellow;
+}
+*/
+
+div.container.profile-left {
+	background-color:yellow;
+}
+
+
+div.container.profile-right {
+	background-color:coral;
+	height:100%;
+	width:50%;
+}
+
+div.container.allPets {
+	overflow:auto;
+}
+
+
+#addPet {
+	background-color:#db9128;
+	color:white;
+	float:right;
+}
+
+.addPet:hover, .addPet:active, .addPet:focus {
+	background-color:#fba62b;
+	border-color: #db9128;
+}
+
+#settings-page{
+	color:#db9128;
+	margin-top:5%;
+	font-size:1.2em;
+}
+
+.petName a {
+	color:#db9128;
+
+}
+
+#profile-title {
+	color:#802200;
+}
