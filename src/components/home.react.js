@@ -36,8 +36,8 @@ class Home extends Component {
 	};
 
 	componentWillMount(){
-		console.log("WHAT THE FUCK");
-		this.props.getAllPets();
+		if(!this.state.owner)
+			this.props.getAllPets();
 	}
 
 	componentWillReceiveProps(nextProps) {

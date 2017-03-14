@@ -68,6 +68,41 @@ router.get('/pets/', function(req, res){
 	});
 });
 
+router.get('/petPref/:id', function(req, res){
+	console.log(req.params.id);
+	console.log("SAY THIS");
+	Info.findOne({_id: req.params.id}, function(err, user){
+		let fullQuery ={
+			$and:[]
+		}
+		let query = {
+			$or: []
+		};
+		console.log(user);
+		if(user.dog === true){
+			query["$or"].push({type: "Dog"});
+			console.log(query);
+		}else{
+			console.log(user["dog"]);
+			console.log("this is the dog");
+			console.log(user);
+		}
+		if(user.cat === true)
+			query["$or"].push({type: "Cat"});
+		if(user.other === true)
+			query["$or"].push({type: "Other"});
+		fullQuery["$and"].push({city: user.city});
+		fullQuery["$and"].push({state: user.state});
+		fullQuery["$and"].push(query);
+		console.log(fullQuery);
+		Pet.find(fullQuery, function(err, pets){
+			console.log(pets);
+			res.send(pets);
+		})
+	});
+});
+
+
 router.get('/pet/:id', function(req, res){
 	console.log(req.params.id);
 	Pet.findOne({_id: req.params.id}, function(err, pet){
