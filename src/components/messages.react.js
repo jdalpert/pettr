@@ -87,7 +87,7 @@ class Messages extends Component {
 				singleMess.push(
 				(this.state.matches[i].requested !== this.props.params.id)?
 				<div key={i} value={i} onClick={() => this._handleSelect(i)}>
-					<div className={"container messageList" + " pressed"}>
+					<div className={"container messageList"}>
 						<img className="match-pic" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg"/>
 						<h4 className="messageName"><b><Link to={"/profile/" +  this.state.matches[i].userIdB}>{this.state.matches[i].userBFirstName + " " + this.state.matches[i].userBLastName}</Link></b></h4>
 						<h4 className="messageName">is interested in <b><Link to={"/viewdog/" + this.state.matches[i].petId}>{this.state.matches[i].petName}</Link></b></h4>

@@ -84,12 +84,13 @@ class PetTool extends Component {
 	}
 
 	_handleHome = () =>{
-		if(!this.state.userId)
+		if(!this.state.userId){
 			this.props.getAllPets();
-		else{
+			this.context.router.push("/home/");	
+		}else{
 			this.props.getPets(this.state.userId);
+			this.context.router.push("/home/" + this.state.userId);
 		}
-		this.context.router.push("/home/" + this.state.userId);
 	}
 
 	_handleProfile = () =>{
