@@ -55,6 +55,26 @@ class Home extends Component {
 		console.log("was it empty?");
 	}
 
+	// for the carousel changing 
+
+	change0 = () =>{
+		this.setState({index:0});
+	}
+
+	change1 = () =>{
+		this.setState({index:1});
+	}
+
+	change2 = () =>{
+		this.setState({index:2});
+	}
+
+	change3 = () =>{
+		this.setState({index:3});
+	}
+
+	// for the carousel changing
+
 	render() {
 		return(
 			<div>
