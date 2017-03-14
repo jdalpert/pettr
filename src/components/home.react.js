@@ -56,7 +56,7 @@ class Home extends Component {
 		console.log("was it empty?");
 	}
 
-	// for the carousel changing 
+	// for the carousel changing
 
 	change0 = () =>{
 		this.setState({index:0});
@@ -81,11 +81,11 @@ class Home extends Component {
 			<div>
 				<div className="container home main-content">
 					<div className="row">
-						<div className="col-sm-1" id="left-arrow"><img id="left-arrow" src="https://github.com/jdalpert/pettr/blob/b072e46c94b4cc459870545bf8002bc84079b9b6/src/components/assets/leftarrow.png?raw=true"/></div>
-						<div className="col-md-6 FIRST-HALF">
+						<div className="col-md-1" id="left-arrow"><img id="left-arrow" src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/01_arrow_left-512.png"/></div>
+						<div className="col-md-8 FIRST-HALF">
 							<div className = "row carousel-thumbnails">
 								<div className="col-sm-9 carousel-stuff">
-									<h2 class="display-4"> My name is {this.state.name}! </h2>
+									<h1 class="display-4"> My name is {this.state.name}! </h1>
 			     					 <Carousel activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect}>
 			       						<Carousel.Item> <img width={400} height={300} alt="400x300" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg"/> </Carousel.Item>
 			       						<Carousel.Item> <img width={400} height={300} alt="400x300" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg"/> </Carousel.Item>
@@ -95,29 +95,32 @@ class Home extends Component {
 								</div>
 
 								<div className = "col-sm-3 thumbnails">
-									<button className="btn btn-primary btn-xs thumbnail-button" onClick={this.change0}><img className="nav-icon thumbnail" width={64} height={64} src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg" alt="Image"/></button>
-									<button className="btn btn-primary btn-xs thumbnail-button" onClick={this.change1}><img className="nav-icon thumbnail" width={64} height={64} src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg" alt="Image"/></button>
-									<button className="btn btn-primary btn-xs thumbnail-button" onClick={this.change2}><img className="nav-icon thumbnail" width={64} height={64} src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg" alt="Image"/></button>
-									<button className="btn btn-primary btn-xs thumbnail-button" onClick={this.change3}><img className="nav-icon thumbnail" width={64} height={64} src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/4/1/5/228543262.jpg" alt="Image"/></button>
+										<button className="btn btn-primary btn-xs thumbnail-button" onClick={this.change0}><img className="nav-icon thumbnail" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg" alt="Image"/></button>
+
+										<button className="btn btn-primary btn-xs thumbnail-button" onClick={this.change1}><img className="nav-icon thumbnail" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg" alt="Image"/></button>
+
+										<button className="btn btn-primary btn-xs thumbnail-button" onClick={this.change2}><img className="nav-icon thumbnail" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg" alt="Image"/></button>
+
+										<button className="btn btn-primary btn-xs thumbnail-button" onClick={this.change3}><img className="nav-icon thumbnail" width={64} height={64} src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/4/1/5/228543262.jpg" alt="Image"/></button>
 								</div>
 							</div>
 						</div>
 
 
-						<div className="col-md-6 SECOND-HALF">
+						<div className="col-md-3 SECOND-HALF">
 							<div className="pet-bio-info">
 								<text id="facts"> About Me <br/></text>
 
 								<div className="row nested">
 									<div className="col-sm-6 about-1">
-										<text id="pet-type">{"Type: "}</text><text>{(this.state.type)? this.state.type : "N/A"}</text><br/> 
-										<text id="pet-age">{"Age: "}</text><text>{(this.state.age)? this.state.age : "N/A"}</text><br/> 
-										<text id="pet-size">{"Size: "}</text><text>{(this.state.size)? this.state.size : "N/A"}</text><br/> 
+										<text id="pet-type">{"Type: "}</text><text>{(this.state.type)? this.state.type : "N/A"}</text><br/>
+										<text id="pet-age">{"Age: "}</text><text>{(this.state.age)? this.state.age : "N/A"}</text><br/>
+										<text id="pet-size">{"Size: "}</text><text>{(this.state.size)? this.state.size : "N/A"}</text><br/>
 									</div>
 
 									<div className="col-sm-6 about-2">
 										<text id="pet-gender">{"Color: "}</text><text>{(this.state.color)? this.state.color : "N/A"}</text><br/>
-										<text id="pet-gender">{"Gender: "}</text><text>{(this.state.gender)? this.state.gender :"N/A"}</text><br/>								
+										<text id="pet-gender">{"Gender: "}</text><text>{(this.state.gender)? this.state.gender :"N/A"}</text><br/>
 									</div>
 								</div>
 							</div>
@@ -137,15 +140,15 @@ class Home extends Component {
 
 					<div className="row confirmButtons">
 						<div className="col">
-							<img className="confirm-icon no" src="https://github.com/jdalpert/pettr/blob/b072e46c94b4cc459870545bf8002bc84079b9b6/src/components/assets/buttonnolikes.png?raw=true"/>
-							<img className="confirm-icon yes" src="https://github.com/jdalpert/pettr/blob/b072e46c94b4cc459870545bf8002bc84079b9b6/src/components/assets/buttonlikes.png?raw=true"/>
+							<img className="nav-icon no" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/abandonb.png?raw=true"/>
+							<img className="nav-icon yes" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/adoptb.png?raw=true"/>
 						</div>
-					</div>	
+					</div>
 
 
-					<div className="col-sm-1" id="right-arrow"><img id="right-arrow" src="https://github.com/jdalpert/pettr/blob/b072e46c94b4cc459870545bf8002bc84079b9b6/src/components/assets/rightarrow.png?raw=true"/></div>
+					<div className="col-sm-1" id="right-arrow"><img id="right-arrow" src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/01_arrow_right-512.png"/></div>
 
-						
+
 				</div>
 			</div>
 		);
