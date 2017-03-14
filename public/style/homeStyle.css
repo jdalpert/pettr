@@ -6,6 +6,10 @@
 	margin-left:5%;
 }*/
 
+.thumbnail-button {
+	margin-top: 10%;
+}
+
 .confirmButtons {
 	margin-top: 2%;
 	text-align: center;
@@ -167,6 +171,26 @@ div.carousel.slide {
 	color: #802200;
 }
 
-.locationInfo {
+/*.locationInfo {
 	margin-left:3%;
+}*/
+
+@media (max-width: 991px) {
+  .thumbnails {
+    text-align: center;
+  }
+
+  .thumbnail-button {
+  	margin-left: 1.5%;
+  	margin-right: 1.5%;
+  }
+
+  .pet-bio-info, .locationInfo{
+  	text-align: center;
+  }
+
+  .nested {
+  	display: inline-block;
+  }
+
 }
