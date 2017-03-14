@@ -209,19 +209,22 @@ div.carousel.slide {
   	display: inline-block;
   }
 }
-@media (max-width: 928px) and (max-width: 844px)
-{
-	.thumbnails{
-		margin-top: 10%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-left: -20%;
-	}
+.SECOND-HALF{
+	/*this is b/c its -10% on the thumbnails.
+	be sure to adjust this accordingly.*/
+	margin-left: -10%;
 }
 
-/*this is when the 9 and 3 columns for the first-half stack*/
-@media (max-width: 844px) and (min-width: 200px) {
+/*note to self-michael: idk why these two media queries fix the columns*/
+@media (min-width: 768px) {
+	margin-top: 10%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: -20%;
+}
+
+@media (max-width: 767px) and (min-width: 200px) {
 	.thumbnails {
 		margin-top: 0;
 		margin-left: 0;
