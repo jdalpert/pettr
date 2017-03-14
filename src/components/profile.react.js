@@ -48,11 +48,16 @@ class Profile extends Component {
 						description: this.props.data.description,
 						organization: this.props.data.organization
 					});
-			} else if (!this.state.login)
-			this.context.router.push("/login");
+			}
 			console.log("was it empty?2");
-		}else if (!this.state.login)
+		}else if (!this.state.login && !Array.isArray(this.props.data))
 			this.context.router.push("/login");
+		else{
+			console.log("ASDDSSS");
+			console.log(this.props);
+			if (this.props.params)
+				this.props.getUserInfo(this.props.params.id);
+		}
 		console.log("end");
 	}
 
@@ -90,7 +95,7 @@ class Profile extends Component {
 	_handleClick = (id) =>{
 		this.props.getPetOwnerInfo(id);
 		console.log(id);
-		this.context.router.push("/");
+		this.context.router.push("/viewdog");
 	};
 
 	_handleAdd = (id) =>{
