@@ -40,6 +40,13 @@ class Signup extends Component {
 		this.setState(obj)
 	};
 
+
+	_handleCheck = (event) => {
+		let obj = {};
+		obj[event.target.name] = !this.state[event.target.name];
+		this.setState(obj)
+	};
+
 	_handleClick = () => {
 		this.props.grab_data(this.state);
 		this.context.router.push("/profile" );
@@ -139,11 +146,11 @@ class Signup extends Component {
 
 							<b><p>Select all pets I'm interested in:</p></b>
 							<div id="select-pets">
-								<input type="checkbox" onChange={this._handleChange} checked={this.state.dog} value={this.state.dog} name ="dog" id="dog"/>
+								<input type="checkbox" onChange={this._handleCheck} checked={this.state.dog} value={this.state.dog} name ="dog" id="dog"/>
 								<label htmlFor="dogs"> Dogs </label>
-								<input type="checkbox" onChange={this._handleChange} checked={this.state.cat} value={this.state.cat} name ="cat" id="cat"/> 
+								<input type="checkbox" onChange={this._handleCheck} checked={this.state.cat} value={this.state.cat} name ="cat" id="cat"/> 
 								<label htmlFor="cats"> Cats </label>
-								<input type="checkbox" onChange={this._handleChange} checked={this.state.other} value={this.state.other} name ="other" id="other"/>
+								<input type="checkbox" onChange={this._handleCheck} checked={this.state.other} value={this.state.other} name ="other" id="other"/>
 								<label htmlFor="other"> Other </label><br/>
 							</div>
 							<p> After you have created an account, you will be able to add pet profiles in your user profile.</p>
