@@ -9,7 +9,8 @@ var petSchema = new Mongoose.Schema({
 	description: String,
 	age: String,
 	size: String,
-	gender: String
+	gender: String,
+	color: String
 });
 
 module.exports = Mongoose.model('Pet', petSchema);
