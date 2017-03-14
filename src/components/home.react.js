@@ -36,8 +36,8 @@ class Home extends Component {
 	};
 
 	componentWillMount(){
-		console.log("WHAT THE FUCK");
-		this.props.getAllPets();
+		if(!this.state.owner)
+			this.props.getAllPets();
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -81,11 +81,11 @@ class Home extends Component {
 			<div>
 				<div className="container home main-content">
 					<div className="row">
-						<div className="col-sm-1" id="left-arrow"><img id="left-arrow" src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/01_arrow_left-512.png"/></div>
+						<div className="col-sm-1" id="left-arrow"><img id="left-arrow" src="https://github.com/jdalpert/pettr/blob/b072e46c94b4cc459870545bf8002bc84079b9b6/src/components/assets/leftarrow.png?raw=true"/></div>
 						<div className="col-md-6 FIRST-HALF">
 							<div className = "row carousel-thumbnails">
 								<div className="col-sm-9 carousel-stuff">
-									<h1 class="display-4"> My name is {this.state.name}! </h1>
+									<h2 class="display-4"> My name is {this.state.name}! </h2>
 			     					 <Carousel activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect}>
 			       						<Carousel.Item> <img width={400} height={300} alt="400x300" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg"/> </Carousel.Item>
 			       						<Carousel.Item> <img width={400} height={300} alt="400x300" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg"/> </Carousel.Item>
@@ -137,13 +137,13 @@ class Home extends Component {
 
 					<div className="row confirmButtons">
 						<div className="col">
-							<img className="nav-icon no" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/abandonb.png?raw=true"/>
-							<img className="nav-icon yes" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/adoptb.png?raw=true"/>
+							<img className="confirm-icon no" src="https://github.com/jdalpert/pettr/blob/b072e46c94b4cc459870545bf8002bc84079b9b6/src/components/assets/buttonnolikes.png?raw=true"/>
+							<img className="confirm-icon yes" src="https://github.com/jdalpert/pettr/blob/b072e46c94b4cc459870545bf8002bc84079b9b6/src/components/assets/buttonlikes.png?raw=true"/>
 						</div>
 					</div>	
 
 
-					<div className="col-sm-1" id="right-arrow"><img id="right-arrow" src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/01_arrow_right-512.png"/></div>
+					<div className="col-sm-1" id="right-arrow"><img id="right-arrow" src="https://github.com/jdalpert/pettr/blob/b072e46c94b4cc459870545bf8002bc84079b9b6/src/components/assets/rightarrow.png?raw=true"/></div>
 
 						
 				</div>
