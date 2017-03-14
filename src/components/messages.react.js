@@ -61,9 +61,9 @@ class Messages extends Component {
 					</div>
 					<hr/>
 					<div className="container messageList">
-						<img className="match-pic" src="http://petadoption.ocpetinfo.com/Adopt/RetrieveImage.asp?ID=A0821356"/>
+						<img className="match-pic" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/b/9/253230283.jpg"/>
 						<h4 className="messageName"><b><Link to="/profile">Michael Williams</Link></b></h4>
-						<h4 className="messageName">interested in <b><Link to="/">Dude</Link></b></h4>
+						<h4 className="messageName">interested in <b><Link to="/">Jasmine</Link></b></h4>
 						<div className="confirmButtonsMessage">
 							<div>
 								<Button bsStyle="primary" bsSize="small" className="messageButton">Connect</Button>

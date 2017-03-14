@@ -1,15 +1,13 @@
-
-
-.swipe-buttons {
+/*.swipe-buttons {
 	text-align:center;
 }
 
 .swipe-buttons button #abandon {
 	margin-left:5%;
-}
+}*/
 
 .confirmButtons {
-	margin-top: 20px;
+	margin-top: 2%;
 	text-align: center;
 }
 
@@ -60,47 +58,23 @@ margin-left: -40px;
 margin-top:20px;
 }
 
-.float {
+/*.float {
 	margin-top:2%;
-}
+}*/
 
 #facts {
 	color: #802200;
 	font-weight:bold;
-	font-size: 20px;
+	font-size: 1.5em;
 }
 
-#pet-breed {
-	display: inline-block;
-	width: 55px;
-	margin-left: 15px;
+#pet-age, #pet-color, #pet-gender, #pet-size, #pet-type {
+	margin-left: 2%;
 	font-weight:bold;
 }
-
-#pet-age {
-	display: inline-block;
-	width: 55px;
-	margin-left: 15px;
-	font-weight:bold;
-}
-
-#pet-color {
-	display: inline-block;
-	width: 55px;
-	margin-left: 15px;
-	font-weight:bold;
-}
-
-#pet-gender {
-	display: inline-block;
-	width: 55px;
-	margin-left: 15px;
-	font-weight:bold;
-}
-
 
 #description {
-	margin-left: 25px;
+	/*margin-left: 25px;*/
 	color:#1c2833;
 }
 
@@ -127,13 +101,72 @@ margin-top:20px;
 
 .petsList>.petName{
 	padding-left: 20px;
-	display: ;
 }
 
-.row .profile{
-	height:100%};
-}
 /*.smallPic {
 	height: 100px;
 	width: 100px;
 }*/
+
+/*makes carousel arrows transparent, but still clickable on left and right*/
+a.carousel-control.right, a.carousel-control.left {
+	opacity: 0;
+    filter:alpha(opacity=0);
+}
+
+.carousel-inner .item img{
+    width: 100%;
+}
+
+div.carousel.slide {
+	height:50%;
+	width:65%;
+	margin: 0 auto;
+}
+
+.carousel-indicators li {
+  background-color:#db9128;
+  border: 1px solid #db9128;
+}
+
+.carouse-indicatrs {
+	bottom:-10%;
+	position:absolute;
+}
+.display-4 {
+	font-size:2em;
+	text-align:center;
+	margin-top:3%;
+}
+
+.pet-bio-info {
+	margin-top:5%;
+}
+
+.about-1 {
+	/*background-color:yellow;*/
+	display: inline-block;
+	text-align: left;
+	float:left;
+}
+
+.about-2 {
+	/*background-color:coral;*/
+	display: inline-block;
+	text-align: left;
+	overflow-y: auto;
+	float:left;
+}
+
+/*.petDescription {
+	margin-top:3%;
+}*/
+
+
+#locationText {
+	color: #802200;
+}
+
+.locationInfo {
+	margin-left:3%;
+}

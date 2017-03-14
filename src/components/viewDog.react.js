@@ -9,7 +9,7 @@ import Slider from 'react-slick';
 
 
 //const store = [{userName: Tony, userAddress: Klondike, userQuote: Food}];
-class Home extends Component {
+class ViewDog extends Component {
 
 	constructor(props) {
 		super(props);
@@ -34,11 +34,6 @@ class Home extends Component {
 	_handleClick = () => {
 		this.context.router.push("/");
 	};
-
-	componentWillMount(){
-		console.log("WHAT THE FUCK");
-		this.props.getAllPets();
-	}
 
 	componentWillReceiveProps(nextProps) {
 		console.log("check");
@@ -156,4 +151,4 @@ function mapStateToProps(state) {
 	};
 }
 
-export default connect(mapStateToProps, actions)(Home);
+export default connect(mapStateToProps, actions)(ViewDog);

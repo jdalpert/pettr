@@ -15,7 +15,7 @@
 }*/
 body {
 	/*background-color: #f6b26b;*/
-  background:url('https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/bg2.png?raw=true');
+  background:url('https://github.com/jdalpert/pettr/blob/be067804dde4fdbf73afc810dfb6e2a25ef21bea/src/components/assets/bg2.png?raw=true');
   /*color: #4f5a65;*/
 	/*color: #2b0000;*/
 	/*color: #1d1905;*/
@@ -36,7 +36,7 @@ input {
 	/*background-color: #FFFFFF;*/
   background-color: rgba(255, 250, 230, 0.9);
   margin-top: 134px;
-  position: relative;
+  position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
   width: 80%;
   height: 75%;
@@ -152,8 +152,16 @@ ul.nav.navbar-nav.navbar-right {
   justify-content: flex-end;
 }
 
+/* this is the welcome: guest! thing*/
 .navbar-default .navbar-text {
   color: #ba2100;
-  float:right;
-  margin:0px;
+  position: absolute;
+  top: -webkit-calc(50% - 19px);
+  top: -moz-calc(50% - 19px);
+  top: -ms-calc(50% - 19px);
+  top: calc(50% - 19px);
+  right: 10%;
+  margin-top: 134px;
+  z-index:1;
+  padding:0;
 }

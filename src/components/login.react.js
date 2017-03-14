@@ -23,6 +23,12 @@ class Login extends Component {
 		router: PropTypes.object
 	};
 
+	componentWillMount(){
+		console.log("WHA2");
+		console.log(this.state);
+		if(this.state.login)
+			this.context.router.push("/profile");
+	}
 
 	componentWillReceiveProps(nextProps) {
 		if(nextProps.data._id)
@@ -37,8 +43,8 @@ class Login extends Component {
 
 	_handleLogin = () => {
 		console.log("CHECK");
-		this.props.loginUser(this.state);
 		this.setState({login: true});
+		this.props.loginUser(this.state);
 		this.context.router.push("/profile");
 	};
 

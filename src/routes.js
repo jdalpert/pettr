@@ -12,6 +12,7 @@ import Messages from './components/messages.react';
 import Settings from './components/settings.react';
 import AddPet from './components/addPet.react';
 import Login from './components/login.react';
+import ViewDog from './components/viewDog.react';
 
 
 //import Greeting from './components/greeting.react';
@@ -30,9 +31,11 @@ export default (
 		<Route path="/signup" component={Signup}/>
 		<Route path="/home" component={Home}/>
 		<Route path="/profile" component={Profile}/>
+		<Route path="/profile/:id" component={Profile}/>
 		<Route path="/mission" component={Mission}/>
 		<Route path="/messages" component={Messages}/>
 		<Route path="/addpet" component={AddPet}/>
 		<Route path="/login" component={Login}/>
+		<Route path="/viewdog" component={ViewDog}/>
 	</Route>
 );
