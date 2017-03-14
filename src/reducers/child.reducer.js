@@ -1,4 +1,4 @@
-import { CHANGE, GRAB, GRAB2, DELETE, LOGINUSER, GETINFO, GETPETINFO } from "../actions/constants";
+import { CHANGE, GRAB, GRAB2, DELETE, LOGINUSER, GETINFO, GETPETINFO, OWNERGETPETINFO, ALLPETS } from "../actions/constants";
 
 const initial_state = {
 	data: ""
@@ -25,8 +25,14 @@ export default function(state = initial_state, action){
 		case GETPETINFO:
 			return {...state, data: action.payload.data};
 
+		case OWNERGETPETINFO:
+			return {...state, data: action.payload.data};
+
 		case DELETE:
 			return {...state, data: action.payload.data};
+
+		case ALLPETS:
+			return {...state, data: action.payload.data};			
 
 		default:
 			return state 

@@ -28,7 +28,7 @@ class Profile extends Component {
 	}
 	componentWillMount(){
 		console.log("check2");
-		if(this.props.data){
+		if(this.props.data && !Array.isArray(this.props.data)){
 			console.log("These are the props data");
 			console.log(this.props.data.userId);
 			if(this.props.data.userId && !this.props.data.email){
@@ -38,6 +38,7 @@ class Profile extends Component {
 			if(this.props.data.email){
 				this.setState(
 					{
+						//userId: this.props.data._id,
 						email: this.props.data.email,
 						firstName: this.props.data.firstName,
 						lastName: this.props.data.lastName,
@@ -47,17 +48,18 @@ class Profile extends Component {
 						description: this.props.data.description,
 						organization: this.props.data.organization
 					});
-			}
-			console.log("was it empty?2");
-		} else if (!this.state.login){
+			} else if (!this.state.login)
 			this.context.router.push("/login");
-		}
+			console.log("was it empty?2");
+		}else if (!this.state.login)
+			this.context.router.push("/login");
+		console.log("end");
 	}
 
 	componentWillReceiveProps(nextProps) {
 		console.log("check");
 		console.log(nextProps);
-		if(nextProps.data){
+		if(nextProps.data && !Array.isArray(nextProps.data)){
 			if(nextProps.data.userId && !nextProps.data.email){
 				this.setState({userId: nextProps.data.userId, login: true});
 				this.props.getUserInfo(nextProps.data.userId);
@@ -65,6 +67,7 @@ class Profile extends Component {
 			if(nextProps.data.email){
 				this.setState(
 					{
+						//userId: nextProps.data._id,
 						email: nextProps.data.email,
 						firstName: nextProps.data.firstName,
 						lastName: nextProps.data.lastName,
@@ -85,7 +88,7 @@ class Profile extends Component {
 	};
 
 	_handleClick = (id) =>{
-		this.props.getPetInfo(id);
+		this.props.getPetOwnerInfo(id);
 		console.log(id);
 		this.context.router.push("/");
 	};
@@ -158,7 +161,7 @@ class Profile extends Component {
 							}
 							<text id="pet-location">Location: {this.state.city}, {this.state.state}<br/></text>
 						{/* Remember to remove button if just viewing a profile */}
-							<h4>Pets<Button onClick={() => this._handleAdd(this.state.userId)}>Add pet?</Button></h4>
+							<h4>Pets  <Button onClick={() => this._handleAdd(this.state.userId)}>Add pet?</Button></h4>
 							<div className="container allPets">
 								{petsArry}
 							</div>

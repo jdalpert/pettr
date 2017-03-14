@@ -14,8 +14,20 @@ class Home extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			id: "",
-			location: ""
+			userId: "",
+			name: "",
+			age: "",
+			color: "",
+			gender: "",
+			size: "",
+			type: "",
+			city: "",
+			state: "",
+			description: "",
+			//add css to make things you want to not to display not to display and use the owner property to get rid of them
+			owner: false,
+			pets: [],
+			petIndex: 0,
 		};
 	}
 
@@ -23,10 +35,23 @@ class Home extends Component {
 		this.context.router.push("/");
 	};
 
+	componentWillMount(){
+		console.log("WHAT THE FUCK");
+	}
+
 	componentWillReceiveProps(nextProps) {
 		console.log("check");
-		this.setState({id: nextProps.data});
-		console.log(nextProps.data);
+		if(!Array.isArray(nextProps.data) && nextProps.data.owner){
+			if(nextProps.data.userId)
+				this.setState(nextProps.data);
+			console.log(nextProps.data);
+		}else if(Array.isArray(nextProps.data) && nextProps.data){
+			console.log("what?");
+			this.setState(nextProps.data[this.state.petIndex]);
+			this.setState({pets: nextProps.data});
+			console.log(nextProps.data);
+		}
+		console.log(nextProps);
 		console.log("was it empty?");
 	}
 
@@ -37,7 +62,7 @@ class Home extends Component {
 					<div className="row">
 						<div className="col-sm-1" id="left-arrow"><img id="left-arrow" src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/01_arrow_left-512.png"/></div>
 						<div className="col-sm-6">
-							<h1 className="display-4"> My name is <text id="pet-name">Lola Bear</text>!</h1>
+							<h1 class="display-4"> My name is {this.state.name}! </h1>
 
      					 <Carousel activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect}>
        						 <Carousel.Item>
@@ -74,7 +99,6 @@ class Home extends Component {
 
 
       					</Carousel>
-
 						</div>
 						<div className="col-sm-6">
 							<div className="pet-bio-info">
@@ -82,37 +106,26 @@ class Home extends Component {
 
 								<div className="row nested">
 									<div className="col-sm-6 about-1">
-										<text id="pet-color">Color: </text>
-										<text> White-Brown</text><br/>
-										<text id="pet-gender">Gender: </text>
-										<text> Female</text>
-										<br/>
+										<text id="pet-gender">{"Color: "}</text><text>{(this.state.color)? this.state.color : "N/A"}</text><br/>
+										<text id="pet-gender">{"Gender: "}</text><text>{(this.state.gender)? this.state.gender :"N/A"}</text><br/>
 									</div>
 
 									<div className="col-sm-6 about-2">
-										<text id="pet-type">Type: </text>
-										<text> Dog</text><br/>
-										<text id="pet-age">Age: </text>
-										<text> 10</text><br/>
-										<text id="pet-size">Size: </text>
-										<text> Small</text><br/>
-									</div>
+										<text id="pet-type">{"Type: "}</text><text>{(this.state.type)? this.state.type : "N/A"}</text><br/> 
+										<text id="pet-age">{"Age: "}</text><text>{(this.state.age)? this.state.age : "N/A"}</text><br/> 
+										<text id="pet-size">{"Size: "}</text><text>{(this.state.size)? this.state.size : "N/A"}</text><br/> 									</div>
 								</div>
 
 
 								<br/>
 									<div className="petDescription">
-										<p id="description">Hi I am a 5 year old golden/chestnut/white female Pomeranian looking for a new home! I am a small dog
-										that weighs 25 lbs or less. I am already spayed, purebred, a special needs pet, and up to date with shots. Unfortunately, I have diabetes
-										and will need insulin shots twice a day, but they are fairly inexpensive.
-										I am respectful and get along well with both people and dogs. Please give me a new home!</p>
+										<p id="description">{this.state.description}</p>
 									</div>
 
 
 								<div className="locationInfo">
 									<h4 id="locationText">Come find me here!</h4>
-									<text id="owner">Southern California Pomeranian Rescue<br/></text>
-									<text id="pet-location">Location: Irvine, CA<br/></text>
+									<text id="pet-location">Location: {this.state.city}, {this.state.state}<br/></text>
 									<a href="#">View Owner Profile</a>
 								</div>
 
