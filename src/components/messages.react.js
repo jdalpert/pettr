@@ -12,11 +12,34 @@ class Messages extends Component {
 
 	constructor(props) {
 		super(props);
+		this.state = {
+			_id: "",
+			firstName: "",
+			lastName: "",
+			matches: [],
+		};
 	}
+
+	static contextTypes = {
+		router: PropTypes.object
+	};
 
 	_handleClick = () => {
 		this.context.router.push("/");
 	};
+
+	componentWillMount(){
+		if (this.props.params)
+			this.props.getUserInfo(this.props.params.id);
+	}
+
+	componentWillReceiveProps(nextProps) {
+		if(nextProps.data){
+			this.setState(nextProps.data);
+			console.log("Check it out");
+			console.log(nextProps.data);
+		}
+	}
 
 	render() {
 		return(

@@ -34,6 +34,7 @@ export default (
 		<Route path="/profile/:id" component={Profile}/>
 		<Route path="/mission" component={Mission}/>
 		<Route path="/messages" component={Messages}/>
+		<Route path="/messages/:id" component={Messages}/>
 		<Route path="/addpet" component={AddPet}/>
 		<Route path="/login" component={Login}/>
 		<Route path="/viewdog" component={ViewDog}/>
