@@ -74,6 +74,24 @@ class Home extends Component {
 		this.setState({index:3});
 	}
 
+	_handleLeft = () =>{
+		let decPet = this.state.petIndex;
+		decPet--;
+		if (decPet < 0)
+			decPet = this.state.pets.length - 1;
+		this.setState({petIndex: decPet});
+		this.setState(this.state.pets[decPet]);
+	}
+
+	_handleRight = () =>{
+		let incPet = this.state.petIndex;
+		incPet++;
+		if (incPet > this.state.pets.length - 1)
+			incPet = 0;
+		this.setState({petIndex: incPet});
+		this.setState(this.state.pets[incPet]);
+	}
+
 	// for the carousel changing
 
 	render() {
@@ -81,7 +99,7 @@ class Home extends Component {
 			<div>
 				<div className="container home main-content">
 					<div className="row">
-						<div className="col-md-1" id="left-arrow"><img id="left-arrow" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/leftarrow.png?raw=true"/></div>
+						<div className="col-md-1" id="left-arrow"><img id="left-arrow" onClick={this._handleLeft} src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/leftarrow.png?raw=true"/></div>
 						<div className="col-md-8 FIRST-HALF">
 							<div className = "row carousel-thumbnails">
 								<div className="col-sm-9 carousel-stuff">
@@ -146,7 +164,7 @@ class Home extends Component {
 					</div>
 
 
-					<div className="col-sm-1" id="right-arrow"><img id="right-arrow" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/rightarrow.png?raw=true"/></div>
+					<div className="col-sm-1" id="right-arrow"><img id="right-arrow" onClick={this._handleRight} src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/rightarrow.png?raw=true"/></div>
 
 
 				</div>
