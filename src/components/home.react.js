@@ -31,13 +31,6 @@ class Home extends Component {
 	}
 
 	render() {
-		// let settings = {
-	 //      dots: true,
-	 //      infinite: true,
-	 //      speed: 500,
-	 //      slidesToShow: 1,
-	 //      slidesToScroll: 1
-  //   	};
 		return(
 			<div>
 				<div className="container home main-content">
@@ -81,51 +74,48 @@ class Home extends Component {
 
 
       					</Carousel>
-							{/*<div className="slideShowPics">
-			                	<Slider {...settings}>
-			                		<div className="slideShowPics"><h3><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg"/></h3></div>
-									<div className="slideShowPics"><h3><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg"/></h3></div>
-		                            <div className="slideShowPics"><h3><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg"/></h3></div>
-			                		<div className="slideShowPics"><h3><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/4/1/5/228543262.jpg"/></h3></div>
-			                	</Slider>
-		                	</div>
-		                */}
+
 						</div>
-						<div className="col-md-6">
+						<div className="col-sm-6">
 							<div className="pet-bio-info">
 								<text id="facts"> About Me <br/></text>
 
-								<div className="col-md-6 about-1">
-									<text id="pet-color">Color: </text> 	
-									<text> White-Brown</text><br/>
-									<text id="pet-gender">Gender: </text> 	
-									<text> Female</text><br/>
-									<br/>
-								</div>
-								<div className="col-md-6 about-2">
-									<text id="pet-type">Type: </text>		
-									<text> Dog</text><br/>
-									<text id="pet-age">Age: </text> 	
-									<text> 10</text><br/>
-									<text id="pet-size">Size: </text>		
-									<text> Small</text><br/>
-								
+								<div className="row nested">
+									<div className="col-sm-6 about-1">
+										<text id="pet-color">Color: </text>
+										<text> White-Brown</text><br/>
+										<text id="pet-gender">Gender: </text>
+										<text> Female</text>
+										<br/>
+									</div>
+
+									<div className="col-sm-6 about-2">
+										<text id="pet-type">Type: </text>
+										<text> Dog</text><br/>
+										<text id="pet-age">Age: </text>
+										<text> 10</text><br/>
+										<text id="pet-size">Size: </text>
+										<text> Small</text><br/>
+									</div>
 								</div>
 
+
 								<br/>
-								<div className="col-md-12 petDescription">
-									<p id="description">Hi I am a 5 year old golden/chestnut/white female Pomeranian looking for a new home! I am a small dog
-									that weighs 25 lbs or less. I am already spayed, purebred, a special needs pet, and up to date with shots. Unfortunately, I have diabetes
-									and will need insulin shots twice a day, but they are fairly inexpensive.
-									I am respectful and get along well with both people and dogs. Please give me a new home!</p>
-								</div>
+									<div className="petDescription">
+										<p id="description">Hi I am a 5 year old golden/chestnut/white female Pomeranian looking for a new home! I am a small dog
+										that weighs 25 lbs or less. I am already spayed, purebred, a special needs pet, and up to date with shots. Unfortunately, I have diabetes
+										and will need insulin shots twice a day, but they are fairly inexpensive.
+										I am respectful and get along well with both people and dogs. Please give me a new home!</p>
+									</div>
+
+
 								<div className="locationInfo">
 									<h4 id="locationText">Come find me here!</h4>
 									<text id="owner">Southern California Pomeranian Rescue<br/></text>
 									<text id="pet-location">Location: Irvine, CA<br/></text>
 									<a href="#">View Owner Profile</a>
 								</div>
-								
+
 							</div>
 						</div>
 
