@@ -6,8 +6,15 @@
 	margin-left:5%;
 }*/
 
+.thumbnails {
+	text-align: center;
+	vertical-align: middle;
+}
+
 .thumbnail-button {
 	margin-top: 10%;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .confirmButtons {
