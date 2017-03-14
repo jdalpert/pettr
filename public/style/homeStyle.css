@@ -209,9 +209,14 @@ div.carousel.slide {
   	display: inline-block;
   }
 }
+.SECOND-HALF{
+	/*this is b/c its -10% on the thumbnails.
+	be sure to adjust this accordingly.*/
+	margin-left: -10%;
+}
 
 /*note to self-michael: idk why these two media queries fix the columns*/
-@media (min-width: 766px) {
+@media (min-width: 768px) {
 	margin-top: 10%;
 	display: flex;
 	flex-direction: column;
@@ -219,7 +224,7 @@ div.carousel.slide {
 	margin-left: -20%;
 }
 
-@media (max-width: 766px) and (min-width: 200px) {
+@media (max-width: 767px) and (min-width: 200px) {
 	.thumbnails {
 		margin-top: 0;
 		margin-left: 0;
