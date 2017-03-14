@@ -85,6 +85,7 @@ class Messages extends Component {
 		let singleMess = [];
 			for(let i = 0; i < this.state.matches.length; i++){
 				singleMess.push(
+				(this.state.matches[i].requested !== this.props.params.id)?
 				<div key={i} value={i} onClick={() => this._handleSelect(i)}>
 					<div className={"container messageList" + " pressed"}>
 						<img className="match-pic" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg"/>
@@ -99,7 +100,20 @@ class Messages extends Component {
 					</div>
 					<hr/>
 				</div>
-				)		
+				:
+				<div key={i} value={i} onClick={() => this._handleSelect(i)}>
+					<div className={"container messageList" + " pressed"}>
+						<img className="match-pic" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg"/>
+						<h4 className="messageName"><b><Link to={"/profile/" +  this.state.matches[i].userIdB}>You </Link></b></h4>
+						<h4 className="messageName">are interested in <b><Link to={"/viewdog/" + this.state.matches[i].petId}>{this.state.matches[i].petName}</Link></b></h4>
+						<div className="confirmButtonsMessage">
+							<div>
+							</div>
+						</div>
+					</div>
+					<hr/>
+				</div>
+				);		
 			}
 		if(!this.state.matches.length)
 			singleMess.push(
@@ -115,14 +129,23 @@ class Messages extends Component {
 			</div>);
 
 		let jumbo = (this.state.matches.length)?
-			<Jumbotron>
-			    <h1 id="matchedTitle">Matched!</h1>
-			    <img className="match-pic" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg"/>
-			    <p><text id="match-name">{this.state.matches[this.state.selectedIndex].userBFirstName + " " + this.state.matches[this.state.selectedIndex].userBLastName }</text> and <text id="pet-name">{this.state.matches[this.state.selectedIndex].petName}</text> matched <text id="match-time">5 days ago</text>! Connect with them at: <br/>
-			    <b><text id="contact-info">{this.state.matches[this.state.selectedIndex].userBContact}</text></b>
-			    </p>
-			    <p><Link to={"/profile/" + this.state.matches[this.state.selectedIndex].userIdB}><Button bsStyle="primary" className="profileButton">View their Profile</Button></Link></p>
-			</Jumbotron>:
+				(this.state.matches[this.state.selectedIndex].requested !== this.props.params.id)?
+				<Jumbotron>
+				    <h1 id="matchedTitle">Matched!</h1>
+				    <img className="match-pic" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg"/>
+				    <p><text id="match-name">{this.state.matches[this.state.selectedIndex].userBFirstName + " " + this.state.matches[this.state.selectedIndex].userBLastName }</text> and <text id="pet-name">{this.state.matches[this.state.selectedIndex].petName}</text> matched <text id="match-time">5 days ago</text>! Connect with them at: <br/>
+				    <b><text id="contact-info">{this.state.matches[this.state.selectedIndex].userBContact}</text></b>
+				    </p>
+				    <p><Link to={"/profile/" + this.state.matches[this.state.selectedIndex].userIdB}><Button bsStyle="primary" className="profileButton">View their Profile</Button></Link></p>
+				</Jumbotron>:
+				<Jumbotron>
+				    <h1 id="matchedTitle">Matched!</h1>
+				    <img className="match-pic" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg"/>
+				    <p><text id="match-name">{"You"}</text> and <text id="pet-name">{this.state.matches[this.state.selectedIndex].petName}</text> matched <text id="match-time">5 days ago</text>! Connect with them at: <br/>
+				    <b><text id="contact-info">{this.state.matches[this.state.selectedIndex].userBContact}</text></b>
+				    </p>
+				    <p><Link to={"/profile/" + this.state.matches[this.state.selectedIndex].userIdB}><Button bsStyle="primary" className="profileButton">View their Profile</Button></Link></p>
+				</Jumbotron>:
 			<Jumbotron>
 			    <h1 id="matchedTitle">Try Exploring Pets</h1>
 			    <p><Link to="/"><Button bsStyle="primary" className="profileButton">Check it out here</Button></Link></p>

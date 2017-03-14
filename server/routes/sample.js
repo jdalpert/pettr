@@ -150,6 +150,7 @@ router.post('/match', function(req, res){
 			console.log(ownerB);
 			Info.findOneAndUpdate({_id: req.body.ownerId}, 
 				{ $push: { matches: {
+					requested: req.body.ownerId,
 					userIdB: req.body.userId,
 					userBFirstName: ownerB.firstName,
 					userBLastName: ownerB.lastName,
@@ -164,6 +165,7 @@ router.post('/match', function(req, res){
 				console.log(addedMatch);
 				Info.findOneAndUpdate({_id: req.body.userId},
 					{$push: { matches: {
+						requested: req.body.ownerId,
 						userIdB: req.body.ownerId,
 						userBFirstName: owner.firstName,
 						userBLastName: owner.lastName,

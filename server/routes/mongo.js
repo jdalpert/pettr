@@ -18,6 +18,7 @@ var userSchema = new Mongoose.Schema({
 		petId: String
 	}],
 	matches:[{
+		requested: String,
 		userIdB: String,
 		userBFirstName: String,
 		userBLastName: String,
