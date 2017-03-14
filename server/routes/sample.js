@@ -61,11 +61,38 @@ router.get('/user/:id', function(req, res){
 	});
 });
 
+router.get('/pets/', function(req, res){
+	Pet.find(function(err, pets){
+		console.log(pets);
+		res.send(pets);
+	});
+});
+
 router.get('/pet/:id', function(req, res){
 	console.log(req.params.id);
 	Pet.findOne({_id: req.params.id}, function(err, pet){
 		console.log(pet);
 		res.send(pet);
+	});
+});
+
+router.get('/petowner/:id', function(req, res){
+	console.log(req.params.id);
+	Pet.findOne({_id: req.params.id}, function(err, pet){
+		var newPet = {
+			userId: pet.userId,
+			name: pet.name,
+			age: pet.age,
+			gender: pet.gender,
+			size: pet.size,
+			type: pet.type,
+			city: pet.city,
+			state: pet.state,
+			description: pet.description,
+			owner: true
+		}
+		console.log(newPet);
+		res.send(newPet);
 	});
 });
 

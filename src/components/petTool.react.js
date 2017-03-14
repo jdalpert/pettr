@@ -30,7 +30,7 @@ class PetTool extends Component {
 	componentWillReceiveProps(nextProps) {
 		console.log("check");
 		console.log(nextProps);
-		if(nextProps.data){
+		if(nextProps.data && !Array.isArray(nextProps.data)){
 			if(nextProps.data.userId && !nextProps.data.email){
 				this.setState({userId: nextProps.data.userId});
 				this.props.getUserInfo(nextProps.data.userId);
@@ -83,6 +83,22 @@ class PetTool extends Component {
 		this.setState({signupIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconlogin2.png?raw=true"});
 	}
 
+	_handleHome = () =>{
+		this.props.getAllPets();
+		this.context.router.push("/");
+	}
+
+	_handleProfile = () =>{
+		console.log("THISSS");
+		console.log(this.state.userId);
+		if(!this.state.userId)
+			this.context.router.push("/login");
+		else{
+			this.props.getUserInfo(this.state.userId);
+			this.context.router.push("/profile");
+		}
+	}
+
 	render() {
 		return(
 			<div>
@@ -93,7 +109,7 @@ class PetTool extends Component {
 					</Navbar.Header>
 					<Navbar.Collapse>
 						<Nav pullRight>
-							<NavItem href="/#/"><img className="nav-icon" src={this.state.homeIc} onMouseOver={this.homeHover} onMouseOut={this.homeUnhover}/></NavItem>
+							<NavItem onClick={this._handleHome}><img className="nav-icon" src={this.state.homeIc} onMouseOver={this.homeHover} onMouseOut={this.homeUnhover}/></NavItem>
 							<NavItem href="/#messages/"><img className="nav-icon" src={this.state.matchIc} onMouseOver={this.matchHover} onMouseOut={this.matchUnhover}/></NavItem>
 							<NavItem href="/#/profile"><img className="nav-icon" src={this.state.profileIc} onMouseOver={this.profileHover} onMouseOut={this.profileUnhover}/></NavItem> 
 							<NavItem href="/#/mission"><img className="nav-icon" src={this.state.missionIc} onMouseOver={this.missionHover} onMouseOut={this.missionUnhover}/></NavItem>

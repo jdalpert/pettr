@@ -14,7 +14,11 @@ class AddPet extends Component {
 		this.state = {
 			userId: "",
 			name:"",
-			type:"dog",
+			age: "",
+			color: "",
+			gender: "",
+			size:"",
+			type:"Dog",
 			city:"",
 			state:"",
 			description:""
@@ -48,7 +52,11 @@ class AddPet extends Component {
 		this.setState({
 			userId: "",
 			name:"",
-			type:"dog",
+			age: "",
+			color: "",
+			gender: "",
+			size:"",
+			type:"Dog",
 			city:"",
 			state:"",
 			description:""
@@ -67,11 +75,11 @@ class AddPet extends Component {
 							<input type="text" name="name" onChange={this._handleChange} value={this.state.name} id="name"/><br/>
 							<b><p>Select type of pet your animal is:</p></b>
 							<div id="select-pets">
-								<input type="radio" onChange={this._handleChange} checked={(this.state.type === "dog")} value={"dog"} name ="type" id="dog"/>
+								<input type="radio" onChange={this._handleChange} checked={(this.state.type === "Dog")} value={"Dog"} name ="type" id="dog"/>
 								<label htmlFor="dogs"> Dog </label>
-								<input type="radio" onChange={this._handleChange} checked={(this.state.type === "cat")} value={"cat"} name ="type" id="cat"/> 
+								<input type="radio" onChange={this._handleChange} checked={(this.state.type === "Cat")} value={"Cat"} name ="type" id="cat"/> 
 								<label htmlFor="cats"> Cat </label>
-								<input type="radio" onChange={this._handleChange} checked={(this.state.type === "other")} value={"other"} name ="type" id="other"/>
+								<input type="radio" onChange={this._handleChange} checked={(this.state.type === "Other")} value={"Other"} name ="type" id="other"/>
 								<label htmlFor="other"> Other </label><br/>
 							</div>
 							<div class="form-group">
@@ -136,6 +144,14 @@ class AddPet extends Component {
 							</div>
 							<label htmlFor="location">City:</label><br/>
 							<input type="text" name="city" onChange={this._handleChange} value={this.state.city} id="city"/><br/>
+							<label htmlFor="gender">Gender(Optional):</label><br/>
+							<input type="text" name="gender" onChange={this._handleChange} value={this.state.gender} id="gender"/><br/>
+							<label htmlFor="age">Age(Optional):</label><br/>
+							<input type="text" name="age" onChange={this._handleChange} value={this.state.age} id="age"/><br/>
+							<label htmlFor="size">Size(Optional):</label><br/>
+							<input type="text" name="size" onChange={this._handleChange} value={this.state.size} id="size"/><br/>
+							<label htmlFor="color">Color(Optional):</label><br/>
+							<input type="text" name="color" onChange={this._handleChange} value={this.state.color} id="color"/><br/>
 							<label htmlFor="description">Description:</label><br/>
 							<textarea placeholder="Tell us about you pet! Breed or anything that you feel like you other people should know!" name="description" onChange={this._handleChange} value={this.state.description} id="description"/>
 						</form>
