@@ -1,5 +1,5 @@
 import Axios from "axios";
-import { CHANGE, GRAB, GRAB2, DELETE, SAMPLE_API, LOGINUSER, GETINFO, GETPETINFO, OWNERGETPETINFO, ALLPETS, GETPETS} from "./constants";
+import { CHANGE, GRAB, GRAB2, DELETE, SAMPLE_API, LOGINUSER, GETINFO, GETPETINFO, OWNERGETPETINFO, ALLPETS, GETPETS, ADDMATCH} from "./constants";
 
 Axios.interceptors.request.use(function (config) {
   console.log(config)
@@ -94,6 +94,14 @@ export function getPets(id){
 	const request = Axios.get(SAMPLE_API + "petPref/" + id);
 	return {
 		type: ALLPETS,
+		payload: request
+	};
+}
+
+export function addMatch(obj){
+	const request = Axios.post(SAMPLE_API + "match/", obj);
+	return {
+		type: ADDMATCH,
 		payload: request
 	};
 }

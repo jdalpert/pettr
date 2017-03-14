@@ -22,6 +22,8 @@ var userSchema = new Mongoose.Schema({
 		userBFirstName: String,
 		userBLastName: String,
 		userBContact: String,
+		petName: String,
+		petId: String,
 		pending: Boolean,
 		approved: Boolean
 	}],

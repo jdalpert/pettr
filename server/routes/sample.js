@@ -139,9 +139,52 @@ router.post('/login', function(req, res){
     });
 });
 
-router.post('/:id', function(req, res){
+router.post('/match', function(req, res){
 	console.log(req.body);
 	console.log("TeSt");
+	Info.findOne({_id: req.body.ownerId}, function(err, owner){
+		console.log("OWNER");
+		console.log(owner);
+		Info.findOne({_id: req.body.userId}, function(err, ownerB){
+			console.log("OWNERB");
+			console.log(ownerB);
+			Info.findOneAndUpdate({_id: req.body.ownerId}, 
+				{ $push: { matches: {
+					userIdB: req.body.userId,
+					userBFirstName: ownerB.firstName,
+					userBLastName: ownerB.lastName,
+					userBContact: ownerB.contactInfo,
+					petName: req.body.name,
+					petId: req.body._id,
+					pending: true,
+					approved: false
+				}}
+			}, function(err, addedMatch){
+				console.log("addedMatch");
+				console.log(addedMatch);
+				Info.findOneAndUpdate({_id: req.body.userId},
+					{$push: { matches: {
+						userIdB: req.body.ownerId,
+						userBFirstName: owner.firstName,
+						userBLastName: owner.lastName,
+						userBContact: owner.contactInfo,
+						petName: req.body.name,
+						petId: req.body._id,
+						pending: true,
+						approved: false
+					}}
+				}, function(err, finished){
+					console.log(finished);
+					res.send(finished);
+				})
+			})
+		})
+	});
+});
+
+router.post('/:id', function(req, res){
+	console.log(req.body);
+	console.log("TeSt2");
 	new Pet(req.body).save(function(err, pet){
 		console.log(pet);
 		let petId = pet._id;
@@ -150,14 +193,14 @@ router.post('/:id', function(req, res){
 		let pets = {petName: petName, petId: petId};
 		console.log(pets);
         Info.findOneAndUpdate( {_id: userId}, 
-        		{ $push: { pets: { petName: petName, petId:petId } } 
-        	},
+        		{ $push: { pets: { petName: petName, petId:petId } } },
         	function(err, user){
         		console.log(user);
         		res.send({userId: user._id});
         });
     });
 });
+
 
 router.post('/', function(req, res){
 	console.log(req.body);

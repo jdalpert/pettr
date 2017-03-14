@@ -8,5 +8,6 @@ export const GETPETINFO = "GETINFO";
 export const OWNERGETPETINFO = "OWNERGETPETINFO";
 export const ALLPETS ="ALLPETS";
 export const GETPETS = "GETPETS";
+export const ADDMATCH = "ADDMATCH";
 
 export const SAMPLE_API = "/api/v0/sample/";

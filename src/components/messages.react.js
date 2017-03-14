@@ -17,6 +17,8 @@ class Messages extends Component {
 			firstName: "",
 			lastName: "",
 			matches: [],
+			selectedIndex: 0,
+			pressed: 0,
 		};
 	}
 
@@ -41,52 +43,53 @@ class Messages extends Component {
 		}
 	}
 
+	_handleSelect = (index, event) => {
+		console.log(index);
+		console.log("HAHA");
+		this.setState({selectedIndex: index});
+	}
+
 	render() {
-		return(
-			<div className="container home main-content messageHolder">
-				<div className="container messageNotifications">
-				<h3 id="matchRequestTitle">Match Requests</h3>
-				<text id="matchRequestInfo">View user's or pet's profile by clicking their name.</text>
-					<div className="container pressed messageList">
+/*		let matchesAry = (this.state.matches.length)?
+			this.state.matches.map((org, index) => {
+				let singleMess = (
+					<div key={index} value={index} onClick={() => this._handleSelect(index)}>
+						<div className={"container messageList" + (this.state.selectedIndex === index)? " pressed" : ""}>
+							<img className="match-pic" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg"/>
+							<h4 className="messageName"><b><Link to={"/profile/" +  org.userIdB}>{org.userBFirstName + " " + org.userBLastName}</Link></b></h4>
+							<h4 className="messageName">interested in <b><Link to={"/viewdog/" + org.petId}>{org.petName}</Link></b></h4>
+							<div className="confirmButtonsMessage">
+								<div>
+									<Button bsStyle="primary" bsSize="small" className="messageButton">Connect</Button>
+									<Button bsStyle="primary" bsSize="small" className="messageButton">Ditch</Button>
+								</div>
+							</div>
+						</div>
+						<hr/>
+					</div>	
+				);
+				console.log(this.state.selectedIndex);
+				console.log(index);
+				return singleMess;
+			}):
+			<div>
+				<div className="container pressed messageList">
+					<h4 className="messageName"><b>No Matches Yet</b></h4>
+					<div className="confirmButtonsMessage">
+						<div>
+						</div>
+					</div>
+				</div>
+				<hr/>
+			</div>;*/
+		let singleMess = [];
+			for(let i = 0; i < this.state.matches.length; i++){
+				singleMess.push(
+				<div key={i} value={i} onClick={() => this._handleSelect(i)}>
+					<div className={"container messageList" + " pressed"}>
 						<img className="match-pic" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg"/>
-						<h4 className="messageName"><b><Link to="/profile">Bob Stanley</Link></b></h4>
-						<h4 className="messageName">interested in <b><Link to="/">Lola Bear</Link></b></h4>
-						<div className="confirmButtonsMessage">
-							<div>
-								<Button bsStyle="primary" bsSize="small" className="messageButton">Connect</Button>
-								<Button bsStyle="primary" bsSize="small" className="messageButton">Ditch</Button>
-							</div>
-						</div>
-					</div>
-					<hr/>
-					<div className="container messageList">
-						<img className="match-pic" src="http://petadoption.ocpetinfo.com/Adopt/RetrieveImage.asp?ID=A1508530"/>
-						<h4 className="messageName"><b><Link to="/profile">Janelle Parker</Link></b></h4>
-						<h4 className="messageName">interested in <b><Link to="/">Belle</Link></b></h4>
-						<div className="confirmButtonsMessage">
-							<div>
-								<Button bsStyle="primary" bsSize="small" className="messageButton">Connect</Button>
-								<Button bsStyle="primary" bsSize="small" className="messageButton">Ditch</Button>
-							</div>
-						</div>
-					</div>
-					<hr/>
-					<div className="container messageList">
-						<img className="match-pic" src="http://petadoption.ocpetinfo.com/Adopt/RetrieveImage.asp?ID=A1508922"/>
-						<h4 className="messageName"><b><Link to="/profile">Nicole Evans</Link></b></h4>
-						<h4 className="messageName">interested in <b><Link to="/">Tasha</Link></b></h4>
-						<div className="confirmButtonsMessage">
-							<div>
-								<Button bsStyle="primary" bsSize="small" className="messageButton">Connect</Button>
-								<Button bsStyle="primary" bsSize="small" className="messageButton">Ditch</Button>
-							</div>
-						</div>
-					</div>
-					<hr/>
-					<div className="container messageList">
-						<img className="match-pic" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/b/9/253230283.jpg"/>
-						<h4 className="messageName"><b><Link to="/profile">Michael Williams</Link></b></h4>
-						<h4 className="messageName">interested in <b><Link to="/">Jasmine</Link></b></h4>
+						<h4 className="messageName"><b><Link to={"/profile/" +  this.state.matches[i].userIdB}>{this.state.matches[i].userBFirstName + " " + this.state.matches[i].userBLastName}</Link></b></h4>
+						<h4 className="messageName">is interested in <b><Link to={"/viewdog/" + this.state.matches[i].petId}>{this.state.matches[i].petName}</Link></b></h4>
 						<div className="confirmButtonsMessage">
 							<div>
 								<Button bsStyle="primary" bsSize="small" className="messageButton">Connect</Button>
@@ -96,17 +99,44 @@ class Messages extends Component {
 					</div>
 					<hr/>
 				</div>
+				)		
+			}
+		if(!this.state.matches.length)
+			singleMess.push(
+			<div>
+				<div className="container pressed messageList">
+					<h4 className="messageName"><b>No Matches Yet</b></h4>
+					<div className="confirmButtonsMessage">
+						<div>
+						</div>
+					</div>
+				</div>
+				<hr/>
+			</div>);
 
-				<Jumbotron>
-				    <h1 id="matchedTitle">Matched!</h1>
-				    <img className="match-pic" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg"/>
-				    <p><text id="match-name"> Bob Stanley</text> and <text id="pet-name">Lola Bear</text> matched <text id="match-time">5 days ago</text>! Connect with them at: <br/>
-				    <b><text id="contact-info">555-555-5555</text></b>
-				    </p>
-				    <p><Button bsStyle="primary" className="profileButton"><Link to="/profile/">View their Profile</Link></Button></p>
-				</Jumbotron>
+		let jumbo = (this.state.matches.length)?
+			<Jumbotron>
+			    <h1 id="matchedTitle">Matched!</h1>
+			    <img className="match-pic" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg"/>
+			    <p><text id="match-name">{this.state.matches[this.state.selectedIndex].userBFirstName + " " + this.state.matches[this.state.selectedIndex].userBLastName }</text> and <text id="pet-name">{this.state.matches[this.state.selectedIndex].petName}</text> matched <text id="match-time">5 days ago</text>! Connect with them at: <br/>
+			    <b><text id="contact-info">{this.state.matches[this.state.selectedIndex].userBContact}</text></b>
+			    </p>
+			    <p><Link to={"/profile/" + this.state.matches[this.state.selectedIndex].userIdB}><Button bsStyle="primary" className="profileButton">View their Profile</Button></Link></p>
+			</Jumbotron>:
+			<Jumbotron>
+			    <h1 id="matchedTitle">Try Exploring Pets</h1>
+			    <p><Link to="/"><Button bsStyle="primary" className="profileButton">Check it out here</Button></Link></p>
+			</Jumbotron>;
+		return(
+			<div className="container home main-content messageHolder">
+				<div className="container messageNotifications">
+				<h3 id="matchRequestTitle">Match Requests</h3>
+				<text id="matchRequestInfo">View user's or pet's profile by clicking their name.</text>
+					{singleMess}
+				</div>
+				{jumbo}
 			</div>
-		);s
+		);
 	}
 }
 

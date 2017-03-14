@@ -14,6 +14,8 @@ class Home extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			ownerId: "",
+			_id: "",
 			userId: "",
 			name: "",
 			age: "",
@@ -38,6 +40,8 @@ class Home extends Component {
 	componentWillMount(){
 		if(!this.state.owner)
 			this.props.getAllPets();
+		if(this.props.params)
+			this.setState({ownerId: this.props.params.id});
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -90,6 +94,17 @@ class Home extends Component {
 			incPet = 0;
 		this.setState({petIndex: incPet});
 		this.setState(this.state.pets[incPet]);
+	}
+
+	_handleAbandon = () =>{
+		this._handleRight();
+	}
+
+	_handleAdopt = () =>{
+		let pet = this.state;
+		pet.pets = [];
+		this.props.addMatch(pet);
+		this._handleRight();
 	}
 
 	// for the carousel changing
@@ -158,8 +173,8 @@ class Home extends Component {
 
 					<div className="row confirmButtons">
 						<div className="col">
-							<img className="nav-icon no" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/buttonnolikes.png?raw=true"/>
-							<img className="nav-icon yes" src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/buttonlikes.png?raw=true"/>
+							<img className="nav-icon no" onClick={this._handleAbandon} src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/buttonnolikes.png?raw=true"/>
+							<img className="nav-icon yes" onClick={this._handleAdopt} src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/buttonlikes.png?raw=true"/>
 						</div>
 					</div>
 

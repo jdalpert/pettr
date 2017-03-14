@@ -30,6 +30,7 @@ export default (
 		<Route path="/settings" component={Settings}/>
 		<Route path="/signup" component={Signup}/>
 		<Route path="/home" component={Home}/>
+		<Route path="/home/:id" component={Home}/>
 		<Route path="/profile" component={Profile}/>
 		<Route path="/profile/:id" component={Profile}/>
 		<Route path="/mission" component={Mission}/>
