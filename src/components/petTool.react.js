@@ -110,7 +110,7 @@ class PetTool extends Component {
 					<Navbar.Collapse>
 						<Nav pullRight>
 							<NavItem onClick={this._handleHome}><img className="nav-icon" src={this.state.homeIc} onMouseOver={this.homeHover} onMouseOut={this.homeUnhover}/></NavItem>
-							<NavItem href="/#messages/"><img className="nav-icon" src={this.state.matchIc} onMouseOver={this.matchHover} onMouseOut={this.matchUnhover}/></NavItem>
+							<NavItem href="/#/messages/"><img className="nav-icon" src={this.state.matchIc} onMouseOver={this.matchHover} onMouseOut={this.matchUnhover}/></NavItem>
 							<NavItem onClick={this._handleProfile}><img className="nav-icon" src={this.state.profileIc} onMouseOver={this.profileHover} onMouseOut={this.profileUnhover}/></NavItem> 
 							<NavItem href="/#/mission"><img className="nav-icon" src={this.state.missionIc} onMouseOver={this.missionHover} onMouseOut={this.missionUnhover}/></NavItem>
 							<NavItem href="/#/signup"><img className="nav-icon" src={this.state.signupIc} onMouseOver={this.signupHover} onMouseOut={this.signupUnhover}/></NavItem>

@@ -126,56 +126,36 @@ class Profile extends Component {
 		return(
 			<div>
 				<div className="container home main-content profile">
-					<div className="row profile">
-						<div className="col-sm-1"/>
-						<div className="col-sm-5">
-							<h2>{this.state.firstName} {this.state.lastName}</h2>
+						<div className="col-sm-6 container profile-left">
+							<div className="col-sm-6 container profile-top-left">
+								<h2>{this.state.firstName} {this.state.lastName}</h2>
 
+								<img id="user-pic" src="http://www.setenterprises.com/var/setent/storage/images/about/personal/christopher-kristock/1185-4-eng-US/Christopher-Kristock_person.jpg"/>
 
-							<Carousel activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect}>
-									<Carousel.Item>
-										 <img width={400} height={300} alt="400x300" src="http://www.setenterprises.com/var/setent/storage/images/about/personal/christopher-kristock/1185-4-eng-US/Christopher-Kristock_person.jpg"/>
-										 <Carousel.Caption>
-											 <h3>First slide label</h3>
-											 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-									 </Carousel.Caption>
-									</Carousel.Item>
-
-									<Carousel.Item>
-										 <img width={400} height={300} alt="400x300" src="http://www.setenterprises.com/var/setent/storage/images/about/personal/christopher-kristock/1185-4-eng-US/Christopher-Kristock_person.jpg"/>
-										 <Carousel.Caption>
-											 <h3>Second slide label</h3>
-											 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-										 </Carousel.Caption>
-								 </Carousel.Item>
-							</Carousel>
-
-
-
-
-
-						</div>
-						<div className="col-sm-5">
-							<h4>Description</h4>
-							<p id="description">{this.state.description}</p>
-
-							<h4>Info</h4>
-							{(this.state.organization)?
-								<text id="owner">Organization: {this.state.organization}<br/></text>:
-								<text id="owner">Organization: N/A<br/></text>
-							}
-							<text id="pet-location">Location: {this.state.city}, {this.state.state}<br/></text>
-						{/* Remember to remove button if just viewing a profile */}
-							<h4>Pets  <Button onClick={() => this._handleAdd(this.state.userId)}>Add pet?</Button></h4>
-							<div className="container allPets">
-								{petsArry}
 							</div>
-							<div className="col-sm-1"/>
-						</div>
-					</div>
 
-					<div className="row">
-                	</div>
+							<div className="col-sm-6 container profile-bot-left">
+								<b><Link id="settings-page" to="/settings">Settings</Link></b>
+								<h4 id="profile-title">Description</h4>
+								<p id="description">{this.state.description}</p>
+
+								<h4 id="profile-title">Info</h4>
+								{(this.state.organization)?
+									<text id="owner">Organization: {this.state.organization}<br/></text>:
+									<text id="owner">Organization: N/A<br/></text>
+								}
+								<text id="pet-location">Location: {this.state.city}, {this.state.state}<br/></text>
+
+							</div>
+						</div>
+
+						<div className="col-sm-6 container profile-right">
+						{/* Remember to remove button if just viewing a profile */}
+							<h4 id="profile-title">Pets <Button id="addPet" onClick={() => this._handleAdd(this.state.userId)}>Add pet?</Button></h4>
+							{/*<div className="container allPets">*/}
+								{petsArry}
+							{/*</div>*/}
+						</div>
 				</div>
 			</div>
 		);
