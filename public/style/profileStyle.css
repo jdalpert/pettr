@@ -6,7 +6,7 @@
 
 div.col-sm-6.container.profile-right {
 	/*background-color:beige;*/
-	overflow:auto;
+	overflow-y:auto;
 }
 
 div.col-sm-6.container.profile-left {
@@ -45,7 +45,6 @@ div.col-sm-6.container.profile-bot-left {
 
 #settings-page{
 	color:#db9128;
-	margin-top:10%;
 }
 
 .petName a {
@@ -71,4 +70,24 @@ div.col-sm-6.container.profile-bot-left {
 
 #settingsText {
 	font-size:1.2em;
+}
+
+.fa {
+	color:#db9128;
+	border-color:#db9128;
+	margin-right:2%;
+}
+
+#owner, #pet-location, #settings-page {
+	font-size:1.1em;
+}
+
+div.container.user-info {
+	overflow-y:auto;
+	max-height:170px;
+	width:100%;
+}
+
+.petsList {
+	width:100%;
 }

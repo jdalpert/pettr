@@ -142,12 +142,14 @@ class Profile extends Component {
 								}
 								<text id="pet-location">Location: {this.state.city}, {this.state.state}<br/></text>
 
+								<b><Link id="settings-page" to="/settings"><i className="fa fa-cog"></i>Settings</Link></b>
 							</div>
-							<div className="col-sm-6 container profile-bot-left">
 
-								<b><Link id="settings-page" to="/settings">Settings</Link></b>
+							<div className="col-sm-6 container profile-bot-left">
 								<h4 id="profile-title">Description</h4>
-								<p id="description">{this.state.description}</p>
+								<div className="container user-info">
+									<p id="description">{this.state.description}</p>
+								</div>
 
 							</div>
 							<div className="col-sm-6 container profile-bot-left">

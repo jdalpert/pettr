@@ -155,7 +155,8 @@ a.carousel-control.right, a.carousel-control.left {
 }
 
 .carousel-inner .item img{
-    width: 100%;
+    width: auto;
+    max-height:300px;
 }
 
 div.carousel.slide {
@@ -232,6 +233,9 @@ div.carousel.slide {
 	be sure to adjust this accordingly.*/
 	margin-left: -10%;
 }
+
+
+.carousel-stuff {}
 
 /*note to self-michael: idk why these two media queries fix the columns*/
 @media (min-width: 768px) {
