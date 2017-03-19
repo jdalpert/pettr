@@ -29,16 +29,16 @@
 }
 
 .thumbnail-button:active, .thumbnail-button:focus {
-	background-color:transparent;		
-	outline:none !important;		
+	background-color:transparent;
+	outline:none !important;
 	border:none;
 }
 
 
-button.btn.btn-primary.btn-xs.thumbnail-button {		
-		background-color:transparent;		
-		border-color:transparent;		
-		box-shadow:none;		
+button.btn.btn-primary.btn-xs.thumbnail-button {
+		background-color:transparent;
+		border-color:transparent;
+		box-shadow:none;
 	}
 
 img.thumbnail {
@@ -108,13 +108,16 @@ margin-top:20px;
 	font-size: 1.5em;
 }
 
-#pet-age, #pet-color, #pet-gender, #pet-size, #pet-type {
+#pet-age, #pet-color, #pet-gender, #pet-size, #pet-type  {
 	margin-left: 2%;
 	font-weight:bold;
 }
 
 #description {
-	/*margin-left: 25px;*/
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 15px;
 	color:#1c2833;
 }
 
@@ -150,8 +153,10 @@ margin-top:20px;
 
 /*makes carousel arrows transparent, but still clickable on left and right*/
 a.carousel-control.right, a.carousel-control.left {
-	opacity: 0;
-    filter:alpha(opacity=0);
+	/*opacity: 0;
+    filter:alpha(opacity=0);*/
+
+	display:none;
 }
 
 .carousel-inner .item img{
@@ -168,6 +173,7 @@ div.carousel.slide {
 .carousel-indicators li {
   background-color:#db9128;
   border: 1px solid #db9128;
+	display: none;
 }
 
 .carouse-indicatrs {
@@ -212,27 +218,7 @@ div.carousel.slide {
 	margin-left:3%;
 }*/
 
-@media (max-width: 992px) {
 
-  .thumbnail-button {
-  	margin-left: 1.5%;
-  	margin-right: 1.5%;
-		display: inline-block;
-  }
-
-  .pet-bio-info, .locationInfo{
-  	text-align: center;
-  }
-
-  .nested {
-  	display: inline-block;
-  }
-}
-.SECOND-HALF{
-	/*this is b/c its -10% on the thumbnails.
-	be sure to adjust this accordingly.*/
-	margin-left: -10%;
-}
 
 
 .carousel-stuff {}
@@ -254,4 +240,53 @@ div.carousel.slide {
 		align-item: center;
 		justify-content: center;
 	}
+
+}
+
+@media (max-width: 992px) {
+
+	h2 {
+		text-align: center;
+	}
+
+  .thumbnail-button {
+  	margin-left: 1.5%;
+  	margin-right: 1.5%;
+		display: inline-block;
+  }
+
+  .pet-bio-info, .locationInfo{
+  	text-align: center;
+  }
+
+  .nested {
+  	display: inline-block;
+  }
+
+	#description {
+		margin-left: 0;
+	}
+
+	.petDescription {
+		padding-left: 20%;
+		padding-right: 20%;
+	}
+}
+
+@media (min-width: 1320px) {
+
+	h2 {
+		float:right;
+	}
+
+	.carousel-inner .item img{
+    max-height:none;
+    float:right;
+}
+
+	.thumbnails {
+		margin-top: 50px;
+	}
+
+
 }
