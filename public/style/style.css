@@ -87,10 +87,15 @@ input {
 }
 
 .main-logo {
-  margin-left:20%;
+  margin-left:-75%;
+  margin-top:-4%;
+  height:18%;
+  width:18%;
 }
 
 .nav-icon{
+  margin-left:-10%;
+  margin-top:-375%;
   max-height:76px;
 }
 
