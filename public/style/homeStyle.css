@@ -14,14 +14,32 @@
 	margin-left: -20%;
 }
 
+.thumbnail:hover {
+	background-color:#f3cc79;
+}
+
 .thumbnail-button {
 	margin-top: 10%;
 	display: inline-block;
 	vertical-align: middle;
-	background-color: #bb7d06;
+	background-color: transparent;
+	border-color:transparent;
 	height: 50px;
 	width: 50px;
 }
+
+.thumbnail-button:active, .thumbnail-button:focus {
+	background-color:transparent;		
+	outline:none !important;		
+	border:none;
+}
+
+
+button.btn.btn-primary.btn-xs.thumbnail-button {		
+		background-color:transparent;		
+		border-color:transparent;		
+		box-shadow:none;		
+	}
 
 img.thumbnail {
 	height: 50px;
