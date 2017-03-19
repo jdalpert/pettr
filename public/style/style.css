@@ -1,12 +1,12 @@
 @font-face {
-	font-family: "mufferaw";
-		src: url(fonts/mufferaw.ttf);
+  font-family: "mufferaw";
+    src: url(fonts/mufferaw.ttf);
 }
 
 @font-face {
-	font-family: "help";
-	src: url(fonts/Museo500.otf) format("opentype");
-	/*this wont work for some reason*/
+  font-family: "help";
+  src: url(fonts/Museo500.otf) format("opentype");
+  /*this wont work for some reason*/
 }
 
 
@@ -14,18 +14,18 @@
   text-align: center;
 }*/
 body {
-	/*background-color: #f6b26b;*/
+  /*background-color: #f6b26b;*/
   background:url('https://github.com/jdalpert/pettr/blob/be067804dde4fdbf73afc810dfb6e2a25ef21bea/src/components/assets/bg2.png?raw=true');
   /*color: #4f5a65;*/
-	/*color: #2b0000;*/
-	/*color: #1d1905;*/
-	/*color: #2a150d;*/
-	color: #3e3e3e;
-	font-family: 'Quando', serif;
+  /*color: #2b0000;*/
+  /*color: #1d1905;*/
+  /*color: #2a150d;*/
+  color: #3e3e3e;
+  font-family: 'Quando', serif;
   }
 
 input {
-	border-radius: 4px;
+  border-radius: 4px;
 }
 
 .defaultButton {
@@ -33,7 +33,7 @@ input {
 }
 
 .main-content {
-	/*background-color: #FFFFFF;*/
+  /*background-color: #FFFFFF;*/
   background-color: rgba(255, 250, 230, 0.9);
   margin-top: 134px;
   position: absolute;
@@ -73,7 +73,6 @@ input {
 /*.icon-bar a:hover {
     background-color: #ecb071;
     width:10%;
-
 }*/
 
 .active {
@@ -113,12 +112,10 @@ nav > li > a > img {
 .navbar-default {
   border:none;
   padding:0;
-  height:0px;
 }
 
 /*.navbar-right {
 }
-
 ul.nav.navbar-nav.navbar-right {
   background-color:yellow;
 }*/

@@ -41,6 +41,13 @@
 	background-color: #bb7d06;
 }
 
+#signup-button {
+	margin-left:5%;
+}
+
+#signup-button:hover, .login-button:hover {
+	background-color: #f4c827;
+}
 
 .btn-primary {
 	border-color: #bb7d06;

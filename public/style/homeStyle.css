@@ -1,7 +1,6 @@
 /*.swipe-buttons {
 	text-align:center;
 }
-
 .swipe-buttons button #abandon {
 	margin-left:5%;
 }*/
@@ -57,10 +56,12 @@ img.thumbnail {
 .no {
 	display: inline-block;
 	/*margin-left: auto;*/
+	margin-top: 1%;
 	margin-right: 10px;
 }
 
 .yes {
+	margin-top: 1%;
 	display: inline-block;
 	margin-left: 10px;
 	/*margin-right: auto;*/
