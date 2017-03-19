@@ -30,6 +30,11 @@ class Home extends Component {
 			owner: false,
 			pets: [],
 			petIndex: 0,
+			adoptIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/buttonlikes.png?raw=true",
+			abandonIc:"https://github.com/jdalpert/pettr/blob/master/src/components/assets/buttonnolikes.png?raw=true",
+			leftArrowIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/leftarrow.png?raw=true",
+			rightArrowIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/rightarrow.png?raw=true"
+
 		};
 	}
 
@@ -98,6 +103,7 @@ class Home extends Component {
 
 	_handleAbandon = () =>{
 		this._handleRight();
+
 	}
 
 	_handleAdopt = () =>{
@@ -107,6 +113,34 @@ class Home extends Component {
 		this._handleRight();
 	}
 
+	adoptHover = () =>{
+		this.setState({adoptIc:"https://github.com/jdalpert/pettr/blob/9d915538eef3ecc87edc0834f6a850c40a336e47/src/components/assets/buttonlikeslight.png?raw=true"});
+	}
+	adoptUnhover = () =>{
+		this.setState({adoptIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/buttonlikes.png?raw=true"});
+	}
+
+	abandonHover = () =>{
+		this.setState({abandonIc:"https://github.com/jdalpert/pettr/blob/9d915538eef3ecc87edc0834f6a850c40a336e47/src/components/assets/buttonnolikeslight.png?raw=true"});
+	}
+	abandonUnhover = () =>{
+		this.setState({abandonIc:"https://github.com/jdalpert/pettr/blob/master/src/components/assets/buttonnolikes.png?raw=true"});
+	}
+
+	rightHover = () =>{
+		this.setState({rightArrowIc:"https://github.com/jdalpert/pettr/blob/698f8f0ed367f20bccf0f94856014a2bb5cb4d61/src/components/assets/rightarrowlight.png?raw=true"});
+	}
+	rightUnhover = () =>{
+		this.setState({rightArrowIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/rightarrow.png?raw=true"});
+	}
+	leftHover = () =>{
+		this.setState({leftArrowIc:"https://github.com/jdalpert/pettr/blob/698f8f0ed367f20bccf0f94856014a2bb5cb4d61/src/components/assets/leftarrowlight.png?raw=true"});
+	}
+	leftUnhover = () =>{
+		this.setState({leftArrowIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/leftarrow.png?raw=true"});
+	}
+
+
 	// for the carousel changing
 
 	render() {
@@ -114,11 +148,11 @@ class Home extends Component {
 			<div>
 				<div className="container home main-content">
 					<div className="row">
-						<div className="col-md-1" id="left-arrow"><img id="left-arrow" onClick={this._handleLeft} src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/leftarrow.png?raw=true"/></div>
+						<div className="col-md-1" id="left-arrow"><img id="left-arrow" onClick={this._handleLeft} src={this.state.leftArrowIc} onMouseOver={this.leftHover} onMouseOut={this.leftUnhover}/></div>
 						<div className="col-md-8 FIRST-HALF">
 							<div className = "row carousel-thumbnails">
 								<div className="col-sm-9 carousel-stuff">
-									<h1 class="display-4"> My name is {this.state.name}! </h1>
+									<h2 class="display-4"> My name is {this.state.name}! </h2>
 			     					 <Carousel activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect}>
 			       						<Carousel.Item> <img width={400} height={300} alt="400x300" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg"/> </Carousel.Item>
 			       						<Carousel.Item> <img width={400} height={300} alt="400x300" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg"/> </Carousel.Item>
@@ -173,13 +207,13 @@ class Home extends Component {
 
 					<div className="row confirmButtons">
 						<div className="col">
-							<img className="nav-icon no" onClick={this._handleAbandon} src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/buttonnolikes.png?raw=true"/>
-							<img className="nav-icon yes" onClick={this._handleAdopt} src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/buttonlikes.png?raw=true"/>
+							<img className="nav-icon no" onClick={this._handleAbandon} src={this.state.abandonIc} onMouseOver={this.abandonHover} onMouseOut={this.abandonUnhover}/>
+							<img className="nav-icon yes" onClick={this._handleAdopt} src={this.state.adoptIc} onMouseOver={this.adoptHover} onMouseOut={this.adoptUnhover}/>
 						</div>
 					</div>
 
 
-					<div className="col-sm-1" id="right-arrow"><img id="right-arrow" onClick={this._handleRight} src="https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/rightarrow.png?raw=true"/></div>
+					<div className="col-sm-1" id="right-arrow"><img id="right-arrow" onClick={this._handleRight} src={this.state.rightArrowIc} onMouseOver={this.rightHover} onMouseOut={this.rightUnhover}/></div>
 
 
 				</div>

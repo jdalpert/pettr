@@ -127,24 +127,31 @@ class Profile extends Component {
 			<div>
 				<div className="container home main-content profile">
 						<div className="col-sm-6 container profile-left">
-							<div className="col-sm-6 container profile-top-left">
-								<h2>{this.state.firstName} {this.state.lastName}</h2>
+							<div className="col-sm-3 container profile-top-left">
+								<h2 id="user-name">{this.state.firstName} {this.state.lastName}</h2>
 
 								<img id="user-pic" src="http://www.setenterprises.com/var/setent/storage/images/about/personal/christopher-kristock/1185-4-eng-US/Christopher-Kristock_person.jpg"/>
 
 							</div>
 
-							<div className="col-sm-6 container profile-bot-left">
-								<b><Link id="settings-page" to="/settings">Settings</Link></b>
-								<h4 id="profile-title">Description</h4>
-								<p id="description">{this.state.description}</p>
-
+							<div className="col-sm-3 container profile-top-right">
 								<h4 id="profile-title">Info</h4>
 								{(this.state.organization)?
 									<text id="owner">Organization: {this.state.organization}<br/></text>:
 									<text id="owner">Organization: N/A<br/></text>
 								}
 								<text id="pet-location">Location: {this.state.city}, {this.state.state}<br/></text>
+
+							</div>
+							<div className="col-sm-6 container profile-bot-left">
+
+								<b><Link id="settings-page" to="/settings">Settings</Link></b>
+								<h4 id="profile-title">Description</h4>
+								<p id="description">{this.state.description}</p>
+
+							</div>
+							<div className="col-sm-6 container profile-bot-left">
+						
 
 							</div>
 						</div>
