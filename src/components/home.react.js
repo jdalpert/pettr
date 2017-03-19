@@ -149,7 +149,7 @@ class Home extends Component {
 				<div className="container home main-content">
 					<div className="row">
 						<div className="col-md-1" id="left-arrow"><img id="left-arrow" onClick={this._handleLeft} src={this.state.leftArrowIc} onMouseOver={this.leftHover} onMouseOut={this.leftUnhover}/></div>
-						<div className="col-md-8 FIRST-HALF">
+						<div className="col-md-6 FIRST-HALF">
 							<div className = "row carousel-thumbnails">
 								<div className="col-sm-9 carousel-stuff">
 

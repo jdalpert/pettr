@@ -236,16 +236,10 @@ div.carousel.slide {
 
 	/*need this because we did margin-left: -10% early.
 	apparently we can't just remove margin-left 0? lol*/
-	.SECOND-HALF {
-		margin-right: -10%;
-	}
+
 
 }
-.SECOND-HALF{
-	/*this is b/c its -10% on the thumbnails.
-	be sure to adjust this accordingly.*/
-	margin-left: -10%;
-}
+
 
 
 .carousel-stuff {}
