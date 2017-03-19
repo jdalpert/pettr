@@ -40,11 +40,13 @@ div.col-sm-6.container.profile-bot-left {
 
 #addPet:hover {
 	background-color: #f4c827;
+	border-style: solid;
+    border-color: yellow;
 }
 
 .addPet:hover, .addPet:active, .addPet:focus {
 	background-color:#fba62b;
-	border-color: #db9128;
+
 }
 
 #settings-page{

@@ -56,7 +56,7 @@ input {
     margin: auto;
     position: absolute;
     top: 0; right: 0;
-    z-index: 100;
+    z-index: 0;
     list-style:none;
     padding-bottom: 10%;
 }
@@ -176,7 +176,7 @@ ul.nav.navbar-nav.navbar-right {
   top: -ms-calc(50% - 19px);
   top: calc(50% - 19px);
   right: 10%;
-  margin-top: 110px;
+  margin-top: 20px;
   z-index:1;
   padding:0;
 
