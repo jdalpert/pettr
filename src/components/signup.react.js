@@ -71,9 +71,9 @@ class Signup extends Component {
 	};
 
 	_handleImage = (event) => {
-		//this.props.add_image({fileLoc:"C:\\Users\\josh1_000\\Pictures\\photo_2016-05-29_19-02-28.jpg"});
-		console.log(event.target.value);
-		this.props.add_image({fileLoc: event.target.value});
+		this.props.add_image({fileLoc:"C:\\Users\\josh1_000\\Pictures\\photo_2016-05-29_19-02-28.jpg"});
+		//console.log(event.target.value);
+		//this.props.add_image({fileLoc: event.target.value});
 	};
 
 	render() {
