@@ -29,16 +29,16 @@
 }
 
 .thumbnail-button:active, .thumbnail-button:focus {
-	background-color:transparent;		
-	outline:none !important;		
+	background-color:transparent;
+	outline:none !important;
 	border:none;
 }
 
 
-button.btn.btn-primary.btn-xs.thumbnail-button {		
-		background-color:transparent;		
-		border-color:transparent;		
-		box-shadow:none;		
+button.btn.btn-primary.btn-xs.thumbnail-button {
+		background-color:transparent;
+		border-color:transparent;
+		box-shadow:none;
 	}
 
 img.thumbnail {
@@ -168,6 +168,7 @@ div.carousel.slide {
 .carousel-indicators li {
   background-color:#db9128;
   border: 1px solid #db9128;
+	display: none;
 }
 
 .carouse-indicatrs {
@@ -227,6 +228,18 @@ div.carousel.slide {
   .nested {
   	display: inline-block;
   }
+
+	.petDescription {
+		padding-left: 20%;
+		padding-right: 20%;
+	}
+
+	/*need this because we did margin-left: -10% early.
+	apparently we can't just remove margin-left 0? lol*/
+	.SECOND-HALF {
+		margin-right: -10%;
+	}
+
 }
 .SECOND-HALF{
 	/*this is b/c its -10% on the thumbnails.
@@ -254,4 +267,23 @@ div.carousel.slide {
 		align-item: center;
 		justify-content: center;
 	}
+
+}
+
+@media (min-width: 1320px) {
+
+	h2 {
+		float:right;
+	}
+
+	.carousel-inner .item img{
+    max-height:none;
+    float:right;
+}
+
+	.thumbnails {
+		margin-top: 50px;
+	}
+
+
 }
