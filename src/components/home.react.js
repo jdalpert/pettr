@@ -195,7 +195,7 @@ class Home extends Component {
 								</div>
 							</div>
 
-							<div className="row petDescription">
+							<div className="petDescription">
 								<p id="description">{this.state.description}</p>
 							</div>
 

@@ -108,13 +108,16 @@ margin-top:20px;
 	font-size: 1.5em;
 }
 
-#pet-age, #pet-color, #pet-gender, #pet-size, #pet-type {
+#pet-age, #pet-color, #pet-gender, #pet-size, #pet-type  {
 	margin-left: 2%;
 	font-weight:bold;
 }
 
 #description {
-	/*margin-left: 25px;*/
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 15px;
 	color:#1c2833;
 }
 
@@ -150,8 +153,10 @@ margin-top:20px;
 
 /*makes carousel arrows transparent, but still clickable on left and right*/
 a.carousel-control.right, a.carousel-control.left {
-	opacity: 0;
-    filter:alpha(opacity=0);
+	/*opacity: 0;
+    filter:alpha(opacity=0);*/
+
+	display:none;
 }
 
 .carousel-inner .item img{
@@ -213,32 +218,6 @@ div.carousel.slide {
 	margin-left:3%;
 }*/
 
-@media (max-width: 992px) {
-
-  .thumbnail-button {
-  	margin-left: 1.5%;
-  	margin-right: 1.5%;
-		display: inline-block;
-  }
-
-  .pet-bio-info, .locationInfo{
-  	text-align: center;
-  }
-
-  .nested {
-  	display: inline-block;
-  }
-
-	.petDescription {
-		padding-left: 20%;
-		padding-right: 20%;
-	}
-
-	/*need this because we did margin-left: -10% early.
-	apparently we can't just remove margin-left 0? lol*/
-
-
-}
 
 
 
@@ -262,6 +241,36 @@ div.carousel.slide {
 		justify-content: center;
 	}
 
+}
+
+@media (max-width: 992px) {
+
+	h2 {
+		text-align: center;
+	}
+
+  .thumbnail-button {
+  	margin-left: 1.5%;
+  	margin-right: 1.5%;
+		display: inline-block;
+  }
+
+  .pet-bio-info, .locationInfo{
+  	text-align: center;
+  }
+
+  .nested {
+  	display: inline-block;
+  }
+
+	#description {
+		margin-left: 0;
+	}
+
+	.petDescription {
+		padding-left: 20%;
+		padding-right: 20%;
+	}
 }
 
 @media (min-width: 1320px) {
