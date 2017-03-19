@@ -102,6 +102,19 @@ a .nav-icon:hover {
 
 }
 
+#login-page {
+  color:#ba2100;
+  float:none;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:1.1em;
+  display:inline;
+}
+
+#login-page:hover {
+  color:#bb7d06;
+}
+
 nav > li > a > img {
   max-width:100px;
 }
@@ -166,4 +179,7 @@ ul.nav.navbar-nav.navbar-right {
   margin-top: 110px;
   z-index:1;
   padding:0;
+
+}
+
 }

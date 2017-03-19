@@ -23,11 +23,14 @@ class Profile extends Component {
 			state: "",
 			pets: [],
 			description: "",
-			organization: ""
+			organization: "",
+			image: "",
 		};
 	}
 	componentWillMount(){
 		console.log("check2");
+		if(this.props.data.secure_url)
+			this.setState({userId: this.props.data.secure_url});
 		if(this.props.data && !Array.isArray(this.props.data)){
 			console.log("These are the props data");
 			console.log(this.props.data.userId);
@@ -130,7 +133,7 @@ class Profile extends Component {
 							<div className="col-sm-3 container profile-top-left">
 								<h2 id="user-name">{this.state.firstName} {this.state.lastName}</h2>
 
-								<img id="user-pic" src="http://www.setenterprises.com/var/setent/storage/images/about/personal/christopher-kristock/1185-4-eng-US/Christopher-Kristock_person.jpg"/>
+								<img id="user-pic" src={(this.state.image)?this.state.image:"http://www.setenterprises.com/var/setent/storage/images/about/personal/christopher-kristock/1185-4-eng-US/Christopher-Kristock_person.jpg"}/>
 
 							</div>
 
@@ -142,12 +145,14 @@ class Profile extends Component {
 								}
 								<text id="pet-location">Location: {this.state.city}, {this.state.state}<br/></text>
 
+								<b><Link id="settings-page" to="/settings"><i className="fa fa-cog"></i>Settings</Link></b>
 							</div>
-							<div className="col-sm-6 container profile-bot-left">
 
-								<b><Link id="settings-page" to="/settings">Settings</Link></b>
+							<div className="col-sm-6 container profile-bot-left">
 								<h4 id="profile-title">Description</h4>
-								<p id="description">{this.state.description}</p>
+								<div className="container user-info">
+									<p id="description">{this.state.description}</p>
+								</div>
 
 							</div>
 							<div className="col-sm-6 container profile-bot-left">

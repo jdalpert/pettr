@@ -149,10 +149,13 @@ class Home extends Component {
 				<div className="container home main-content">
 					<div className="row">
 						<div className="col-md-1" id="left-arrow"><img id="left-arrow" onClick={this._handleLeft} src={this.state.leftArrowIc} onMouseOver={this.leftHover} onMouseOut={this.leftUnhover}/></div>
-						<div className="col-md-8 FIRST-HALF">
+						<div className="col-md-6 FIRST-HALF">
 							<div className = "row carousel-thumbnails">
 								<div className="col-sm-9 carousel-stuff">
+
+								<div className = "row">
 									<h2 class="display-4"> My name is {this.state.name}! </h2>
+								</div>
 			     					 <Carousel activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect}>
 			       						<Carousel.Item> <img width={400} height={300} alt="400x300" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg"/> </Carousel.Item>
 			       						<Carousel.Item> <img width={400} height={300} alt="400x300" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg"/> </Carousel.Item>
@@ -168,13 +171,13 @@ class Home extends Component {
 
 										<button className="btn btn-primary btn-xs thumbnail-button" onClick={this.change2}><img className="nav-icon thumbnail" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg" alt="Image"/></button>
 
-										<button className="btn btn-primary btn-xs thumbnail-button" onClick={this.change3}><img className="nav-icon thumbnail" width={64} height={64} src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/4/1/5/228543262.jpg" alt="Image"/></button>
+										<button className="btn btn-primary btn-xs thumbnail-button" onClick={this.change3}><img className="nav-icon thumbnail" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/4/1/5/228543262.jpg" alt="Image"/></button>
 								</div>
 							</div>
 						</div>
 
 
-						<div className="col-md-3 SECOND-HALF">
+						<div className="col-md-5 SECOND-HALF">
 							<div className="pet-bio-info">
 								<text id="facts"> About Me <br/></text>
 

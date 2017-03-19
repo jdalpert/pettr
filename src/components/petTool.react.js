@@ -137,8 +137,10 @@ class PetTool extends Component {
 						{
 							(this.state.email)?
 							<span>Welcome: <b>{this.state.email}</b></span>:
-							<span>Welcome: Guest!</span>
+							<span>Welcome: Guest <b>-</b></span>
 						}
+						<span><a href="/#/login" id="login-page"> LOGIN</a></span>
+
 				    </Navbar.Text>
 				</Navbar>
 			</div>
