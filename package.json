@@ -34,6 +34,7 @@
     "babel-preset-stage-1": "^6.5.0",
     "body-parser": "^1.15.1",
     "bower": "^1.7.7",
+    "cloudinary": "^1.8.0",
     "cookie-parser": "^1.4.3",
     "express": "^4.13.4",
     "file-loader": "^0.10.1",
