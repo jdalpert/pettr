@@ -10,13 +10,19 @@ div.col-sm-6.container.profile-right {
 }
 
 div.col-sm-6.container.profile-left {
-	/*background-color:blue;*/
+	background-color: rgb(247, 235, 194);
 }
 
-div.col-sm-6.container.profile-top-left {
+div.col-sm-3.container.profile-top-left {
 	/*background-color:orange;*/
-	width:100%;
 	padding:0px;
+	width:50%;
+}
+
+div.col-sm-3.container.profile-top-right {
+	/*background-color:green;*/
+	padding:0px;
+	width:50%;
 }
 
 div.col-sm-6.container.profile-bot-left {
@@ -25,12 +31,6 @@ div.col-sm-6.container.profile-bot-left {
 	padding:0px;
 }
 
-
-
-/*div.container.allPets {
-	overflow:auto;
-}
-*/
 
 #addPet {
 	background-color:#db9128;
@@ -45,8 +45,7 @@ div.col-sm-6.container.profile-bot-left {
 
 #settings-page{
 	color:#db9128;
-	margin-top:5%;
-	font-size:1.2em;
+	margin-top:10%;
 }
 
 .petName a {
@@ -56,10 +55,20 @@ div.col-sm-6.container.profile-bot-left {
 
 #profile-title {
 	color:#802200;
+	font-size:2em;
 }
 
-/* NEW STYLING*/
-
 #user-pic {
-	width:50%;
+	width:80%;
+	display:block;
+
+}
+
+#user-name {
+	margin-top:10px;
+
+}
+
+#settingsText {
+	font-size:1.2em;
 }
