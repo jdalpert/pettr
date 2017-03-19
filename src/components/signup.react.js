@@ -5,8 +5,13 @@ import { connect } from "react-redux";
 import Contact from './contact.react'
 import * as actions from "../actions/add_person.action";
 import { Button } from 'react-bootstrap';
+import ReactFilestack from 'react-filestack';
 
-//const store = [{userName: Tony, userAddress: Klondike, userQuote: Food}];
+const options = {
+  accept: 'image/*',
+  fromSources: ['COMPUTER', 'FACEBOOK', 'CLOUDAPP']
+};
+
 class Signup extends Component {
 
 	constructor(props) {
@@ -56,6 +61,10 @@ class Signup extends Component {
 		this.props.loginUser(this.state);
 		this.context.router.push("/profile");
 	};
+
+    yourCallbackFunction = (result) => {
+  		console.log(results);
+	}
 
 	render() {
 		return(
@@ -155,6 +164,7 @@ class Signup extends Component {
 							</div>
 							<p> After you have created an account, you will be able to add pet profiles in your user profile.</p>
 						</form>
+						<ReactFilestack apikey={'Aeu5t4YQMSQmgwkasYEozz'} link options={options} onSuccess={this.yourCallbackFunction} />
 						<Button className="btn btn-primary btn-xs" onClick={this._handleClick} id="signup-button">Signup</Button>
 					</div>
 
