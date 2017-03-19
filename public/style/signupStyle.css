@@ -99,19 +99,20 @@ textarea  {
 }
 
 #signup-title {
-	text-align:center;
-}
+/*	text-align:center;
+*/}
 
-div.col-sm-5.signup-Left {
+/*div.col-sm-5.signup-Left {
 	background-color:teal;
 
 }
 div.col-sm-5.signup-Right {
 	background-color:coral;
 }
-
+*/
 div.col-sm-1 {
 	/*background-color:teal;*/
+	height:100px;
 }
 
 div.col-sm-12.signup-body {

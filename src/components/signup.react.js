@@ -70,9 +70,10 @@ class Signup extends Component {
 		return(
 			<div>
 				<div className="container col-sm-12 signup main-content">
-					<h1 id="signup-title">Sign Up </h1>
-
 					<div className="col-sm-1"></div>
+
+						<h1 id="col-sm-5 signup-title">Sign Up </h1>
+
 					<div className="col-sm-5 signup-left">
 						<form action="" className="signup-form"> 
 							<label htmlFor="first-name">First Name:</label><br/>
@@ -178,6 +179,8 @@ class Signup extends Component {
 					</div>
 
 					<div className="col-sm-1"></div>
+
+
 
 				</div>
 			</div>
