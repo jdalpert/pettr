@@ -28,6 +28,10 @@ input {
   border-radius: 4px;
 }
 
+.logout{
+  cursor: pointer;
+}
+
 .defaultButton {
   width:  150px;
 }

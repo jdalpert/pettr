@@ -115,6 +115,12 @@ class PetTool extends Component {
 		}
 	}
 
+	_handleLogout = () => {
+		this.setState({userId:"", email: ""});
+		//might need to make a redux call to ensure the next page doesn't contain info
+		this.context.router.push("/login");
+	}
+
 	render() {
 		return(
 			<div>
@@ -139,8 +145,11 @@ class PetTool extends Component {
 							<span>Welcome: <b>{this.state.email}</b></span>:
 							<span>Welcome: Guest <b>-</b></span>
 						}
-						<span><a href="/#/login" id="login-page"> LOGIN</a></span>
-
+						{
+						(!this.state.userId)?
+							<span><a href="/#/login" id="login-page"> LOGIN</a></span>:
+							<span><a id="login-page" className="logout" onClick={this._handleLogout}> - LOGOUT</a></span>
+						}
 				    </Navbar.Text>
 				</Navbar>
 			</div>
