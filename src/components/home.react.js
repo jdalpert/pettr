@@ -154,7 +154,7 @@ class Home extends Component {
 								<div className="col-sm-9 carousel-stuff">
 
 								<div className = "row">
-									<h2 class="display-4"> My name is {this.state.name}! </h2>
+									<h2 className="display-4"> My name is {this.state.name}! </h2>
 								</div>
 			     					 <Carousel activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect}>
 			       						<Carousel.Item> <img width={400} height={300} alt="400x300" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg"/> </Carousel.Item>
