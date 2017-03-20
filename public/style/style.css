@@ -123,6 +123,10 @@ nav > li > a > img {
 .navbar-default {
   border:none;
   padding:0;
+/*im not actually too keen what height:0px does but we need it
+to match the welcome:guest thing*/
+  height:0px;
+
 }
 
 /*.navbar-right {
@@ -174,7 +178,7 @@ ul.nav.navbar-nav.navbar-right {
   top: -ms-calc(50% - 19px);
   top: calc(50% - 19px);
   right: 10%;
-  margin-top: 20px;
+  margin-top: 110px;
   z-index:1;
   padding:0;
 

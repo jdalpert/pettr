@@ -14,13 +14,13 @@ class PetTool extends Component {
 		this.state = {
 			userId: "",
 			email: "",
-			pettrTitle:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/pettr%20logo.png?raw=true",
+			pettrTitle:"https://github.com/jdalpert/pettr/blob/master/src/components/assets/pettr%20logo.png?raw=true",
 			homeIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconhome.png?raw=true",
 			matchIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconmatch.png?raw=true",
 			profileIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconprofile.png?raw=true",
 			missionIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/missionstatement.png?raw=true",
 			signupIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconlogin2.png?raw=true"
-		};		
+		};
 	}
 
 	static contextTypes = {
@@ -86,7 +86,7 @@ class PetTool extends Component {
 	_handleHome = () =>{
 		if(!this.state.userId){
 			this.props.getAllPets();
-			this.context.router.push("/home/");	
+			this.context.router.push("/home/");
 		}else{
 			this.props.getPets(this.state.userId);
 			this.context.router.push("/home/" + this.state.userId);
@@ -112,7 +112,7 @@ class PetTool extends Component {
 		else{
 			this.props.getUserInfo(this.state.userId);
 			this.context.router.push("/messages/" + this.state.userId);
-		}		
+		}
 	}
 
 	render() {
@@ -120,17 +120,17 @@ class PetTool extends Component {
 			<div>
 				<Navbar className="icon-bar">
 					<Navbar.Header>
-						<NavItem href="/#/"><img className="main-logo" src={this.state.pettrTitle} onMouseOver={this.pettrTitleHover} onMouseOut={this.pettrTitleUnhover}/></NavItem> 
+						<NavItem href="/#/"><img className="main-logo" src={this.state.pettrTitle} onMouseOver={this.pettrTitleHover} onMouseOut={this.pettrTitleUnhover}/></NavItem>
 						<Navbar.Toggle />
 					</Navbar.Header>
 					<Navbar.Collapse>
 						<Nav pullRight>
 							<NavItem onClick={this._handleHome}><img className="nav-icon" src={this.state.homeIc} onMouseOver={this.homeHover} onMouseOut={this.homeUnhover}/></NavItem>
 							<NavItem onClick={this._handleMatches}><img className="nav-icon" src={this.state.matchIc} onMouseOver={this.matchHover} onMouseOut={this.matchUnhover}/></NavItem>
-							<NavItem onClick={this._handleProfile}><img className="nav-icon" src={this.state.profileIc} onMouseOver={this.profileHover} onMouseOut={this.profileUnhover}/></NavItem> 
+							<NavItem onClick={this._handleProfile}><img className="nav-icon" src={this.state.profileIc} onMouseOver={this.profileHover} onMouseOut={this.profileUnhover}/></NavItem>
 							<NavItem href="/#/mission"><img className="nav-icon" src={this.state.missionIc} onMouseOver={this.missionHover} onMouseOut={this.missionUnhover}/></NavItem>
 							<NavItem href="/#/signup"><img className="nav-icon" src={this.state.signupIc} onMouseOver={this.signupHover} onMouseOut={this.signupUnhover}/></NavItem>
-							
+
 						</Nav>
 					</Navbar.Collapse>
 					<Navbar.Text>
