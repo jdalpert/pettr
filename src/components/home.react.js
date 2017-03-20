@@ -209,10 +209,8 @@ class Home extends Component {
 
 
 					<div className="row confirmButtons">
-						<div className="col">
 							<img className="nav-icon no" onClick={this._handleAbandon} src={this.state.abandonIc} onMouseOver={this.abandonHover} onMouseOut={this.abandonUnhover}/>
 							<img className="nav-icon yes" onClick={this._handleAdopt} src={this.state.adoptIc} onMouseOver={this.adoptHover} onMouseOut={this.adoptUnhover}/>
-						</div>
 					</div>
 
 
