@@ -70,12 +70,6 @@ class Signup extends Component {
 		this.context.router.push("/profile");
 	};
 
-	_handleImage = (event) => {
-		this.props.add_image({fileLoc:"C:\\Users\\josh1_000\\Pictures\\photo_2016-05-29_19-02-28.jpg"});
-		//console.log(event.target.value);
-		//this.props.add_image({fileLoc: event.target.value});
-	};
-
 	render() {
 		return(
 			<div>
@@ -183,9 +177,6 @@ class Signup extends Component {
 							</div>
 							<p> After you have created an account, you will be able to add pet profiles in your user profile.</p>
 						</form>
-						<input type="file" onChange={this._handleImage}/>​
-						<Button className="btn btn-primary btn-xs" onClick={this._handleImage} id="add-picture">Add Picture</Button>
-						<img id="user-pic" src={(this.state.image)?this.state.image:"http://www.setenterprises.com/var/setent/storage/images/about/personal/christopher-kristock/1185-4-eng-US/Christopher-Kristock_person.jpg"}/>
 						<Button className="btn btn-primary btn-xs" onClick={this._handleClick} id="signup-button">Signup</Button>
 
 					</div>

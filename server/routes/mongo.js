@@ -1,7 +1,7 @@
 var Mongoose = require('mongoose');
 
-//Mongoose.connect('mongodb://localhost:27017/test'); 
-Mongoose.connect('mongodb://test:test@ds135680.mlab.com:35680/heroku_whq17hnb');
+Mongoose.connect('mongodb://localhost:27017/test'); 
+//Mongoose.connect('mongodb://test:test@ds135680.mlab.com:35680/heroku_whq17hnb');
 
 var userSchema = new Mongoose.Schema({ 
 	firstName: String,
@@ -16,7 +16,8 @@ var userSchema = new Mongoose.Schema({
 	pets: [{
 		_id: false,
 		petName: String,
-		petId: String
+		petId: String,
+		petImage: String
 	}],
 	matches:[{
 		requested: String,
@@ -29,6 +30,7 @@ var userSchema = new Mongoose.Schema({
 		pending: Boolean,
 		approved: Boolean
 	}],
+	profilePic: String,
 	contactInfo: String,
 	description: String,
 	organization: String
