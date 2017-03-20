@@ -43,6 +43,20 @@
 	text-align:center;
 }
 
+#signup-button {
+	margin-left:5%;
+}
+
+#signup-button:hover, .login-button:hover {
+	background-color: #f4c827;
+	border-style: solid;
+    border-color: yellow;
+}
+
+#signup-button:hover, .login-button:hover, #signup-button:active, .login-button:active, #signup-button:focus, .login-button:focus{
+	background-color:#fba62b;
+
+}
 
 .btn-primary {
 	border-color: #bb7d06;
