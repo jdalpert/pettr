@@ -121,7 +121,6 @@ margin-top:20px;
 
 	margin-top: 10px;
 	margin-bottom: 10px;
-	margin-left: 15px;
 	color:#1c2833;
 }
 
@@ -223,8 +222,6 @@ div.carousel.slide {
 }*/
 
 
-
-
 .carousel-stuff {}
 
 /*note to self-michael: idk why these two media queries fix the columns*/
@@ -281,7 +278,7 @@ div.carousel.slide {
 
 @media (min-width: 1320px) {
 
-	h2 {
+	.display-4 {
 		float:right;
 	}
 
