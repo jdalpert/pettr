@@ -6,5 +6,17 @@ text-align: center;
 
 #how-to{
 	margin-top: 100px;
+	color:#ba2100;
 }
 
+p#mission_text {
+	font-size:1.2em;
+}
+
+#mission_heads {
+	color:#ba2100;
+}
+
+#steps_heads {
+	color:#bb7d06;
+}

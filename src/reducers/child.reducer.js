@@ -1,4 +1,4 @@
-import { CHANGE, GRAB, GRAB2, DELETE, LOGINUSER, GETINFO, GETPETINFO, OWNERGETPETINFO, ALLPETS, GETPETS, ADDMATCH } from "../actions/constants";
+import { CHANGE, GRAB, GRAB2, DELETE, LOGINUSER, GETINFO, GETPETINFO, OWNERGETPETINFO, ALLPETS, GETPETS, ADDMATCH, ADDIMAGE } from "../actions/constants";
 
 const initial_state = {
 	data: ""
@@ -38,6 +38,9 @@ export default function(state = initial_state, action){
 			return {...state, data: action.payload.data};
 
 		case ADDMATCH:
+			return {...state, data: action.payload.data};
+
+		case ADDIMAGE:
 			return {...state, data: action.payload.data};
 
 		default:

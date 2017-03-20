@@ -5,12 +5,6 @@ import { connect } from "react-redux";
 import Contact from './contact.react'
 import * as actions from "../actions/add_person.action";
 import { Button } from 'react-bootstrap';
-import ReactFilestack from 'react-filestack';
-
-const options = {
-  accept: 'image/*',
-  fromSources: ['COMPUTER', 'FACEBOOK', 'CLOUDAPP']
-};
 
 class Signup extends Component {
 
@@ -31,9 +25,23 @@ class Signup extends Component {
 			organization: "",
 			loginEmail: "",
 			loginPassword: "",
+			image: ""
 		};		
 	}
 
+	componentWillMount(){
+		console.log("check2");
+		console.log(this.props.data);
+		if(this.props.data.secure_url)
+			this.setState({image: this.props.data.secure_url});
+	}
+
+	componentWillReceiveProps(nextProps){
+		console.log("check1");
+		console.log(nextProps.data);
+		if(nextProps.data.secure_url)
+			this.setState({image: nextProps.data.secure_url});
+	}
 
 	static contextTypes = {
 		router: PropTypes.object
@@ -62,16 +70,21 @@ class Signup extends Component {
 		this.context.router.push("/profile");
 	};
 
-    yourCallbackFunction = (result) => {
-  		console.log(results);
-	}
+	_handleImage = (event) => {
+		this.props.add_image({fileLoc:"C:\\Users\\josh1_000\\Pictures\\photo_2016-05-29_19-02-28.jpg"});
+		//console.log(event.target.value);
+		//this.props.add_image({fileLoc: event.target.value});
+	};
 
 	render() {
 		return(
 			<div>
-				<div className="container signup main-content">
-					<div className="col-sm-7">
-						<h1>Sign Up </h1>
+				<div className="container col-sm-12 signup main-content">
+					<div className="col-sm-1"></div>
+
+						<h1 id="col-sm-5 signup-title">Sign Up </h1>
+
+					<div className="col-sm-5 signup-left">
 						<form action="" className="signup-form"> 
 							<label htmlFor="first-name">First Name:</label><br/>
 							<input type="text" name="firstName" onChange={this._handleChange} value={this.state.firstName} id="first-name"/><br/>
@@ -143,8 +156,14 @@ class Signup extends Component {
 							</div>
 							<label htmlFor="location">City:</label><br/>
 							<input type="text" name="city" onChange={this._handleChange} value={this.state.city} id="city"/><br/>
-							<label htmlFor="contactInfo">Contact Info:</label><br/>
-							<input type="text" placeholder="This will be sent to potentional matches" name="contactInfo" onChange={this._handleChange} value={this.state.contactInfo} id="contactInfo"/><br/>
+						</form>
+					</div>
+
+					<div className="col-sm-5 signup-right">
+						<form action="" className="signup-form"> 
+
+						<label htmlFor="contactInfo">Preferred Contact:</label><br/>
+							<input type="text" placeholder="Sent to matches" name="contactInfo" onChange={this._handleChange} value={this.state.contactInfo} id="contactInfo"/><br/>
 							<label htmlFor="Organization">Organization(Optional):</label><br/>
 							<input type="text" name="organization" onChange={this._handleChange} value={this.state.organization} id="organization"/><br/>
 
@@ -164,29 +183,16 @@ class Signup extends Component {
 							</div>
 							<p> After you have created an account, you will be able to add pet profiles in your user profile.</p>
 						</form>
-						<ReactFilestack apikey={'Aeu5t4YQMSQmgwkasYEozz'} link options={options} onSuccess={this.yourCallbackFunction} />
+						<input type="file" onChange={this._handleImage}/>​
+						<Button className="btn btn-primary btn-xs" onClick={this._handleImage} id="add-picture">Add Picture</Button>
+						<img id="user-pic" src={(this.state.image)?this.state.image:"http://www.setenterprises.com/var/setent/storage/images/about/personal/christopher-kristock/1185-4-eng-US/Christopher-Kristock_person.jpg"}/>
 						<Button className="btn btn-primary btn-xs" onClick={this._handleClick} id="signup-button">Signup</Button>
+
 					</div>
 
-					<div className="col-sm-5">
-						<div className="login">
-							<img className="asset" src="https://github.com/jdalpert/pettr/blob/layout/src/components/assets/asset.png?raw=true"/>
-							<div className="heading">
-								<h3>Already have an account?<br/>Sign in</h3>
-							    <form action="">
-							      <div className="input-group input-group-lg">
-							        <span className="input-group-addon"><i className="fa fa-user"></i></span>
-							        <input type="text" className="form-control" placeholder="Email" name="loginEmail" onChange={this._handleChange} value={this.state.loginEmail}/>
-							      </div>
-							      <div className="input-group input-group-lg">
-							        <span className="input-group-addon"><i className="fa fa-lock"></i></span>
-							        <input type="password" className="form-control" placeholder="Password" name="loginPassword" onChange={this._handleChange} value={this.state.loginPassword}/>
-							      </div>
-							        <button className="btn btn-primary btn-xs login-button" onClick={this._handleLogin} >Login</button>
-							    </form>
-							</div>
-						</div>
-					</div>
+					<div className="col-sm-1"></div>
+
+
 
 				</div>
 			</div>

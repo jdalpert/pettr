@@ -1,12 +1,12 @@
 @font-face {
-	font-family: "mufferaw";
-		src: url(fonts/mufferaw.ttf);
+  font-family: "mufferaw";
+    src: url(fonts/mufferaw.ttf);
 }
 
 @font-face {
-	font-family: "help";
-	src: url(fonts/Museo500.otf) format("opentype");
-	/*this wont work for some reason*/
+  font-family: "help";
+  src: url(fonts/Museo500.otf) format("opentype");
+  /*this wont work for some reason*/
 }
 
 
@@ -14,18 +14,18 @@
   text-align: center;
 }*/
 body {
-	/*background-color: #f6b26b;*/
+  /*background-color: #f6b26b;*/
   background:url('https://github.com/jdalpert/pettr/blob/be067804dde4fdbf73afc810dfb6e2a25ef21bea/src/components/assets/bg2.png?raw=true');
   /*color: #4f5a65;*/
-	/*color: #2b0000;*/
-	/*color: #1d1905;*/
-	/*color: #2a150d;*/
-	color: #3e3e3e;
-	font-family: 'Quando', serif;
+  /*color: #2b0000;*/
+  /*color: #1d1905;*/
+  /*color: #2a150d;*/
+  color: #3e3e3e;
+  font-family: 'Quando', serif;
   }
 
 input {
-	border-radius: 4px;
+  border-radius: 4px;
 }
 
 .defaultButton {
@@ -33,7 +33,7 @@ input {
 }
 
 .main-content {
-	/*background-color: #FFFFFF;*/
+  /*background-color: #FFFFFF;*/
   background-color: rgba(255, 250, 230, 0.9);
   margin-top: 134px;
   position: absolute;
@@ -56,7 +56,7 @@ input {
     margin: auto;
     position: absolute;
     top: 0; right: 0;
-    z-index: 100;
+    z-index: 0;
     list-style:none;
     padding-bottom: 10%;
 }
@@ -73,7 +73,6 @@ input {
 /*.icon-bar a:hover {
     background-color: #ecb071;
     width:10%;
-
 }*/
 
 .active {
@@ -87,15 +86,33 @@ input {
 }
 
 .main-logo {
-  margin-left:20%;
+  margin-left:-75%;
+  margin-top:-4%;
+  height:18%;
+  width:18%;
 }
 
 .nav-icon{
+  margin-left:-10%;
+  margin-top:-375%;
   max-height:76px;
 }
 
 a .nav-icon:hover {
 
+}
+
+#login-page {
+  color:#ba2100;
+  float:none;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:1.1em;
+  display:inline;
+}
+
+#login-page:hover {
+  color:#bb7d06;
 }
 
 nav > li > a > img {
@@ -108,12 +125,10 @@ nav > li > a > img {
 .navbar-default {
   border:none;
   padding:0;
-  height:0px;
 }
 
 /*.navbar-right {
 }
-
 ul.nav.navbar-nav.navbar-right {
   background-color:yellow;
 }*/
@@ -161,7 +176,10 @@ ul.nav.navbar-nav.navbar-right {
   top: -ms-calc(50% - 19px);
   top: calc(50% - 19px);
   right: 10%;
-  margin-top: 110px;
+  margin-top: 20px;
   z-index:1;
   padding:0;
+
+}
+
 }

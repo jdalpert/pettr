@@ -20,6 +20,17 @@
 	background-color:#db9128;
 }
 
+.profileButton:hover {
+	background-color:#f4c827;
+	border-style: solid;
+    border-color: yellow;
+}
+
+.profileButton:hover, .profileButton:active, .profileButton:focus {
+	background-color:#fba62b;
+
+}
+
 .profileButton a {
 	color: white;
 	text-decoration:none;

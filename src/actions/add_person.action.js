@@ -1,5 +1,5 @@
 import Axios from "axios";
-import { CHANGE, GRAB, GRAB2, DELETE, SAMPLE_API, LOGINUSER, GETINFO, GETPETINFO, OWNERGETPETINFO, ALLPETS, GETPETS, ADDMATCH} from "./constants";
+import { CHANGE, GRAB, GRAB2, DELETE, SAMPLE_API, LOGINUSER, GETINFO, GETPETINFO, OWNERGETPETINFO, ALLPETS, GETPETS, ADDMATCH, ADDIMAGE} from "./constants";
 
 Axios.interceptors.request.use(function (config) {
   console.log(config)
@@ -111,6 +111,15 @@ export function delete_person(userID) {
 	const request = Axios.delete(SAMPLE_API+userID);
 	return {
 		type: DELETE,
+		payload: request
+	};
+}
+
+export function add_image(img) {
+	console.log(img.fileLoc);
+	const request = Axios.post(SAMPLE_API+"addimage/", img);
+	return {
+		type: ADDIMAGE,
 		payload: request
 	};
 }

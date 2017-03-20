@@ -14,7 +14,7 @@ class PetTool extends Component {
 		this.state = {
 			userId: "",
 			email: "",
-			pettrTitle:"https://github.com/jdalpert/pettr/blob/layout/src/components/assets/title.png?raw=true",
+			pettrTitle:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/pettr%20logo.png?raw=true",
 			homeIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconhome.png?raw=true",
 			matchIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconmatch.png?raw=true",
 			profileIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconprofile.png?raw=true",
@@ -42,10 +42,10 @@ class PetTool extends Component {
 	}
 
 	pettrTitleHover = () =>{
-		this.setState({pettrTitle:"https://github.com/jdalpert/pettr/blob/layout/src/components/assets/titleAlt.png?raw=true"});
+		this.setState({pettrTitle:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/pettr%20logolight.png?raw=true"});
 	}
 	pettrTitleUnhover = () =>{
-		this.setState({pettrTitle:"https://github.com/jdalpert/pettr/blob/layout/src/components/assets/title.png?raw=true"});
+		this.setState({pettrTitle:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/pettr%20logo.png?raw=true"});
 	}
 
 	homeHover = () =>{
@@ -137,8 +137,10 @@ class PetTool extends Component {
 						{
 							(this.state.email)?
 							<span>Welcome: <b>{this.state.email}</b></span>:
-							<span>Welcome: Guest!</span>
+							<span>Welcome: Guest <b>-</b></span>
 						}
+						<span><a href="/#/login" id="login-page"> LOGIN</a></span>
+
 				    </Navbar.Text>
 				</Navbar>
 			</div>

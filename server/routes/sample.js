@@ -13,6 +13,16 @@ var mongoose = require('mongoose');
 var Info = require('./mongo.js');
 var Pet = require('./pet.js');
 
+var cloudinary = require('cloudinary');
+
+cloudinary.config({ 
+  cloud_name: 'hakknwvbm', 
+  api_key: '587132324837152', 
+  api_secret: 'Ha2Ko65p1t_b1MYN8OFZnjivlkU' 
+});
+
+var CLOUDINARY_URL="cloudinary://587132324837152:Ha2Ko65p1t_b1MYN8OFZnjivlkU@hakknwvbm"
+
 /*router.all('/upload',function(req,res){
      var dirname = require('path').dirname(__dirname);
      var filename = req.files.file.name;
@@ -53,6 +63,14 @@ var Pet = require('./pet.js');
         }
     });
 });*/
+router.post('/addimage/', function(req, res){
+	console.log(req.body.fileLoc);
+	cloudinary.uploader.upload(req.body.fileLoc, function(result) { 
+  		console.log(result);
+  		res.send(result);
+	});
+});
+
 router.get('/user/:id', function(req, res){
 	console.log(req.params.id);
 	Info.findOne({_id: req.params.id}, function(err, user){
