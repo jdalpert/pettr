@@ -29,6 +29,10 @@ class Settings extends Component {
 		this.setState(obj)
 	};
 
+	_handleBack = () => {
+		this.context.router.push("/profile" );
+	};
+
 	// _handleClick = () => {
 	// 	this.props.grab_data(this.state);
 	// 	this.state.firstName = "";
@@ -43,7 +47,7 @@ class Settings extends Component {
 			<div>
 				<div className="container signup main-content">
 					<div className="col-sm-3 settings">
-						<h1>Settings </h1>
+						<h2>Settings </h2>
 						<form action="" className="signup-form settings"> 
 
 							<b><p>Pet Preferences</p></b>
@@ -54,16 +58,16 @@ class Settings extends Component {
 								<label htmlFor="cats"> Cats </label><br/>
 								<p><input type="checkbox" id="other" value="other"/>
 								<label htmlFor="other"> Other </label><br/></p>
+								<label htmlFor="current-organization">Current Organization</label><br/>
+								<label htmlFor="new-organization">New Organization</label><br/>
+								<input type="text" id="new-organization"/><br/>
+								<label htmlFor="new-description">Bio Description</label><br/>
+								<textarea placeholder="Tell us about yourself and anything that will help
+								other users know what you're looking for! Are you looking for a specific pets?
+								Are you creating pet profiles and why?"/>
 							</div>
 
-							<label htmlFor="current location">Current Location</label><br/>
-							<p>LOCATION PLACEHOLDER</p>
-							<label htmlFor="new location">New Location</label><br/>
-							<input type="text" id="location"/><br/>
 
-
-							<label htmlFor="new password">New Password</label><br/>
-							<input type="text" id="passowrd"/><br/>
 
 						</form>
 
@@ -72,19 +76,25 @@ class Settings extends Component {
 					<div className="col-sm-5 settings">
 						<div className="signup-form settings">
 							<div className="heading">
-								<h2>Contact Information</h2>
-							<label htmlFor="current email">Current Email</label><br/>
-							<p>EMAIL PLACEHOLDER</p>
-							<label htmlFor="new email">New Email</label><br/>
+								<h2>User Info</h2>
+							<label htmlFor="new-password">New Password</label><br/>
+							<input type="text" id="passowrd"/><br/>
+							<label htmlFor="current-email">Current Email</label><br/>
+							<label htmlFor="new-email">New Email</label><br/>
 							<input type="text" id="email"/><br/>			
-							<label htmlFor="current phonenum">Current Phone Number</label><br/>
-							<p>PHONE NUM PLACEHOLDER</p>
-							<label htmlFor="new phonenum">New Phone Number</label><br/>
-							<input type="text" id="phonenum"/><br/>						
+							<label htmlFor="current-phonenum">Current Phone Number</label><br/>
+							<label htmlFor="new-phonenum">New Phone Number</label><br/>
+							<input type="text" id="phonenum"/><br/>	
+							<label htmlFor="current-location">Current Location</label><br/>
+							<label htmlFor="new-location">New Location</label><br/>
+							<input type="text" id="location"/><br/>
 							</div>
 						</div>
 					</div>
-						<Button className="btn btn-primary btn-xs" /*onClick={this._handleClick}*/ id="save-button">Save</Button>
+						<div className="btn-group setting-buttons col-sm-12">
+							<Button  onClick={this._handleBack} id="back-button">Back</Button>
+							<Button /*onClick={this._handleClick}*/ id="save-button">Save</Button>
+						</div>
 				</div>
 			</div>
 

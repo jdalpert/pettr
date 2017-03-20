@@ -1,0 +1,41 @@
+/*settings*/
+
+#save-button, #back-button{
+    margin-right: 50%;
+    margin-left: 45%;
+    font-size:1em;
+    margin-top:5%;
+    background-color:#fba62b;
+	border-style: solid;
+	border-color: #fba62b;
+	color:white;
+}
+
+#save-button:hover, #save-button:active, #save-button:focus,
+#back-button:hover, #back-button:active, #back-button:focus {
+	background-color:#f4c827;
+}
+
+.settings{
+	margin-left: 15%;
+}
+
+#save-button {
+	margin-top: 1%;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+#back-button {
+	display: inline-block;
+	margin-top: 1%;
+	margin-right: 10px;
+}
+
+div.btn-group.setting-buttons {
+	display:inline-flex;
+}
+
+div.btn-group.setting-buttons.col-sm-12 {
+	margin-top:5%;
+}
