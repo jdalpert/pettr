@@ -77,10 +77,10 @@ class PetTool extends Component {
 	}
 
 	signupHover = () =>{
-		this.setState({signupIc:"https://github.com/jdalpert/pettr/blob/layout/src/components/assets/iconlogin.png?raw=true"});
+		this.setState({signupIc:"https://github.com/jdalpert/pettr/blob/layout/src/components/assets/iconloginlight.png?raw=true"});
 	}
 	signupUnhover = () =>{
-		this.setState({signupIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconloginlight.png?raw=true"});
+		this.setState({signupIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconlogin.png?raw=true"});
 	}
 
 	_handleHome = () =>{
