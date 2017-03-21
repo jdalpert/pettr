@@ -170,7 +170,7 @@ class Home extends Component {
 			       						{(this.state.images[2].pic)?<Carousel.Item> <img width={400} height={300} alt="400x300" src={(this.state.images[2].pic)}/> </Carousel.Item>:<span></span>}
 			       						{(this.state.images[3].pic)?<Carousel.Item> <img width={400} height={300} alt="400x300" src={(this.state.images[3].pic)}/> </Carousel.Item>:<span></span>}
 			      					 </Carousel>:
-			      					<img  width={400} height={300} alt="400x300" id="user-pic" src={imagePlaceholder}/>
+			      					<img  width={400} height={300} alt="400x300" id="pet-pic" src={imagePlaceholder}/>
 			      					}
 								</div>
 								{(this.state.images.length !== 0 && (this.state.images[0].pic || this.state.images[1].pic  || this.state.images[2].pic || this.state.images[3].pic))?

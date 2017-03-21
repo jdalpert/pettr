@@ -222,6 +222,11 @@ div.carousel.slide {
 	margin-left:3%;
 }*/
 
+#pet-pic {
+	max-width:80%;
+	display:block;
+}
+
 /*note to self-michael: idk why these two media queries fix the columns*/
 @media (min-width: 768px) {
 	margin-top: 10%;
