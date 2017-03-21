@@ -223,7 +223,7 @@ router.post('/match', function(req, res){
 					}}
 				}, function(err, finished){
 					console.log(finished);
-					res.send(finished);
+					res.send(addedMatch);
 				})
 			})
 		})
