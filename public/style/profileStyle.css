@@ -41,7 +41,7 @@ div.col-sm-6.container.profile-bot-left {
 #addPet:hover {
 	background-color: #f4c827;
 	border-style: solid;
-    border-color: yellow;
+    border-color: #fba62b;
 }
 
 .addPet:hover, .addPet:active, .addPet:focus {
@@ -53,6 +53,15 @@ div.col-sm-6.container.profile-bot-left {
 	color:#db9128;
 }
 
+#settings-page:hover, #settings-page:focus {
+	color:#fba62b;
+	text-decoration:none;
+}
+
+.fa:hover, .fa:focus {
+	color:#fba62b;
+	border-color:#fba62b;
+}
 .petName a {
 	color:#db9128;
 
@@ -64,9 +73,9 @@ div.col-sm-6.container.profile-bot-left {
 }
 
 #user-pic {
-	width:80%;
+	max-width:200px;
+	max-height:200px;
 	display:block;
-
 }
 
 #user-name {
@@ -96,4 +105,9 @@ div.container.user-info {
 
 .petsList {
 	width:100%;
+}
+
+.petName a:hover, .petName a:focus {
+	color: #fba62b;
+	text-decoration:none;
 }

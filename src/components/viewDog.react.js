@@ -153,7 +153,7 @@ class ViewDog extends Component {
 										<h2 className="display-4"> My name is {this.state.name}! </h2>
 									</div>
 									{(this.state.images.length !== 0 && (this.state.images[0].pic || this.state.images[1].pic  || this.state.images[2].pic || this.state.images[3].pic))?
-			     					 <Carousel activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect}>
+			     					 <Carousel activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect} interval={500000000}>
 			       						{(this.state.images[0].pic)?<Carousel.Item> <img width={400} height={300} alt="400x300" src={(this.state.images[0].pic)}/> </Carousel.Item>:<span></span>}
 			       						{(this.state.images[1].pic)?<Carousel.Item> <img width={400} height={300} alt="400x300" src={(this.state.images[1].pic)}/> </Carousel.Item>:<span></span>}
 			       						{(this.state.images[2].pic)?<Carousel.Item> <img width={400} height={300} alt="400x300" src={(this.state.images[2].pic)}/> </Carousel.Item>:<span></span>}
