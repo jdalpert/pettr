@@ -161,7 +161,7 @@ class Signup extends Component {
 								<input type="checkbox" onChange={this._handleCheck} checked={this.state.other} value={this.state.other} name ="other" id="other"/>
 								<label htmlFor="other"> Other </label><br/>
 							</div>
-							<p>Unfortunately due to the nature of Heroku, we cannot provide image hosting so please post a link your photo from a popular image hosting hosting site! (We reccomend imgBB and using the direct links option)</p> 
+							<p>Unfortunately due to the nature of Heroku, we cannot provide image hosting so please post a link your photo from a popular image hosting hosting site! (We reccomend imgBB and using the direct links option, or Image Url option)</p> 
 							<label htmlFor="profilePic">Profile Pic:</label><br/>
 							<input type="text" name="profilePic" onChange={this._handleChange} value={this.state.profilePic} id="profilePic"/><br/>
 							<p> After you have created an account, you will be able to add pet profiles in your user profile.</p>
