@@ -211,7 +211,7 @@ class Home extends Component {
 							<div className="locationInfo">
 								<h4 id="locationText">Come find me here!</h4>
 								<text id="pet-location">Location: {this.state.city}, {this.state.state}<br/></text>
-								<a href="#">View Owner Profile</a>
+								<a href={"/#/profile/" + this.state.userId}>View Owner Profile</a>
 							</div>
 						</div>
 					</div>

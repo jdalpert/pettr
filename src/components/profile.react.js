@@ -106,7 +106,13 @@ class Profile extends Component {
 	_handleAdd = (id) =>{
 		this.props.getUserInfo(id);
 		this.context.router.push("/addpet");
-	}
+	};
+
+	_handleSettings = () => {
+		console.log("double check");
+		console.log(this.state.userId);
+		this.context.router.push("/settings/" + this.state.userId);
+	};
 
 	render() {
     	let petsArry = (this.state.pets.length)?
@@ -146,7 +152,7 @@ class Profile extends Component {
 								}
 								<text id="pet-location">Location: {this.state.city}, {this.state.state}<br/></text>
 
-								<b><Link id="settings-page" to="/settings"><i className="fa fa-cog"></i>Settings</Link></b>
+								<b><a id="settings-page" onClick={this._handleSettings}><i className="fa fa-cog"></i>Settings</a></b>
 							</div>
 
 							<div className="col-sm-6 container profile-bot-left">

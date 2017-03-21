@@ -1,5 +1,5 @@
 import Axios from "axios";
-import { CHANGE, GRAB, GRAB2, DELETE, SAMPLE_API, LOGINUSER, GETINFO, GETPETINFO, OWNERGETPETINFO, ALLPETS, GETPETS, ADDMATCH, ADDIMAGE} from "./constants";
+import { CHANGE, GRAB, GRAB2, DELETE, SAMPLE_API, LOGINUSER, GETINFO, GETPETINFO, OWNERGETPETINFO, ALLPETS, GETPETS, ADDMATCH, ADDIMAGE, UPUDATA} from "./constants";
 
 Axios.interceptors.request.use(function (config) {
   console.log(config)
@@ -32,24 +32,8 @@ export function add_person(data) {
 	};
 }
 
-export function grab_data(obj) {
-	const request = Axios.post(SAMPLE_API, obj);
-	return {
-		type: GRAB,
-		payload: request
-	};
-}
-
-export function grab_data2(obj) {
-	const request = Axios.post(SAMPLE_API+obj.userId, obj);
-	return {
-		type: GRAB2,
-		payload: request
-	};
-}
-
 export function loginUser(obj){
-	const request = Axios.post(SAMPLE_API+"login", obj);
+	const request = Axios.post(SAMPLE_API+"login/", obj);
 	return {
 		type: LOGINUSER,
 		payload: request
@@ -123,3 +107,29 @@ export function add_image(img) {
 		payload: request
 	};
 }
+
+export function update_data(obj) {
+	const request = Axios.post(SAMPLE_API+"update/", obj);
+	return {
+		type: UPUDATA,
+		payload: request
+	};
+}
+
+export function grab_data(obj) {
+	const request = Axios.post(SAMPLE_API, obj);
+	return {
+		type: GRAB,
+		payload: request
+	};
+}
+
+export function grab_data2(obj) {
+	const request = Axios.post(SAMPLE_API+obj.userId, obj);
+	return {
+		type: GRAB2,
+		payload: request
+	};
+}
+
+
