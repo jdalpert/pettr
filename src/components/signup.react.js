@@ -162,7 +162,7 @@ class Signup extends Component {
 								<label htmlFor="other"> Other </label><br/>
 							</div>
 							<p>Unfortunately due to the nature of Heroku, we cannot provide image hosting so please post a link to your photo from a popular image hosting site! (We reccomend imgBB and using the direct links option, or Image Url option)</p> 
-							<label htmlFor="profilePic">Profile Pi Urlc:</label><br/>
+							<label htmlFor="profilePic">Profile Pic URL:</label><br/>
 							<input type="text" name="profilePic" onChange={this._handleChange} value={this.state.profilePic} id="profilePic"/><br/>
 							<p> After you have created an account, you will be able to add pet profiles in your user profile.</p>
 							</form>
