@@ -220,7 +220,7 @@ router.post('/:id', function(req, res){
 			imagePlaceholder = "https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/catasset.png?raw=true"
 		if(pet.type === "Other" || pet.type === "other") 
 			imagePlaceholder = "https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/otherasset.png?raw=true"
-		petImage = (pet.images[0])? pet.images[0].pic : imagePlaceholder;
+		petImage = (pet.images[0].pic)? pet.images[0].pic : imagePlaceholder;
 		let pets = {petName: petName, petId: petId, petImage: petImage};
 		console.log(pets);
         Info.findOneAndUpdate( {_id: userId}, 

@@ -160,13 +160,12 @@ class Home extends Component {
 						<div className="col-md-6 FIRST-HALF">
 							<div className = "row carousel-thumbnails">
 								<div className="col-sm-9 carousel-stuff">
-
-								<div className = "row">
-									<h2 className="display-4"> My name is {this.state.name}! </h2>
-								</div>
-									{(this.state.images.length !== 0)?
+									<div className = "row">
+										<h2 className="display-4"> My name is {this.state.name}! </h2>
+									</div>
+									{(this.state.images.length !== 0 && (this.state.images[0].pic || this.state.images[1].pic  || this.state.images[2].pic || this.state.images[3].pic))?
 			     					 <Carousel activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect}>
-			       						<Carousel.Item> <img width={400} height={300} alt="400x300" src={(this.state.images[0].pic)}/> </Carousel.Item>
+			       						{(this.state.images[0].pic)?<Carousel.Item> <img width={400} height={300} alt="400x300" src={(this.state.images[0].pic)}/> </Carousel.Item>:<span></span>}
 			       						{(this.state.images[1].pic)?<Carousel.Item> <img width={400} height={300} alt="400x300" src={(this.state.images[1].pic)}/> </Carousel.Item>:<span></span>}
 			       						{(this.state.images[2].pic)?<Carousel.Item> <img width={400} height={300} alt="400x300" src={(this.state.images[2].pic)}/> </Carousel.Item>:<span></span>}
 			       						{(this.state.images[3].pic)?<Carousel.Item> <img width={400} height={300} alt="400x300" src={(this.state.images[3].pic)}/> </Carousel.Item>:<span></span>}
@@ -174,7 +173,7 @@ class Home extends Component {
 			      					<img  width={400} height={300} alt="400x300" id="user-pic" src={imagePlaceholder}/>
 			      					}
 								</div>
-								{(this.state.images.length !== 0)?
+								{(this.state.images.length !== 0 && (this.state.images[0].pic || this.state.images[1].pic  || this.state.images[2].pic || this.state.images[3].pic))?
 									<div className = "col-sm-3 thumbnails">
 											{(this.state.images[0].pic)?<button className="btn btn-primary btn-xs thumbnail-button" onClick={this.change0}><img className="nav-icon thumbnail" src={this.state.images[0].pic} alt="Image"/></button>:<span></span>}
 											{(this.state.images[1].pic)?<button className="btn btn-primary btn-xs thumbnail-button" onClick={this.change1}><img className="nav-icon thumbnail" src={this.state.images[1].pic} alt="Image"/></button>:<span></span>}
