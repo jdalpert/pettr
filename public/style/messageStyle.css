@@ -23,7 +23,7 @@
 .profileButton:hover {
 	background-color:#f4c827;
 	border-style: solid;
-    border-color: yellow;
+    border-color: #fba62b;
 }
 
 .profileButton:hover, .profileButton:active, .profileButton:focus {
@@ -92,4 +92,9 @@ hr {
 
 #matchedTitle {
 	color:#db9128;
+}
+
+.messageName a:hover, .messageName a:focus {
+	color:#db9128;
+	text-decoration:none;
 }
