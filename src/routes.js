@@ -28,6 +28,7 @@ export default (
 		<Route path="/child" component={Child}/>
 		<Route path="/test" component={Test}/>
 		<Route path="/settings" component={Settings}/>
+		<Route path="/settings/:id" component={Settings}/>
 		<Route path="/signup" component={Signup}/>
 		<Route path="/home" component={Home}/>
 		<Route path="/home/:id" component={Home}/>

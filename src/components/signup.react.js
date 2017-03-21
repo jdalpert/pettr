@@ -142,7 +142,7 @@ class Signup extends Component {
 					<div className="col-sm-5 signup-right">
 						<form action="" className="signup-form"> 
 
-						<label htmlFor="contactInfo">Preferred Contact:</label><br/>
+							<label htmlFor="contactInfo">Preferred Contact:</label><br/>
 							<input type="text" placeholder="Sent to matches" name="contactInfo" onChange={this._handleChange} value={this.state.contactInfo} id="contactInfo"/><br/>
 							<label htmlFor="Organization">Organization(Optional):</label><br/>
 							<input type="text" name="organization" onChange={this._handleChange} value={this.state.organization} id="organization"/><br/>
