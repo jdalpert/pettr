@@ -105,6 +105,7 @@ router.get('/petPref/:id', function(req, res){
 			query["$or"].push({type: "Other"});
 		fullQuery["$and"].push({city: user.city});
 		fullQuery["$and"].push({state: user.state});
+		fullQuery["$and"].push({$not:{_id: req.params.id}});
 		fullQuery["$and"].push(query);
 		console.log(fullQuery);
 		Pet.find(fullQuery, function(err, pets){
