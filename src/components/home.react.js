@@ -26,6 +26,7 @@ class Home extends Component {
 			city: "",
 			state: "",
 			description: "",
+			images: [],
 			//add css to make things you want to not to display not to display and use the owner property to get rid of them
 			owner: false,
 			pets: [],
@@ -144,6 +145,17 @@ class Home extends Component {
 	// for the carousel changing
 
 	render() {
+		let imagePlaceholder = "";
+		if(this.state.type == "Dog" || this.state.type == "dog")
+			imagePlaceholder = "https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/dogasset.png?raw=true"
+		if(this.state.type === "Cat" || this.state.type === "cat") 
+			imagePlaceholder = "https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/catasset.png?raw=true"
+		if(this.state.type === "Other" || this.state.type === "other") 
+			imagePlaceholder = "https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/otherasset.png?raw=true"
+		console.log("IMGs");
+		console.log(this.state.images);
+		console.log(this.state.type);
+		console.log(imagePlaceholder);
 		return(
 			<div>
 				<div className="container home main-content">
@@ -156,23 +168,28 @@ class Home extends Component {
 								<div className = "row">
 									<h2 className="display-4"> My name is {this.state.name}! </h2>
 								</div>
+									{(this.state.images.length !== 0)?
 			     					 <Carousel activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect}>
 			       						<Carousel.Item> <img width={400} height={300} alt="400x300" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg"/> </Carousel.Item>
 			       						<Carousel.Item> <img width={400} height={300} alt="400x300" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg"/> </Carousel.Item>
 			       						<Carousel.Item> <img width={400} height={300} alt="400x300" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg"/> </Carousel.Item>
 			       						<Carousel.Item> <img width={400} height={300} alt="400x300" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/4/1/5/228543262.jpg"/> </Carousel.Item>
-			      					</Carousel>
+			      					 </Carousel>:
+			      					<img  width={400} height={300} alt="400x300" id="user-pic" src={imagePlaceholder}/>
+			      					}
 								</div>
+								{(this.state.images.length !== 0)?
+									<div className = "col-sm-3 thumbnails">
+											<button className="btn btn-primary btn-xs thumbnail-button" onClick={this.change0}><img className="nav-icon thumbnail" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg" alt="Image"/></button>
 
-								<div className = "col-sm-3 thumbnails">
-										<button className="btn btn-primary btn-xs thumbnail-button" onClick={this.change0}><img className="nav-icon thumbnail" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/e/e/7/228543241.jpg" alt="Image"/></button>
+											<button className="btn btn-primary btn-xs thumbnail-button" onClick={this.change1}><img className="nav-icon thumbnail" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg" alt="Image"/></button>
 
-										<button className="btn btn-primary btn-xs thumbnail-button" onClick={this.change1}><img className="nav-icon thumbnail" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg" alt="Image"/></button>
+											<button className="btn btn-primary btn-xs thumbnail-button" onClick={this.change2}><img className="nav-icon thumbnail" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg" alt="Image"/></button>
 
-										<button className="btn btn-primary btn-xs thumbnail-button" onClick={this.change2}><img className="nav-icon thumbnail" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/0/a/b/228543256.jpg" alt="Image"/></button>
-
-										<button className="btn btn-primary btn-xs thumbnail-button" onClick={this.change3}><img className="nav-icon thumbnail" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/4/1/5/228543262.jpg" alt="Image"/></button>
-								</div>
+											<button className="btn btn-primary btn-xs thumbnail-button" onClick={this.change3}><img className="nav-icon thumbnail" src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/4/1/5/228543262.jpg" alt="Image"/></button>
+									</div>:
+									<div className = "col-sm-3 thumbnails"></div>
+								}
 							</div>
 						</div>
 

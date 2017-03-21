@@ -133,7 +133,7 @@ class Profile extends Component {
 							<div className="col-sm-3 container profile-top-left">
 								<h2 id="user-name">{this.state.firstName} {this.state.lastName}</h2>
 
-								<img id="user-pic" src={(this.state.image)?this.state.image:"http://www.setenterprises.com/var/setent/storage/images/about/personal/christopher-kristock/1185-4-eng-US/Christopher-Kristock_person.jpg"}/>
+								<img id="user-pic" src={(this.state.image)?this.state.image:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/userasset.png?raw=true"}/>
 
 							</div>
 
