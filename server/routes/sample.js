@@ -63,13 +63,7 @@ var CLOUDINARY_URL="cloudinary://587132324837152:Ha2Ko65p1t_b1MYN8OFZnjivlkU@hak
         }
     });
 });*/
-router.post('/addimage/', function(req, res){
-	console.log(req.body.fileLoc);
-	cloudinary.uploader.upload(req.body.fileLoc, function(result) { 
-  		console.log(result);
-  		res.send(result);
-	});
-});
+
 
 router.get('/user/:id', function(req, res){
 	console.log(req.params.id);
@@ -111,6 +105,7 @@ router.get('/petPref/:id', function(req, res){
 			query["$or"].push({type: "Other"});
 		fullQuery["$and"].push({city: user.city});
 		fullQuery["$and"].push({state: user.state});
+		fullQuery["$and"].push({$not:{_id: req.params.id}});
 		fullQuery["$and"].push(query);
 		console.log(fullQuery);
 		Pet.find(fullQuery, function(err, pets){
@@ -142,10 +137,43 @@ router.get('/petowner/:id', function(req, res){
 			city: pet.city,
 			state: pet.state,
 			description: pet.description,
+			images: pet.images,
 			owner: true
 		}
 		console.log(newPet);
 		res.send(newPet);
+	});
+});
+
+router.post('/update', function(req, res){
+	console.log(req.body);
+	console.log("AHSHS");
+	Info.findOneAndUpdate({_id: req.body.userId}, {
+			email:req.body.email,
+			password:req.body.password,
+			firstName:req.body.firstName,
+			lastName:req.body.lastName,
+			city:req.body.city,
+			state:req.body.state,
+			dog:req.body.dog ,
+			cat: req.body.cat,
+			other: req.body.other,
+			pets: req.body.pets,
+			contactInfo: req.body.contactInfo,
+			description:req.body.description,
+			organization:req.body.organization,
+			profilePic:req.body.profilePic,
+	}, function(err, user){
+		console.log(user);
+        res.send({userId: user._id});
+    });
+});
+
+router.post('/addimage/', function(req, res){
+	console.log(req.body.fileLoc);
+	cloudinary.uploader.upload(req.body.fileLoc, function(result) { 
+  		console.log(result);
+  		res.send(result);
 	});
 });
 
@@ -202,6 +230,14 @@ router.post('/match', function(req, res){
 	});
 });
 
+router.post('/', function(req, res){
+	console.log(req.body);
+	new Info(req.body).save(function(err, user){
+		console.log(user);
+        res.send({userId: user._id});
+    });
+});
+
 router.post('/:id', function(req, res){
 	console.log(req.body);
 	console.log("TeSt2");
@@ -210,24 +246,25 @@ router.post('/:id', function(req, res){
 		let petId = pet._id;
 		let petName = pet.name;
 		let userId = pet.userId;
-		let pets = {petName: petName, petId: petId};
+		let petImage = "";
+		let imagePlaceholder = "";
+		console.log(pet);
+		if(pet.type == "Dog" || pet.type == "dog")
+			imagePlaceholder = "https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/dogasset.png?raw=true"
+		if(pet.type === "Cat" || pet.type === "cat") 
+			imagePlaceholder = "https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/catasset.png?raw=true"
+		if(pet.type === "Other" || pet.type === "other") 
+			imagePlaceholder = "https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/otherasset.png?raw=true"
+		petImage = (pet.images[0].pic)? pet.images[0].pic : imagePlaceholder;
+		let pets = {petName: petName, petId: petId, petImage: petImage};
 		console.log(pets);
         Info.findOneAndUpdate( {_id: userId}, 
-        		{ $push: { pets: { petName: petName, petId:petId } } },
+        		{ $push: { pets: { petName: petName, petId:petId, petImage: petImage} } },
         	function(err, user){
         		console.log(user);
         		res.send({userId: user._id});
         });
     });
 });
-
-
-router.post('/', function(req, res){
-	console.log(req.body);
-	new Info(req.body).save(function(err, user){
-		console.log(user);
-        res.send({userId: user._id});
-    });
-})
 
 module.exports = router;

@@ -21,7 +21,12 @@ class AddPet extends Component {
 			type:"Dog",
 			city:"",
 			state:"",
-			description:""
+			description:"",
+			image1:"",
+			image2:"",
+			image3:"",
+			image4:"",
+			images:[],
 		};		
 	} 
 
@@ -48,7 +53,21 @@ class AddPet extends Component {
 	};
 
 	_handleClick = () => {
-		this.props.grab_data2(this.state);
+		let images = [{pic: this.state.image1}, {pic: this.state.image2}, {pic: this.state.image3}, {pic: this.state.image4}];		
+		let curState = {
+			userId: this.state.userId,
+			name:this.state.name,
+			age: this.state.age,
+			color: this.state.color,
+			gender: this.state.gender,
+			size:this.state.size,
+			type:this.state.type,
+			city:this.state.city,
+			state:this.state.state,
+			description:this.state.description,
+			images: images
+		}
+		this.props.grab_data2(curState);
 		this.setState({
 			userId: "",
 			name:"",
@@ -59,7 +78,8 @@ class AddPet extends Component {
 			type:"Dog",
 			city:"",
 			state:"",
-			description:""
+			description:"",
+			images: []
 		});
 		this.context.router.push("/profile");
 	};
@@ -154,7 +174,16 @@ class AddPet extends Component {
 							<input type="text" name="color" onChange={this._handleChange} value={this.state.color} id="color"/><br/>
 							<label htmlFor="description">Description:</label><br/>
 							<textarea placeholder="Tell us about you pet! Breed or anything that you feel like you other people should know!" name="description" onChange={this._handleChange} value={this.state.description} id="description"/>
-						</form>
+							<p>Unfortunately due to the nature of Heroku, we cannot provide image hosting so please post a link your photo from a popular image hosting hosting site! (We reccomend imgBB and using the direct links option, or Image Url option)</p> 
+							<label htmlFor="image1">Image 1(Optional)</label><br/>
+							<input type="text" name="image1" onChange={this._handleChange} value={this.state.image1} id="image1"/><br/>		
+							<label htmlFor="image2">Image 2(Optional)</label><br/>
+							<input type="text" name="image2" onChange={this._handleChange} value={this.state.image2} id="image2"/><br/>		
+							<label htmlFor="image3">Image 3(Optional)</label><br/>
+							<input type="text" name="image 3" onChange={this._handleChange} value={this.state.image3} id="image3"/><br/>		
+							<label htmlFor="image4">Image 4(Optional)</label><br/>
+							<input type="text" name="image4" onChange={this._handleChange} value={this.state.image4} id="image4"/><br/>								
+							</form>
 						<Button className="btn btn-primary btn-xs" onClick={this._handleClick} id="signup-button">Submit</Button>
 					</div>
 				</div>

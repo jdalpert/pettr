@@ -19,7 +19,7 @@ class PetTool extends Component {
 			matchIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconmatch.png?raw=true",
 			profileIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconprofile.png?raw=true",
 			missionIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/missionstatement.png?raw=true",
-			signupIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconlogin2.png?raw=true"
+			signupIc:"https://github.com/jdalpert/pettr/blob/master/src/components/assets/iconlogin.png?raw=true"
 		};
 	}
 
@@ -77,10 +77,10 @@ class PetTool extends Component {
 	}
 
 	signupHover = () =>{
-		this.setState({signupIc:"https://github.com/jdalpert/pettr/blob/layout/src/components/assets/iconloginlight.png?raw=true"});
+		this.setState({signupIc:"https://github.com/jdalpert/pettr/blob/layout/src/components/assets/iconlogin.png?raw=true"});
 	}
 	signupUnhover = () =>{
-		this.setState({signupIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconlogin2.png?raw=true"});
+		this.setState({signupIc:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/iconloginlight.png?raw=true"});
 	}
 
 	_handleHome = () =>{
