@@ -142,6 +142,7 @@ router.get('/petowner/:id', function(req, res){
 			city: pet.city,
 			state: pet.state,
 			description: pet.description,
+			images: pet.images,
 			owner: true
 		}
 		console.log(newPet);
@@ -210,10 +211,20 @@ router.post('/:id', function(req, res){
 		let petId = pet._id;
 		let petName = pet.name;
 		let userId = pet.userId;
-		let pets = {petName: petName, petId: petId};
+		let petImage = "";
+		let imagePlaceholder = "";
+		console.log(pet);
+		if(pet.type == "Dog" || pet.type == "dog")
+			imagePlaceholder = "https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/dogasset.png?raw=true"
+		if(pet.type === "Cat" || pet.type === "cat") 
+			imagePlaceholder = "https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/catasset.png?raw=true"
+		if(pet.type === "Other" || pet.type === "other") 
+			imagePlaceholder = "https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/otherasset.png?raw=true"
+		petImage = (pet.images[0])? pet.images[0].pic : imagePlaceholder;
+		let pets = {petName: petName, petId: petId, petImage: petImage};
 		console.log(pets);
         Info.findOneAndUpdate( {_id: userId}, 
-        		{ $push: { pets: { petName: petName, petId:petId } } },
+        		{ $push: { pets: { petName: petName, petId:petId, petImage: petImage} } },
         	function(err, user){
         		console.log(user);
         		res.send({userId: user._id});

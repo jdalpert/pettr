@@ -24,7 +24,7 @@ class Profile extends Component {
 			pets: [],
 			description: "",
 			organization: "",
-			image: "",
+			profilePic: "",
 		};
 	}
 	componentWillMount(){
@@ -42,6 +42,7 @@ class Profile extends Component {
 				this.setState(
 					{
 						//userId: this.props.data._id,
+						profilePic: this.props.data.profilePic,
 						email: this.props.data.email,
 						firstName: this.props.data.firstName,
 						lastName: this.props.data.lastName,
@@ -76,6 +77,7 @@ class Profile extends Component {
 				this.setState(
 					{
 						//userId: nextProps.data._id,
+						profilePic: nextProps.data.profilePic,
 						email: nextProps.data.email,
 						firstName: nextProps.data.firstName,
 						lastName: nextProps.data.lastName,
@@ -112,7 +114,7 @@ class Profile extends Component {
     			let singlePet = (
     				<div>
 	    				<div className="container petsList">
-							<div><img src="https://s3.amazonaws.com/pet-uploads.adoptapet.com/d/6/1/228543250.jpg"/></div>
+							<div><img src={org.petImage}/></div>
 							<h4 className="petName"><a onClick={() => this._handleClick(org.petId)}><b key={org.petId}>{org.petName}</b></a></h4>
 						</div>
 						<hr/>
@@ -132,9 +134,8 @@ class Profile extends Component {
 						<div className="col-sm-6 container profile-left">
 							<div className="col-sm-3 container profile-top-left">
 								<h2 id="user-name">{this.state.firstName} {this.state.lastName}</h2>
-
-								<img id="user-pic" src={(this.state.image)?this.state.image:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/userasset.png?raw=true"}/>
-
+								<img id="user-pic" src={(this.state.profilePic)?this.state.profilePic:"https://github.com/jdalpert/pettr/blob/PotatoBranch/src/components/assets/userasset.png?raw=true"}/>
+									
 							</div>
 
 							<div className="col-sm-3 container profile-top-right">
