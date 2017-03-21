@@ -238,7 +238,7 @@ class Settings extends Component {
 							<label htmlFor="location">City:</label><br/>
 							<input type="text" name="city" onChange={this._handleChange} value={this.state.city} id="city"/><br/>
 							<p>Unfortunately due to the nature of Heroku, we cannot provide image hosting so please post a link to your photo from a popular image hosting site! (We reccomend imgBB and using the direct links option, or Image Url option)</p> 
-							<label htmlFor="profilePic">Profile Pic Url:</label><br/>
+							<label htmlFor="profilePic">Profile Pic URL:</label><br/>
 							<input type="text" name="profilePic" onChange={this._handleChange} value={this.state.profilePic} id="profilePic"/><br/>
 							</div>
 						</div>
