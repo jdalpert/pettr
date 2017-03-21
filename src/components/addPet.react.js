@@ -174,7 +174,7 @@ class AddPet extends Component {
 							<input type="text" name="color" onChange={this._handleChange} value={this.state.color} id="color"/><br/>
 							<label htmlFor="description">Description:</label><br/>
 							<textarea placeholder="Tell us about you pet! Breed or anything that you feel like you other people should know!" name="description" onChange={this._handleChange} value={this.state.description} id="description"/>
-							<p>Unfortunately due to the nature of Heroku, we cannot provide image hosting so please post a link your photo from a popular image hosting hosting site! (We reccomend imgBB and using the direct links option)</p> 
+							<p>Unfortunately due to the nature of Heroku, we cannot provide image hosting so please post a link your photo from a popular image hosting hosting site! (We reccomend imgBB and using the direct links option, or Image Url option)</p> 
 							<label htmlFor="image1">Image 1(Optional)</label><br/>
 							<input type="text" name="image1" onChange={this._handleChange} value={this.state.image1} id="image1"/><br/>		
 							<label htmlFor="image2">Image 2(Optional)</label><br/>

@@ -63,13 +63,7 @@ var CLOUDINARY_URL="cloudinary://587132324837152:Ha2Ko65p1t_b1MYN8OFZnjivlkU@hak
         }
     });
 });*/
-router.post('/addimage/', function(req, res){
-	console.log(req.body.fileLoc);
-	cloudinary.uploader.upload(req.body.fileLoc, function(result) { 
-  		console.log(result);
-  		res.send(result);
-	});
-});
+
 
 router.get('/user/:id', function(req, res){
 	console.log(req.params.id);
@@ -150,6 +144,38 @@ router.get('/petowner/:id', function(req, res){
 	});
 });
 
+router.post('/update', function(req, res){
+	console.log(req.body);
+	console.log("AHSHS");
+	Info.findOneAndUpdate({_id: req.body.userId}, {
+			email:req.body.email,
+			password:req.body.password,
+			firstName:req.body.firstName,
+			lastName:req.body.lastName,
+			city:req.body.city,
+			state:req.body.state,
+			dog:req.body.dog ,
+			cat: req.body.cat,
+			other: req.body.other,
+			pets: req.body.pets,
+			contactInfo: req.body.contactInfo,
+			description:req.body.description,
+			organization:req.body.organization,
+			profilePic:req.body.profilePic,
+	}, function(err, user){
+		console.log(user);
+        res.send({userId: user._id});
+    });
+});
+
+router.post('/addimage/', function(req, res){
+	console.log(req.body.fileLoc);
+	cloudinary.uploader.upload(req.body.fileLoc, function(result) { 
+  		console.log(result);
+  		res.send(result);
+	});
+});
+
 router.post('/login', function(req, res){
 	console.log(req.body);
 	Info.findOne({email:req.body.loginEmail, password:req.body.loginPassword}, function(err, user){
@@ -203,6 +229,14 @@ router.post('/match', function(req, res){
 	});
 });
 
+router.post('/', function(req, res){
+	console.log(req.body);
+	new Info(req.body).save(function(err, user){
+		console.log(user);
+        res.send({userId: user._id});
+    });
+});
+
 router.post('/:id', function(req, res){
 	console.log(req.body);
 	console.log("TeSt2");
@@ -231,14 +265,5 @@ router.post('/:id', function(req, res){
         });
     });
 });
-
-
-router.post('/', function(req, res){
-	console.log(req.body);
-	new Info(req.body).save(function(err, user){
-		console.log(user);
-        res.send({userId: user._id});
-    });
-})
 
 module.exports = router;
